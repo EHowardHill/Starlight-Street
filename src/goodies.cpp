@@ -64,9 +64,21 @@ constexpr CharProperties char_map(char ch) {
         case 'z': return {9, 0, 51};
         case ',': return {4, 0, 52};
         case '.': return {3, 0, 53};
-        case '"': return {5, 0, 54};
+        case '\'': return {5, 0, 54};
         case '!': return {3, 0, 55};
         case '?': return {10, 0, 56};
         default: return {8, 0, 57};    // Space
     }
 }
+
+enum Characters {
+    CH_BERYL,
+    CH_CASTOR,
+    CH_NONE
+};
+
+struct DialogueLine {
+    int sound_id;
+    int ch_id;
+    const char *line;
+};
