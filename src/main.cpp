@@ -35,6 +35,7 @@
 
 #include "bn_sprite_items_beryl.h"
 #include "bn_sprite_items_font.h"
+#include "bn_sprite_items_ui_bubble.h"
 #include "bn_sprite_items_dialogue_back.h"
 #include "bn_regular_bg_items_starsbackground.h"
 #include "bn_regular_bg_items_bg_berylsroom.h"
@@ -47,12 +48,11 @@ using namespace regular_bg_items;
 
 #include "goodies.cpp"
 
-constexpr int walk_speed = 4;
+class TextElement;
 
-const DialogueLine gamelines[64][64] = {
-    {{0, 0, "I'm wondering, does this look at all familiar to you?"},
-     {0, 0, "Is this working?"},
-     {-1}}};
+constexpr int walk_speed = 4;
+constexpr int DIALOGUE_MAX_WIDTH = 110;
+constexpr int MAX_TEXT_LENGTH = 64;
 
 fixed_t<12> lerp(bn::fixed a, int b, bn::fixed_t<12> t)
 {
@@ -63,28 +63,34 @@ class TextElement
 {
 public:
     int ticker = 0;
-    vector<sprite_ptr, 64> text_vector; // Fixed incorrect vector declaration
+    vector<sprite_ptr, MAX_TEXT_LENGTH> text_vector;
     int y = 0;
     int x = 0;
-    int width = 0;
     int offset = 0;
     int line = 0;
     int i = 0;
     int conversation;
     int current_line;
+    int current_ch;
+    int current_emo;
     bool active = false;
+    bool is_talking = false;
+    const DialogueLine *dl;
 
     vector<sprite_ptr, 2> spr_dialogue_back;
 
+    sprite_ptr a_button = ui_bubble.create_sprite(100, -86, 2);
+
     int calculate_word_width(int start_index)
     {
-        DialogueLine dl = gamelines[conversation][current_line];
+        current_ch = dl->ch_id;
+        current_emo = dl->emo_id;
 
         int word_width = 0;
         int idx = start_index;
-        while (dl.line[idx] != '\0' && dl.line[idx] != ' ' && idx < 64)
+        while (dl->line[idx] != '\0' && dl->line[idx] != ' ' && idx < MAX_TEXT_LENGTH)
         {
-            auto metadata = char_map(dl.line[idx]);
+            auto metadata = char_map(dl->line[idx]);
             word_width += metadata.width;
             idx++;
         }
@@ -92,7 +98,7 @@ public:
     }
 
     // Setup function to initialize the text element
-    void setup(int X, int Y, int width_, int conversation_)
+    void setup(int X, int Y, int conversation_)
     {
         text_vector.clear();
         ticker = 0;
@@ -101,12 +107,13 @@ public:
         x = X;
         offset = 0;
         line = 0;
-        width = width_;
         conversation = conversation_;
         active = true;
 
-        auto db_spr = dialogue_back.create_sprite(-64, 40, 0);
-        auto db_spr2 = dialogue_back.create_sprite(64, 40, 0);
+        a_button.set_z_order(-5);
+
+        auto db_spr = dialogue_back.create_sprite(-64, -64, 0);
+        auto db_spr2 = dialogue_back.create_sprite(-64, 64, 0);
         db_spr.set_scale(2, 2);
         db_spr2.set_scale(2, 2);
         db_spr.set_blending_enabled(true);
@@ -120,25 +127,35 @@ public:
 
     void update()
     {
-        DialogueLine dl = gamelines[conversation][current_line];
+        a_button.set_y(lerp(a_button.y(), -64, 0.2));
 
-        if (dl.sound_id == -1)
+        auto new_scale = lerp(a_button.horizontal_scale(), 1, 0.2);
+        a_button.set_scale(new_scale, new_scale);
+        dl = &gamelines[conversation][current_line];
+
+        if (dl->sound_id == -1)
         {
             active = false;
+            is_talking = false;
         }
         else
         {
-            if (i < 64)
+            BN_LOG("IN: ", is_talking);
+
+            if (i < MAX_TEXT_LENGTH)
             {
+                is_talking = true;
                 if (a_pressed())
                 {
+                    a_button.set_scale(1.2, 1.2);
+
                     do
                     {
-                        char current_char = dl.line[i];
+                        char current_char = dl->line[i];
 
                         if (current_char == '\0')
                         {
-                            i = 64;
+                            i = MAX_TEXT_LENGTH;
                         }
                         else
                         {
@@ -161,7 +178,7 @@ public:
                                 int word_width = calculate_word_width(i);
 
                                 // Check if the word fits in the current line
-                                if (offset + word_width > width)
+                                if (offset + word_width > DIALOGUE_MAX_WIDTH)
                                 {
                                     // Wrap to next line
                                     offset = 0;
@@ -180,13 +197,15 @@ public:
                                 i++;
                             }
                         }
-                    } while (i < 64);
+                    } while (i < MAX_TEXT_LENGTH);
                 }
             }
             else
             {
+                is_talking = false;
                 if (a_pressed())
                 {
+                    a_button.set_scale(1.2, 1.2);
                     current_line++;
                     text_vector.clear();
                     ticker = 0;
@@ -198,13 +217,13 @@ public:
 
             if (ticker % 2 == 0) // Update every 2 ticks
             {
-                if (i < 64) // Ensure index is within bounds
+                if (i < MAX_TEXT_LENGTH) // Ensure index is within bounds
                 {
-                    char current_char = dl.line[i];
+                    char current_char = dl->line[i];
 
                     if (current_char == '\0')
                     {
-                        i = 64;
+                        i = MAX_TEXT_LENGTH;
                     }
                     else
                     {
@@ -228,7 +247,7 @@ public:
                             int word_width = calculate_word_width(i);
 
                             // Check if the word fits in the current line
-                            if (offset + word_width > width)
+                            if (offset + word_width > DIALOGUE_MAX_WIDTH)
                             {
                                 // Wrap to next line
                                 offset = 0;
@@ -254,6 +273,22 @@ public:
         }
     }
 };
+
+class global_data
+{
+public:
+    random rnd;
+    bool is_talking;
+    bool currently_talking;
+    optional<TextElement> opt_te;
+
+    global_data()
+    {
+        //
+    }
+};
+
+global_data *globals;
 
 class Beryl
 {
@@ -303,90 +338,76 @@ public:
         return spr_beryl[0].y() + 32.0;
     }
 
+    void set_frame(int frame)
+    {
+        for (int t = 0; t < 4; ++t)
+        {
+            int tile_index = facing_left ? ((frame * 4) + ((t + 2) % 4)) : ((frame * 4) + t);
+            spr_beryl[t].set_horizontal_flip(facing_left);
+            spr_beryl[t].set_tiles(beryl.tiles_item(), tile_index);
+        }
+    }
+
     void update()
     {
-        if (right_held())
-        {
-            facing_left = false;
-            state = 1;
-            set_x(x() + 1.0);
-        }
-        else if (left_held())
-        {
-            facing_left = true;
-            state = 1;
-            set_x(x() - 1.0);
-        }
-        else
-        {
-            state = 0;
-        }
+        ticker++;
 
-        if (state == 1)
+        if (globals->opt_te.has_value())
         {
-            // cam.set_x(lerp(cam.x(), spr_beryl[0].x().integer() + 64, 0.1));
-            ticker++;
-
-            for (int t = 0; t < 4; t++)
+            if (globals->opt_te.value().is_talking)
             {
-                if (facing_left)
-                {
-                    spr_beryl[t].set_horizontal_flip(true);
-                    if (t < 2)
-                    {
-                        spr_beryl[t].set_tiles(beryl.tiles_item(), (((ticker / walk_speed) % 8) * 4) + t + 2);
-                        spr_beryl[t].set_tiles(beryl.tiles_item(), (((ticker / walk_speed) % 8) * 4) + t + 2);
-                    }
-                    else
-                    {
-                        spr_beryl[t].set_tiles(beryl.tiles_item(), (((ticker / walk_speed) % 8) * 4) + t - 2);
-                        spr_beryl[t].set_tiles(beryl.tiles_item(), (((ticker / walk_speed) % 8) * 4) + t - 2);
-                    }
-                }
-                else
-                {
-                    spr_beryl[t].set_horizontal_flip(false);
-                    spr_beryl[t].set_tiles(beryl.tiles_item(), (((ticker / walk_speed) % 8) * 4) + t);
-                    spr_beryl[t].set_tiles(beryl.tiles_item(), (((ticker / walk_speed) % 8) * 4) + t);
-                }
+                set_frame(9 + (globals->opt_te.value().current_emo * 2) + ((ticker % 8) > 4));
+            }
+            else
+            {
+                set_frame(9 + (globals->opt_te.value().current_emo * 2));
             }
         }
         else
         {
-            // cam.set_x(lerp(cam.x(), spr_beryl[0].x().integer() - 32, 0.1));
-
-            for (int t = 0; t < 4; t++)
+            if (right_held())
             {
-                if (facing_left)
+                if (ticker % 16 == 0)
                 {
-                    spr_beryl[t].set_horizontal_flip(true);
+                    fixed_t<12> vol = globals->rnd.get_int(8) / 8.0;
+                    sound_items::footstep.play(vol);
+                }
+                facing_left = false;
+                state = 1;
+                set_x(x() + 1.0);
+            }
+            else if (left_held())
+            {
+                if (ticker % 16 == 0)
+                {
+                    fixed_t<12> vol = globals->rnd.get_int(8) / 8.0;
+                    sound_items::footstep.play(vol);
+                }
+                facing_left = true;
+                state = 1;
+                set_x(x() - 1.0);
+            }
+            else
+            {
+                state = 0;
+            }
 
-                    if (t < 2)
-                    {
-                        spr_beryl[t].set_tiles(beryl.tiles_item(), (8 * 4) + t + 2);
-                    }
-                    else
-                    {
-                        spr_beryl[t].set_tiles(beryl.tiles_item(), (8 * 4) + t - 2);
-                    }
-                }
-                else
-                {
-                    spr_beryl[t].set_horizontal_flip(false);
-                    spr_beryl[t].set_tiles(beryl.tiles_item(), (8 * 4) + t);
-                }
+            if (state == 1)
+            {
+                set_frame((ticker / walk_speed) % 8);
+            }
+            else
+            {
+                set_frame(8);
             }
         }
-
-        cam.set_x(x() + 32);
     }
 };
 
 int main()
 {
     init();
-
-    music_items::lt01.play();
+    globals = new global_data();
 
     auto bg = starsbackground.create_bg(0, 48);
     auto bg_room = bg_berylsroom.create_bg(0, 0);
@@ -394,35 +415,31 @@ int main()
     Beryl b;
     bg_room.set_camera(b.cam);
 
-    optional<TextElement> opt_te;
-
-    const char *l = gamelines[0][0].line;
-    BN_LOG(l);
-
     int ticker = 0;
     while (true)
     {
         b.update();
 
-        if (b_pressed() && !opt_te.has_value())
+        if (b_pressed() && !globals->opt_te.has_value())
         {
             TextElement te;
-            te.setup(-110, 0, 220, 0);
-            opt_te = te;
+            te.setup(-110, -60, 0);
+            globals->opt_te = te;
         }
 
-        if (opt_te.has_value())
+        if (globals->opt_te.has_value())
         {
-            b.cam.set_y(lerp(b.cam.y(), 32, 0.2));
-            opt_te.value().update();
-            if (!opt_te.value().active)
+            globals->opt_te.value().update();
+            if (!globals->opt_te.value().active)
             {
-                opt_te.reset();
+                globals->opt_te.reset();
             }
+
+            b.cam.set_x(lerp(b.cam.x(), b.x().integer() - 64, 0.2));
         }
         else
         {
-            b.cam.set_y(lerp(b.cam.y(), 0, 0.2));
+            b.cam.set_x(lerp(b.cam.x(), b.x().integer(), 0.5));
         }
 
         ticker++;

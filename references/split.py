@@ -9,7 +9,7 @@ def process_half_image(half_image):
     return green_bg.convert('RGB')  # Convert to RGB
 
 def main():
-    input_folder = 'references/stand'
+    input_folder = 'references/sit01'
     images = []
 
     # Loop over all PNG files in the "walk" folder
@@ -42,7 +42,7 @@ def main():
         y_offset += 128
 
     # Save the final image as "beryl.bmp"
-    final_image.save('beryl.bmp')
+    final_image.save('beryl_sit01.bmp')
 
 if __name__ == '__main__':
     main()

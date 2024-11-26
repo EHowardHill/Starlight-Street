@@ -6,6 +6,7 @@
 namespace bn::sound_items
 {
     constexpr inline sound_item click(0);
+    constexpr inline sound_item footstep(1);
 }
 
 #endif

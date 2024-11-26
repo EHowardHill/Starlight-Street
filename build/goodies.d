@@ -1,2 +1,2 @@
 goodies.o: \
- /mnt/c/users/ethan/OneDrive/Documents/GitHub/Starlight-Street/src/goodies.cpp
+ /mnt/c/users/ethan/documents/github/Starlight-Street/src/goodies.cpp

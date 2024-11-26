@@ -77,8 +77,32 @@ enum Characters {
     CH_NONE
 };
 
+enum Emotions {
+    SIT_NORMAL,
+    SIT_CONFUSED,
+    EMO_NORMAL,
+    EMO_CONFUSED,
+    EMO_SAD,
+    EMO_SURPRISED,
+};
+
+enum Actions {
+    BERYL_LEFT,
+    BERYL_RIGHT,
+};
+
 struct DialogueLine {
     int sound_id;
     int ch_id;
+    int emo_id;
+    int action;
     const char *line;
 };
+
+const DialogueLine gamelines[64][64] = {
+    {{0, CH_BERYL, SIT_CONFUSED, 0, "...My head..."},
+     {0, CH_BERYL, SIT_NORMAL, 0, "..Where am I?"},
+     {0, CH_BERYL, SIT_CONFUSED, 0, "...I don't even... remember who I am..."},
+     {-1}}};
+
+     

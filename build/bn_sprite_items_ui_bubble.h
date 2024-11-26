@@ -7,12 +7,12 @@
 
 //======================================================================
 //
-//	ui_bubble_bn_gfx, 32x64@4, 
+//	ui_bubble_bn_gfx, 32x128@4, 
 //	+ palette 16 entries, not compressed
-//	+ 32 tiles not compressed
-//	Total size: 32 + 1024 = 1056
+//	+ 64 tiles not compressed
+//	Total size: 32 + 2048 = 2080
 //
-//	Time-stamp: 2024-11-25, 16:18:08
+//	Time-stamp: 2024-11-25, 20:11:38
 //	Exported by Cearn's GBA Image Transmogrifier, v0.9.2
 //	( http://www.coranac.com/projects/#grit )
 //
@@ -21,8 +21,8 @@
 #ifndef GRIT_UI_BUBBLE_BN_GFX_H
 #define GRIT_UI_BUBBLE_BN_GFX_H
 
-#define ui_bubble_bn_gfxTilesLen 1024
-extern const bn::tile ui_bubble_bn_gfxTiles[32];
+#define ui_bubble_bn_gfxTilesLen 2048
+extern const bn::tile ui_bubble_bn_gfxTiles[64];
 
 #define ui_bubble_bn_gfxPalLen 32
 extern const bn::color ui_bubble_bn_gfxPal[16];
@@ -34,7 +34,7 @@ extern const bn::color ui_bubble_bn_gfxPal[16];
 namespace bn::sprite_items
 {
     constexpr inline sprite_item ui_bubble(sprite_shape_size(sprite_shape::SQUARE, sprite_size::BIG), 
-            sprite_tiles_item(span<const tile>(ui_bubble_bn_gfxTiles, 32), bpp_mode::BPP_4, compression_type::NONE, 2), 
+            sprite_tiles_item(span<const tile>(ui_bubble_bn_gfxTiles, 64), bpp_mode::BPP_4, compression_type::NONE, 4), 
             sprite_palette_item(span<const color>(ui_bubble_bn_gfxPal, 16), bpp_mode::BPP_4, compression_type::NONE));
 }
 
