@@ -25,7 +25,6 @@
 #include <bn_optional.h>
 #include <bn_blending.h>
 #include <bn_rect_window.h>
-#include <bn_optional.h>
 
 #include "bn_music.h"
 #include "bn_music_items.h"
@@ -46,17 +45,29 @@ using namespace keypad;
 using namespace sprite_items;
 using namespace regular_bg_items;
 
-#include "goodies.cpp"
-
-class TextElement;
-
-constexpr int walk_speed = 4;
-constexpr int DIALOGUE_MAX_WIDTH = 110;
-constexpr int MAX_TEXT_LENGTH = 64;
+#include "main.h"
+#include "dialogue.h"
+#include "levels.h"
 
 fixed_t<12> lerp(bn::fixed a, int b, bn::fixed_t<12> t)
 {
-    return a * (1 - t) + b * t;
+    // Promote to higher precision during computation
+    auto high_precision_a = bn::fixed_t<12>(a);
+    auto high_precision_b = bn::fixed_t<12>(b);
+    auto high_precision_t = bn::fixed_t<12>(t);
+
+    // Perform computation in the same precision
+    fixed_t<12> expected = high_precision_a * (1 - high_precision_t) + high_precision_b * high_precision_t;
+
+    return expected;
+}
+
+bool close(int a, int b, int dist)
+{
+    int c = a - b;
+    if (c < 0)
+        c = c * -1;
+    return c < dist;
 }
 
 class TextElement
@@ -64,15 +75,13 @@ class TextElement
 public:
     int ticker = 0;
     vector<sprite_ptr, MAX_TEXT_LENGTH> text_vector;
-    int y = 0;
     int x = 0;
+    int y = 0;
     int offset = 0;
     int line = 0;
     int i = 0;
     int conversation;
     int current_line;
-    int current_ch;
-    int current_emo;
     bool active = false;
     bool is_talking = false;
     const DialogueLine *dl;
@@ -83,9 +92,6 @@ public:
 
     int calculate_word_width(int start_index)
     {
-        current_ch = dl->ch_id;
-        current_emo = dl->emo_id;
-
         int word_width = 0;
         int idx = start_index;
         while (dl->line[idx] != '\0' && dl->line[idx] != ' ' && idx < MAX_TEXT_LENGTH)
@@ -133,18 +139,87 @@ public:
         a_button.set_scale(new_scale, new_scale);
         dl = &gamelines[conversation][current_line];
 
-        if (dl->sound_id == -1)
+        switch (dl->action)
         {
+        case EXIT:
             active = false;
             is_talking = false;
+            break;
+
+        case PLAY_WELCOME:
+            music_items::welcome.play();
+            break;
+
+        default:
+            break;
         }
-        else
+
+        // Action item
+        if (dl->line == "?")
         {
-            BN_LOG("IN: ", is_talking);
+            current_line++;
+            text_vector.clear();
+            ticker = 0;
+            i = 0;
+            offset = 0;
+            line = 0;
+        }
+
+        // Dialogue item
+        else if (dl->action != EXIT)
+        {
 
             if (i < MAX_TEXT_LENGTH)
             {
                 is_talking = true;
+
+                if (ticker % 2 == 0) // Update every 2 ticks
+                {
+                    if (i < MAX_TEXT_LENGTH) // Ensure index is within bounds
+                    {
+                        char current_char = dl->line[i];
+
+                        if (current_char == '\0')
+                        {
+                            i = MAX_TEXT_LENGTH;
+                        }
+                        else
+                        {
+                            // Check if current_char is whitespace
+                            if (current_char == ' ')
+                            {
+                                offset += 8;
+                                i++;
+                            }
+                            else
+                            {
+                                // Calculate the width of the next word
+                                int word_width = calculate_word_width(i);
+
+                                // Check if the word fits in the current line
+                                if (offset + word_width > DIALOGUE_MAX_WIDTH)
+                                {
+                                    // Wrap to next line
+                                    offset = 0;
+                                    line++;
+                                }
+
+                                // Now proceed to add the character
+                                auto metadata = char_map(current_char); // Get metadata for the character
+                                auto letter = font.create_sprite(
+                                    x + offset,
+                                    y + (line * 32),
+                                    metadata.index);
+                                letter.set_z_order(-5);
+                                text_vector.push_back(letter);
+                                offset += metadata.width;
+                                i++;
+                                sound_items::click.play();
+                            }
+                        }
+                    }
+                }
+
                 if (a_pressed())
                 {
                     a_button.set_scale(1.2, 1.2);
@@ -163,13 +238,7 @@ public:
                             if (current_char == ' ')
                             {
                                 // Just add the whitespace character
-                                auto metadata = char_map(current_char);
-                                auto letter = font.create_sprite(
-                                    x + offset,
-                                    y + (line * 32),
-                                    metadata.index);
-                                text_vector.push_back(letter);
-                                offset += metadata.width;
+                                offset += 8;
                                 i++;
                             }
                             else
@@ -203,6 +272,7 @@ public:
             else
             {
                 is_talking = false;
+
                 if (a_pressed())
                 {
                     a_button.set_scale(1.2, 1.2);
@@ -215,60 +285,6 @@ public:
                 }
             }
 
-            if (ticker % 2 == 0) // Update every 2 ticks
-            {
-                if (i < MAX_TEXT_LENGTH) // Ensure index is within bounds
-                {
-                    char current_char = dl->line[i];
-
-                    if (current_char == '\0')
-                    {
-                        i = MAX_TEXT_LENGTH;
-                    }
-                    else
-                    {
-                        // Check if current_char is whitespace
-                        if (current_char == ' ')
-                        {
-                            // Just add the whitespace character
-                            auto metadata = char_map(current_char);
-                            auto letter = font.create_sprite(
-                                x + offset,
-                                y + (line * 32),
-                                metadata.index);
-                            text_vector.push_back(letter);
-                            offset += metadata.width;
-                            i++;
-                            sound_items::click.play();
-                        }
-                        else
-                        {
-                            // Calculate the width of the next word
-                            int word_width = calculate_word_width(i);
-
-                            // Check if the word fits in the current line
-                            if (offset + word_width > DIALOGUE_MAX_WIDTH)
-                            {
-                                // Wrap to next line
-                                offset = 0;
-                                line++;
-                            }
-
-                            // Now proceed to add the character
-                            auto metadata = char_map(current_char); // Get metadata for the character
-                            auto letter = font.create_sprite(
-                                x + offset,
-                                y + (line * 32),
-                                metadata.index);
-                            letter.set_z_order(-5);
-                            text_vector.push_back(letter);
-                            offset += metadata.width;
-                            i++;
-                            sound_items::click.play();
-                        }
-                    }
-                }
-            }
             ticker++; // Increment ticker unconditionally
         }
     }
@@ -277,7 +293,7 @@ public:
 class global_data
 {
 public:
-    random rnd;
+    bn::random rnd;
     bool is_talking;
     bool currently_talking;
     optional<TextElement> opt_te;
@@ -293,6 +309,7 @@ global_data *globals;
 class Beryl
 {
 public:
+    bool facing_left;
     sprite_ptr spr_beryl[4] = {
         beryl.create_sprite(-32, -32 + 24, 0),
         beryl.create_sprite(-32, 32 + 24, 1),
@@ -302,7 +319,6 @@ public:
     int state = 0;
     int ticker = 0;
     camera_ptr cam = camera_ptr::create(0, 0);
-    bool facing_left = true;
 
     Beryl()
     {
@@ -354,13 +370,34 @@ public:
 
         if (globals->opt_te.has_value())
         {
-            if (globals->opt_te.value().is_talking)
+            switch (globals->opt_te.value().dl->action)
             {
-                set_frame(9 + (globals->opt_te.value().current_emo * 2) + ((ticker % 8) > 4));
+            case BERYL_LEFT:
+            {
+                facing_left = true;
+                break;
             }
-            else
+            case BERYL_RIGHT:
             {
-                set_frame(9 + (globals->opt_te.value().current_emo * 2));
+                facing_left = false;
+                break;
+            }
+            default:
+            {
+                break;
+            }
+            }
+
+            if (globals->opt_te.value().dl->ch_id == CH_BERYL)
+            {
+                if (globals->opt_te.value().is_talking)
+                {
+                    set_frame(9 + (globals->opt_te.value().dl->emo_id * 2) + ((ticker % 8) > 4));
+                }
+                else
+                {
+                    set_frame(9 + (globals->opt_te.value().dl->emo_id * 2));
+                }
             }
         }
         else
@@ -409,23 +446,30 @@ int main()
     init();
     globals = new global_data();
 
+    // music_items::welcome.play();
+
     auto bg = starsbackground.create_bg(0, 48);
-    auto bg_room = bg_berylsroom.create_bg(0, 0);
+
+    const Room current_room = room_map(ROOM_BEDROOM);
+    auto bg_room = current_room.bg.create_bg(0, 0);
 
     Beryl b;
     bg_room.set_camera(b.cam);
+    b.set_x(current_room.init_x);
+
+    auto action_bubble = ui_bubble.create_sprite(0, -110, 0);
+
+    {
+        TextElement te;
+        te.setup(-110, -60, 0);
+        te.conversation = current_room.init_action;
+        globals->opt_te = te;
+    }
 
     int ticker = 0;
     while (true)
     {
         b.update();
-
-        if (b_pressed() && !globals->opt_te.has_value())
-        {
-            TextElement te;
-            te.setup(-110, -60, 0);
-            globals->opt_te = te;
-        }
 
         if (globals->opt_te.has_value())
         {
@@ -440,6 +484,40 @@ int main()
         else
         {
             b.cam.set_x(lerp(b.cam.x(), b.x().integer(), 0.5));
+        }
+
+        bool action_found = false;
+        for (int i = 0; i < 64; i++)
+        {
+            if (current_room.items[i].x == 0)
+            {
+                i = 64;
+            }
+            else
+            {
+                BN_LOG(b.x().integer(), " , ", current_room.items[i].x, " , ", 5);
+
+                if (close(b.x().integer(), current_room.items[i].x, 5) && !globals->opt_te.has_value())
+                {
+                    action_bubble.set_y(lerp(action_bubble.y(), -64, 0.2));
+
+                    if (a_pressed())
+                    {
+                        TextElement te;
+                        te.setup(-110, -60, 0);
+                        te.conversation = current_room.items[i].action;
+                        globals->opt_te = te;
+                    }
+
+                    i = 64;
+                    action_found = true;
+                }
+            }
+        }
+
+        if (!action_found)
+        {
+            action_bubble.set_y(lerp(action_bubble.y(), -110, 0.2));
         }
 
         ticker++;

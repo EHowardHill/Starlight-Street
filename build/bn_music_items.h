@@ -7,6 +7,7 @@ namespace bn::music_items
 {
     constexpr inline music_item lt01(0);
     constexpr inline music_item st01(1);
+    constexpr inline music_item welcome(2);
 }
 
 #endif
