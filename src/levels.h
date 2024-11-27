@@ -6,7 +6,7 @@
 struct ActionableItem {
     int x;
     int action;
-    bool singleuse;
+    bool automatic;
 };
 
 struct Room {
@@ -22,7 +22,6 @@ enum Rooms {
 
 enum Conversations
 {
-    C_TEST0,
     C_INITCONV,
     C_BED,
     C_INITCASTOR
@@ -33,8 +32,9 @@ constexpr ActionableItem room_items[1][64] = {
 
     // Bedroom
     {
-        {-64, C_BED, false},
-        {64, C_TEST0, false}
+        {-240, C_INITCONV, true},
+        {-240, C_BED, false},
+        {64, C_INITCASTOR, true}
     }
 };
 
@@ -47,7 +47,7 @@ constexpr Room room_map(int room_no) {
     constexpr ActionableItem empty_items[64] = {}; // Define the empty array inline
     switch (room_no) {
         case ROOM_BEDROOM:
-            return make_room(bn::regular_bg_items::bg_berylsroom, room_items[ROOM_BEDROOM], -64, C_INITCONV);
+            return make_room(bn::regular_bg_items::bg_berylsroom, room_items[ROOM_BEDROOM], -240, C_INITCONV);
         default:
             return make_room(bn::regular_bg_items::bg_berylsroom, empty_items, 0, 0);
     }

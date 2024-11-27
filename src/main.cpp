@@ -25,6 +25,7 @@
 #include <bn_optional.h>
 #include <bn_blending.h>
 #include <bn_rect_window.h>
+#include <bn_math.h>
 
 #include "bn_music.h"
 #include "bn_music_items.h"
@@ -36,6 +37,7 @@
 #include "bn_sprite_items_font.h"
 #include "bn_sprite_items_ui_bubble.h"
 #include "bn_sprite_items_dialogue_back.h"
+#include "bn_sprite_items_castor.h"
 #include "bn_regular_bg_items_starsbackground.h"
 #include "bn_regular_bg_items_bg_berylsroom.h"
 
@@ -70,6 +72,20 @@ bool close(int a, int b, int dist)
     return c < dist;
 }
 
+class Castor
+{
+public:
+    sprite_ptr spr = castor.create_sprite(0, -120);
+    int ideal_y;
+    int ticker;
+
+    void update()
+    {
+        ticker++;
+        spr.set_y(lerp(spr.y().integer(), ideal_y + (int)(degrees_sin((ticker * 2) % 360) * 12), 0.2));
+    }
+};
+
 class TextElement
 {
 public:
@@ -85,6 +101,7 @@ public:
     bool active = false;
     bool is_talking = false;
     const DialogueLine *dl;
+    Castor castor;
 
     vector<sprite_ptr, 2> spr_dialogue_back;
 
@@ -134,6 +151,7 @@ public:
     void update()
     {
         a_button.set_y(lerp(a_button.y(), -64, 0.2));
+        castor.update();
 
         auto new_scale = lerp(a_button.horizontal_scale(), 1, 0.2);
         a_button.set_scale(new_scale, new_scale);
@@ -148,6 +166,18 @@ public:
 
         case PLAY_WELCOME:
             music_items::welcome.play();
+            break;
+
+        case CASTOR_APPEAR:
+        {
+            Castor c;
+            c.ideal_y = -32;
+            castor = c;
+            break;
+        }
+
+        case CASTOR_DISAPPEAR:
+            castor.ideal_y = -120;
             break;
 
         default:
@@ -370,8 +400,16 @@ public:
 
         if (globals->opt_te.has_value())
         {
+            globals->opt_te.value().castor.spr.set_camera(cam);
+            globals->opt_te.value().castor.spr.set_x(x() + 64);
+
             switch (globals->opt_te.value().dl->action)
             {
+            case CASTOR_APPEAR:
+            {
+                facing_left = false;
+                break;
+            }
             case BERYL_LEFT:
             {
                 facing_left = true;
@@ -445,8 +483,7 @@ int main()
 {
     init();
     globals = new global_data();
-
-    // music_items::welcome.play();
+    vector<int, 64> spent_dialogue;
 
     auto bg = starsbackground.create_bg(0, 48);
 
@@ -458,13 +495,6 @@ int main()
     b.set_x(current_room.init_x);
 
     auto action_bubble = ui_bubble.create_sprite(0, -110, 0);
-
-    {
-        TextElement te;
-        te.setup(-110, -60, 0);
-        te.conversation = current_room.init_action;
-        globals->opt_te = te;
-    }
 
     int ticker = 0;
     while (true)
@@ -479,14 +509,14 @@ int main()
                 globals->opt_te.reset();
             }
 
-            b.cam.set_x(lerp(b.cam.x(), b.x().integer() - 64, 0.2));
+            b.cam.set_x(lerp(b.cam.x(), b.x().integer() - 64 + (32 - (64 * b.facing_left)), 0.2));
         }
         else
         {
             b.cam.set_x(lerp(b.cam.x(), b.x().integer(), 0.5));
         }
 
-        bool action_found = false;
+        bool show_bubble = false;
         for (int i = 0; i < 64; i++)
         {
             if (current_room.items[i].x == 0)
@@ -495,28 +525,39 @@ int main()
             }
             else
             {
-                BN_LOG(b.x().integer(), " , ", current_room.items[i].x, " , ", 5);
+                int action = current_room.items[i].action;
+                bool exists = false;
 
-                if (close(b.x().integer(), current_room.items[i].x, 5) && !globals->opt_te.has_value())
+                for (int t = 0; t < spent_dialogue.size(); t++)
                 {
-                    action_bubble.set_y(lerp(action_bubble.y(), -64, 0.2));
+                    exists = exists || (spent_dialogue.at(t) == action);
+                    if (exists)
+                        t = spent_dialogue.size();
+                }
 
-                    if (a_pressed())
+                if (close(b.x().integer(), current_room.items[i].x, 5) && !globals->opt_te.has_value() && !(exists && current_room.items[i].automatic))
+                {
+                    show_bubble = true;
+
+                    if (current_room.items[i].automatic || a_pressed())
                     {
-                        TextElement te;
-                        te.setup(-110, -60, 0);
-                        te.conversation = current_room.items[i].action;
-                        globals->opt_te = te;
-                    }
+                        if (!exists)
+                        {
+                            spent_dialogue.push_back(action);
+                        }
 
-                    i = 64;
-                    action_found = true;
+                        TextElement te;
+                        te.setup(-108, -60, 0);
+                        te.conversation = action;
+                        globals->opt_te = te;
+                        i = 64;
+                    }
                 }
             }
         }
-
-        if (!action_found)
-        {
+        if (show_bubble) {
+            action_bubble.set_y(lerp(action_bubble.y(), -64, 0.2));
+        } else {
             action_bubble.set_y(lerp(action_bubble.y(), -110, 0.2));
         }
 
