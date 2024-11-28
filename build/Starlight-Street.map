@@ -5,11 +5,11 @@ Archive member included to satisfy reference by file (symbol)
 /opt/devkitpro/devkitARM/bin/../lib/gcc/arm-none-eabi/14.2.0/thumb/libgcc.a(_sync_none.o)
                               (__sync_synchronize_none)
 /opt/devkitpro/devkitARM/bin/../lib/gcc/arm-none-eabi/14.2.0/thumb/libgcc.a(_arm_muldf3.o)
-                              /tmp/ccYUFq4M.ltrans0.ltrans.o (__aeabi_dmul)
+                              /tmp/ccktRJzG.ltrans1.ltrans.o (__aeabi_dmul)
 /opt/devkitpro/devkitARM/bin/../lib/gcc/arm-none-eabi/14.2.0/thumb/libgcc.a(_arm_addsubdf3.o)
-                              /tmp/ccYUFq4M.ltrans0.ltrans.o (__aeabi_i2d)
+                              /tmp/ccktRJzG.ltrans1.ltrans.o (__aeabi_i2d)
 /opt/devkitpro/devkitARM/bin/../lib/gcc/arm-none-eabi/14.2.0/thumb/libgcc.a(_arm_fixdfsi.o)
-                              /tmp/ccYUFq4M.ltrans0.ltrans.o (__aeabi_d2iz)
+                              /tmp/ccktRJzG.ltrans1.ltrans.o (__aeabi_d2iz)
 
 Discarded input sections
 
@@ -42,98 +42,106 @@ Discarded input sections
  .text          0x00000000        0x0 font_bn_gfx.o
  .data          0x00000000        0x0 font_bn_gfx.o
  .bss           0x00000000        0x0 font_bn_gfx.o
+ .text          0x00000000        0x0 rake01_bn_gfx.o
+ .data          0x00000000        0x0 rake01_bn_gfx.o
+ .bss           0x00000000        0x0 rake01_bn_gfx.o
+ .text          0x00000000        0x0 star_bn_gfx.o
+ .data          0x00000000        0x0 star_bn_gfx.o
+ .bss           0x00000000        0x0 star_bn_gfx.o
  .text          0x00000000        0x0 starsbackground_bn_gfx.o
  .data          0x00000000        0x0 starsbackground_bn_gfx.o
  .bss           0x00000000        0x0 starsbackground_bn_gfx.o
  .text          0x00000000        0x0 ui_bubble_bn_gfx.o
  .data          0x00000000        0x0 ui_bubble_bn_gfx.o
  .bss           0x00000000        0x0 ui_bubble_bn_gfx.o
- .data          0x00000000        0x0 /tmp/ccYUFq4M.ltrans0.ltrans.o
- .data          0x00000000        0x0 /tmp/ccYUFq4M.ltrans1.ltrans.o
- .comment       0x00000000       0x24 /tmp/ccTS1GPQ.debug.temp.o
- .comment       0x00000000       0x24 /tmp/ccG32DcI.debug.temp.o
- .comment       0x00000000       0x24 /tmp/ccHjkJou.debug.temp.o
- .comment       0x00000000       0x24 /tmp/cc5RA772.debug.temp.o
- .comment       0x00000000       0x24 /tmp/cc3FRq93.debug.temp.o
- .comment       0x00000000       0x24 /tmp/ccFiOCYE.debug.temp.o
- .comment       0x00000000       0x24 /tmp/cceSLdlk.debug.temp.o
- .comment       0x00000000       0x24 /tmp/ccddVuPU.debug.temp.o
- .comment       0x00000000       0x24 /tmp/cc08BAG9.debug.temp.o
- .comment       0x00000000       0x24 /tmp/cc3JWvj8.debug.temp.o
- .comment       0x00000000       0x24 /tmp/cc8rDF4z.debug.temp.o
- .comment       0x00000000       0x24 /tmp/ccK9bzAI.debug.temp.o
- .comment       0x00000000       0x24 /tmp/ccsHmEVJ.debug.temp.o
- .comment       0x00000000       0x24 /tmp/ccNdvfHi.debug.temp.o
- .comment       0x00000000       0x24 /tmp/ccv16uvU.debug.temp.o
- .comment       0x00000000       0x24 /tmp/ccgHNtnY.debug.temp.o
- .debug_info    0x00000000      0x45f /tmp/ccC9UA50.debug.temp.o
- .debug_abbrev  0x00000000       0xdc /tmp/ccC9UA50.debug.temp.o
- .debug_line    0x00000000      0x233 /tmp/ccC9UA50.debug.temp.o
- .debug_str     0x00000000      0x4dd /tmp/ccC9UA50.debug.temp.o
- .comment       0x00000000       0x24 /tmp/ccC9UA50.debug.temp.o
- .debug_info    0x00000000     0x93c1 /tmp/ccluG2Ba.debug.temp.o
- .debug_abbrev  0x00000000      0xa09 /tmp/ccluG2Ba.debug.temp.o
- .debug_line    0x00000000      0x745 /tmp/ccluG2Ba.debug.temp.o
- .debug_str     0x00000000     0x9084 /tmp/ccluG2Ba.debug.temp.o
- .comment       0x00000000       0x24 /tmp/ccluG2Ba.debug.temp.o
- .comment       0x00000000       0x24 /tmp/cc2zxHzJ.debug.temp.o
- .comment       0x00000000       0x24 /tmp/cckOim5u.debug.temp.o
- .comment       0x00000000       0x24 /tmp/ccpAo6ZT.debug.temp.o
- .comment       0x00000000       0x24 /tmp/ccsch08I.debug.temp.o
- .comment       0x00000000       0x24 /tmp/cch7dZSB.debug.temp.o
- .comment       0x00000000       0x24 /tmp/ccZnE881.debug.temp.o
- .comment       0x00000000       0x24 /tmp/ccqtYPlM.debug.temp.o
- .comment       0x00000000       0x24 /tmp/cc1QHINi.debug.temp.o
- .comment       0x00000000       0x24 /tmp/ccZXdSq4.debug.temp.o
- .debug_info    0x00000000      0x52b /tmp/cca3YA82.debug.temp.o
- .debug_abbrev  0x00000000      0x14c /tmp/cca3YA82.debug.temp.o
- .debug_line    0x00000000      0x28b /tmp/cca3YA82.debug.temp.o
- .debug_str     0x00000000      0x513 /tmp/cca3YA82.debug.temp.o
- .comment       0x00000000       0x24 /tmp/cca3YA82.debug.temp.o
- .comment       0x00000000       0x24 /tmp/ccGqtSRM.debug.temp.o
- .debug_info    0x00000000      0x4b0 /tmp/ccruHTqd.debug.temp.o
- .debug_abbrev  0x00000000      0x133 /tmp/ccruHTqd.debug.temp.o
- .debug_line    0x00000000      0x2ea /tmp/ccruHTqd.debug.temp.o
- .debug_str     0x00000000      0x52e /tmp/ccruHTqd.debug.temp.o
- .comment       0x00000000       0x24 /tmp/ccruHTqd.debug.temp.o
- .comment       0x00000000       0x24 /tmp/ccY4Hidb.debug.temp.o
- .comment       0x00000000       0x24 /tmp/cc5uz4HI.debug.temp.o
- .comment       0x00000000       0x24 /tmp/ccqMGPn8.debug.temp.o
- .comment       0x00000000       0x24 /tmp/cc57V5xn.debug.temp.o
- .comment       0x00000000       0x24 /tmp/ccWLBXNn.debug.temp.o
- .comment       0x00000000       0x24 /tmp/cc9iKQyH.debug.temp.o
- .comment       0x00000000       0x24 /tmp/cct0QBXz.debug.temp.o
- .comment       0x00000000       0x24 /tmp/cc5x1eSp.debug.temp.o
- .debug_info    0x00000000      0x830 /tmp/ccw4wvUl.debug.temp.o
- .debug_abbrev  0x00000000      0x1b1 /tmp/ccw4wvUl.debug.temp.o
- .debug_line    0x00000000      0x11d /tmp/ccw4wvUl.debug.temp.o
- .debug_str     0x00000000      0x33f /tmp/ccw4wvUl.debug.temp.o
- .comment       0x00000000       0x24 /tmp/ccw4wvUl.debug.temp.o
- .debug_info    0x00000000      0x728 /tmp/ccsQuUFQ.debug.temp.o
- .debug_abbrev  0x00000000      0x19e /tmp/ccsQuUFQ.debug.temp.o
- .debug_line    0x00000000      0x10e /tmp/ccsQuUFQ.debug.temp.o
- .debug_str     0x00000000      0x2f0 /tmp/ccsQuUFQ.debug.temp.o
- .comment       0x00000000       0x24 /tmp/ccsQuUFQ.debug.temp.o
- .debug_info    0x00000000      0x278 /tmp/ccJRIO3n.debug.temp.o
- .debug_abbrev  0x00000000      0x162 /tmp/ccJRIO3n.debug.temp.o
- .debug_line    0x00000000      0x13b /tmp/ccJRIO3n.debug.temp.o
- .debug_str     0x00000000      0x283 /tmp/ccJRIO3n.debug.temp.o
- .comment       0x00000000       0x24 /tmp/ccJRIO3n.debug.temp.o
- .comment       0x00000000       0x24 /tmp/ccsseAeA.debug.temp.o
- .comment       0x00000000       0x24 /tmp/ccoos1Y9.debug.temp.o
- .comment       0x00000000       0x24 /tmp/ccLVyW56.debug.temp.o
- .comment       0x00000000       0x24 /tmp/ccU5pnRm.debug.temp.o
- .debug_info    0x00000000       0xf6 /tmp/ccqVLpb7.debug.temp.o
- .debug_abbrev  0x00000000       0xc8 /tmp/ccqVLpb7.debug.temp.o
- .debug_line    0x00000000       0xec /tmp/ccqVLpb7.debug.temp.o
- .debug_str     0x00000000      0x1c3 /tmp/ccqVLpb7.debug.temp.o
- .comment       0x00000000       0x24 /tmp/ccqVLpb7.debug.temp.o
- .debug_info    0x00000000      0x357 /tmp/ccHkzz4y.debug.temp.o
- .debug_abbrev  0x00000000      0x131 /tmp/ccHkzz4y.debug.temp.o
- .debug_line    0x00000000       0xe6 /tmp/ccHkzz4y.debug.temp.o
- .debug_str     0x00000000      0x2d7 /tmp/ccHkzz4y.debug.temp.o
- .comment       0x00000000       0x24 /tmp/ccHkzz4y.debug.temp.o
- .comment       0x00000000       0x24 /tmp/cc4lckLv.debug.temp.o
+ .data          0x00000000        0x0 /tmp/ccktRJzG.ltrans0.ltrans.o
+ .data          0x00000000        0x0 /tmp/ccktRJzG.ltrans1.ltrans.o
+ .bss           0x00000000        0x0 /tmp/ccktRJzG.ltrans1.ltrans.o
+ .data          0x00000000        0x0 /tmp/ccktRJzG.ltrans2.ltrans.o
+ .comment       0x00000000       0x24 /tmp/ccJmOrco.debug.temp.o
+ .comment       0x00000000       0x24 /tmp/ccdYGhJh.debug.temp.o
+ .comment       0x00000000       0x24 /tmp/ccMI1Ney.debug.temp.o
+ .comment       0x00000000       0x24 /tmp/ccTtwinI.debug.temp.o
+ .comment       0x00000000       0x24 /tmp/ccHNglKc.debug.temp.o
+ .comment       0x00000000       0x24 /tmp/ccoTCAQH.debug.temp.o
+ .comment       0x00000000       0x24 /tmp/ccWQbbWA.debug.temp.o
+ .comment       0x00000000       0x24 /tmp/ccLVDvXv.debug.temp.o
+ .comment       0x00000000       0x24 /tmp/cc8dwAhG.debug.temp.o
+ .comment       0x00000000       0x24 /tmp/ccCKwPX8.debug.temp.o
+ .comment       0x00000000       0x24 /tmp/ccL5qha7.debug.temp.o
+ .comment       0x00000000       0x24 /tmp/ccIWzpi3.debug.temp.o
+ .comment       0x00000000       0x24 /tmp/cc6rI9UN.debug.temp.o
+ .comment       0x00000000       0x24 /tmp/ccdBckBY.debug.temp.o
+ .comment       0x00000000       0x24 /tmp/cc9Ar874.debug.temp.o
+ .comment       0x00000000       0x24 /tmp/ccPPwzAe.debug.temp.o
+ .debug_info    0x00000000      0x45f /tmp/ccsWdt4t.debug.temp.o
+ .debug_abbrev  0x00000000       0xdc /tmp/ccsWdt4t.debug.temp.o
+ .debug_line    0x00000000      0x233 /tmp/ccsWdt4t.debug.temp.o
+ .debug_str     0x00000000      0x4dd /tmp/ccsWdt4t.debug.temp.o
+ .comment       0x00000000       0x24 /tmp/ccsWdt4t.debug.temp.o
+ .debug_info    0x00000000     0x93c1 /tmp/ccVEI7cy.debug.temp.o
+ .debug_abbrev  0x00000000      0xa09 /tmp/ccVEI7cy.debug.temp.o
+ .debug_line    0x00000000      0x745 /tmp/ccVEI7cy.debug.temp.o
+ .debug_str     0x00000000     0x9084 /tmp/ccVEI7cy.debug.temp.o
+ .comment       0x00000000       0x24 /tmp/ccVEI7cy.debug.temp.o
+ .comment       0x00000000       0x24 /tmp/ccfBXiql.debug.temp.o
+ .comment       0x00000000       0x24 /tmp/ccPb7YZs.debug.temp.o
+ .comment       0x00000000       0x24 /tmp/ccpFBV35.debug.temp.o
+ .comment       0x00000000       0x24 /tmp/ccw5A3n2.debug.temp.o
+ .comment       0x00000000       0x24 /tmp/cc0PuC2Y.debug.temp.o
+ .comment       0x00000000       0x24 /tmp/ccqj43oK.debug.temp.o
+ .comment       0x00000000       0x24 /tmp/ccMhhL7N.debug.temp.o
+ .comment       0x00000000       0x24 /tmp/ccYDf9vv.debug.temp.o
+ .comment       0x00000000       0x24 /tmp/cc46nfuk.debug.temp.o
+ .debug_info    0x00000000      0x52b /tmp/cc2iIoLl.debug.temp.o
+ .debug_abbrev  0x00000000      0x14c /tmp/cc2iIoLl.debug.temp.o
+ .debug_line    0x00000000      0x28b /tmp/cc2iIoLl.debug.temp.o
+ .debug_str     0x00000000      0x513 /tmp/cc2iIoLl.debug.temp.o
+ .comment       0x00000000       0x24 /tmp/cc2iIoLl.debug.temp.o
+ .comment       0x00000000       0x24 /tmp/cc0iZ13Q.debug.temp.o
+ .debug_info    0x00000000      0x4b0 /tmp/ccMhoQrr.debug.temp.o
+ .debug_abbrev  0x00000000      0x133 /tmp/ccMhoQrr.debug.temp.o
+ .debug_line    0x00000000      0x2ea /tmp/ccMhoQrr.debug.temp.o
+ .debug_str     0x00000000      0x52e /tmp/ccMhoQrr.debug.temp.o
+ .comment       0x00000000       0x24 /tmp/ccMhoQrr.debug.temp.o
+ .comment       0x00000000       0x24 /tmp/ccC0Hgtu.debug.temp.o
+ .comment       0x00000000       0x24 /tmp/cc0Jd66m.debug.temp.o
+ .comment       0x00000000       0x24 /tmp/ccyJvEEr.debug.temp.o
+ .comment       0x00000000       0x24 /tmp/cce9htz3.debug.temp.o
+ .comment       0x00000000       0x24 /tmp/cc5qDKJT.debug.temp.o
+ .comment       0x00000000       0x24 /tmp/ccUAgzWV.debug.temp.o
+ .comment       0x00000000       0x24 /tmp/ccFegeKA.debug.temp.o
+ .comment       0x00000000       0x24 /tmp/ccP5YWZw.debug.temp.o
+ .debug_info    0x00000000      0x830 /tmp/cc0NESwH.debug.temp.o
+ .debug_abbrev  0x00000000      0x1b1 /tmp/cc0NESwH.debug.temp.o
+ .debug_line    0x00000000      0x11d /tmp/cc0NESwH.debug.temp.o
+ .debug_str     0x00000000      0x33f /tmp/cc0NESwH.debug.temp.o
+ .comment       0x00000000       0x24 /tmp/cc0NESwH.debug.temp.o
+ .debug_info    0x00000000      0x728 /tmp/ccBfOpYY.debug.temp.o
+ .debug_abbrev  0x00000000      0x19e /tmp/ccBfOpYY.debug.temp.o
+ .debug_line    0x00000000      0x10e /tmp/ccBfOpYY.debug.temp.o
+ .debug_str     0x00000000      0x2f0 /tmp/ccBfOpYY.debug.temp.o
+ .comment       0x00000000       0x24 /tmp/ccBfOpYY.debug.temp.o
+ .debug_info    0x00000000      0x278 /tmp/ccS6Lyem.debug.temp.o
+ .debug_abbrev  0x00000000      0x162 /tmp/ccS6Lyem.debug.temp.o
+ .debug_line    0x00000000      0x13b /tmp/ccS6Lyem.debug.temp.o
+ .debug_str     0x00000000      0x283 /tmp/ccS6Lyem.debug.temp.o
+ .comment       0x00000000       0x24 /tmp/ccS6Lyem.debug.temp.o
+ .comment       0x00000000       0x24 /tmp/ccVhvxKW.debug.temp.o
+ .comment       0x00000000       0x24 /tmp/ccsFfXOc.debug.temp.o
+ .comment       0x00000000       0x24 /tmp/cclfgkLM.debug.temp.o
+ .comment       0x00000000       0x24 /tmp/ccv3O3sm.debug.temp.o
+ .debug_info    0x00000000       0xf6 /tmp/ccl7HeLA.debug.temp.o
+ .debug_abbrev  0x00000000       0xc8 /tmp/ccl7HeLA.debug.temp.o
+ .debug_line    0x00000000       0xec /tmp/ccl7HeLA.debug.temp.o
+ .debug_str     0x00000000      0x1c3 /tmp/ccl7HeLA.debug.temp.o
+ .comment       0x00000000       0x24 /tmp/ccl7HeLA.debug.temp.o
+ .debug_info    0x00000000      0x357 /tmp/cc6Z4Mwx.debug.temp.o
+ .debug_abbrev  0x00000000      0x131 /tmp/cc6Z4Mwx.debug.temp.o
+ .debug_line    0x00000000       0xe6 /tmp/cc6Z4Mwx.debug.temp.o
+ .debug_str     0x00000000      0x2d7 /tmp/cc6Z4Mwx.debug.temp.o
+ .comment       0x00000000       0x24 /tmp/cc6Z4Mwx.debug.temp.o
+ .comment       0x00000000       0x24 /tmp/ccjdAPvD.debug.temp.o
  .text          0x00000000        0x0 bn_sprites_manager.bn_iwram.o
  .data          0x00000000        0x0 bn_sprites_manager.bn_iwram.o
  .bss           0x00000000        0x0 bn_sprites_manager.bn_iwram.o
@@ -479,378 +487,440 @@ Linker script and memory map
  *(.plt)
                 0x0800021c                        . = ALIGN (0x4)
 
-.text           0x08000220    0x15868
+.text           0x08000220    0x165d0
  *(EXCLUDE_FILE(*.iwram*) .text*)
  .text.__do_global_dtors_aux
                 0x08000220       0x2c /opt/devkitpro/devkitARM/bin/../lib/gcc/arm-none-eabi/14.2.0/thumb/crtbegin.o
  .text.frame_dummy
                 0x0800024c       0x24 /opt/devkitpro/devkitARM/bin/../lib/gcc/arm-none-eabi/14.2.0/thumb/crtbegin.o
- .text          0x08000270     0x816c /tmp/ccYUFq4M.ltrans0.ltrans.o
-                0x08000ab4                bn::camera_ptr::position() const
-                0x08000ac8                void bn::ostringstream::append_args<char [4], int>(char const (&) [4], int const&)
-                0x08000ae0                bn::audio_manager::(anonymous namespace)::static_data::~static_data() [clone .lto_priv.0]
-                0x08000ae0                bn::audio_manager::(anonymous namespace)::static_data::~static_data() [clone .lto_priv.0]
-                0x08000ae4                bn::regular_bg_tiles_item::valid_tiles_count(int, bn::bpp_mode)
-                0x08000b20                bn::bg_blocks_manager::log_status()
-                0x08001680                bn::bg_blocks_manager::decrease_usages(int)
-                0x08001728                bn::bg_blocks_manager::(anonymous namespace)::static_data::~static_data() [clone .lto_priv.0]
-                0x08001728                bn::bg_blocks_manager::(anonymous namespace)::static_data::~static_data() [clone .lto_priv.0]
-                0x08001788                bn::bgs_manager::(anonymous namespace)::item_type::update_regular_hw_position() [clone .lto_priv.0]
-                0x080017e8                bn::bgs_manager::update_regular_map_tiles_cbb(int, int)
-                0x080018a8                bn::bgs_manager::update_regular_map_palette_bpp(int, bn::bpp_mode)
-                0x08001978                _bn::assert::show(char const*, char const*, char const*, int, bn::istring_base const&)
-                0x08001990                void _bn::assert::show_args<char [38]>(char const*, char const*, char const*, int, char const (&) [38])
-                0x08001990                void _bn::assert::show_args<char [32]>(char const*, char const*, char const*, int, char const (&) [32])
-                0x08001990                void _bn::assert::show_args<char [16]>(char const*, char const*, char const*, int, char const (&) [16])
-                0x08001990                void _bn::assert::show_args<char [33]>(char const*, char const*, char const*, int, char const (&) [33])
-                0x08001990                void _bn::assert::show_args<char [17]>(char const*, char const*, char const*, int, char const (&) [17])
-                0x08001990                void _bn::assert::show_args<char [23]>(char const*, char const*, char const*, int, char const (&) [23])
-                0x08001990                void _bn::assert::show_args<char [37]>(char const*, char const*, char const*, int, char const (&) [37])
-                0x08001990                void _bn::assert::show_args<char [22]>(char const*, char const*, char const*, int, char const (&) [22])
-                0x08001990                void _bn::assert::show_args<char [27]>(char const*, char const*, char const*, int, char const (&) [27])
-                0x08001990                void _bn::assert::show_args<char [14]>(char const*, char const*, char const*, int, char const (&) [14])
-                0x08001990                void _bn::assert::show_args<char [35]>(char const*, char const*, char const*, int, char const (&) [35])
-                0x08001990                void _bn::assert::show_args<char [19]>(char const*, char const*, char const*, int, char const (&) [19])
-                0x08001990                void _bn::assert::show_args<char [26]>(char const*, char const*, char const*, int, char const (&) [26])
-                0x08001990                void _bn::assert::show_args<char [13]>(char const*, char const*, char const*, int, char const (&) [13])
-                0x08001990                void _bn::assert::show_args<char [18]>(char const*, char const*, char const*, int, char const (&) [18])
-                0x08001990                void _bn::assert::show_args<char [46]>(char const*, char const*, char const*, int, char const (&) [46])
-                0x08001990                void _bn::assert::show_args<char [31]>(char const*, char const*, char const*, int, char const (&) [31])
-                0x08001990                void _bn::assert::show_args<char [15]>(char const*, char const*, char const*, int, char const (&) [15])
-                0x08001990                void _bn::assert::show_args<char [54]>(char const*, char const*, char const*, int, char const (&) [54])
-                0x080019d0                bn::bgs_manager::(anonymous namespace)::static_data::~static_data() [clone .lto_priv.0]
-                0x080019d0                bn::bgs_manager::(anonymous namespace)::static_data::~static_data() [clone .lto_priv.0]
-                0x08001d14                _bn::assert::show(char const*, char const*, char const*, int)
-                0x08001df4                bn::optional<bn::bg_palette_ptr>::operator->() const [clone .part.0] [clone .lto_priv.0]
-                0x08001df4                bn::optional<bn::affine_bg_tiles_ptr>::operator->() const [clone .part.0] [clone .lto_priv.0]
-                0x08001e1c                bn::bg_blocks_manager::(anonymous namespace)::item_type::regular_tiles_offset() const [clone .lto_priv.0]
-                0x08002698                bn::optional<bn::bg_palette_ptr>::operator->() [clone .part.0] [clone .lto_priv.0]
-                0x08002698                bn::optional<bn::regular_bg_tiles_ptr>::operator->() [clone .part.0] [clone .lto_priv.0]
-                0x080026c0                bn::optional<bn::regular_bg_map_ptr>::operator*() [clone .part.0] [clone .lto_priv.0]
-                0x080026e8                void _bn::assert::show_args<char [27], int>(char const*, char const*, char const*, int, char const (&) [27], int const&)
-                0x080026e8                void _bn::assert::show_args<char [24], int>(char const*, char const*, char const*, int, char const (&) [24], int const&)
-                0x080026e8                void _bn::assert::show_args<char [17], int>(char const*, char const*, char const*, int, char const (&) [17], int const&)
-                0x080026e8                void _bn::assert::show_args<char [15], int>(char const*, char const*, char const*, int, char const (&) [15], int const&)
-                0x080026e8                void _bn::assert::show_args<char [22], int>(char const*, char const*, char const*, int, char const (&) [22], int const&)
-                0x080026e8                void _bn::assert::show_args<char [39], int>(char const*, char const*, char const*, int, char const (&) [39], int const&)
-                0x080026e8                void _bn::assert::show_args<char [25], int>(char const*, char const*, char const*, int, char const (&) [25], int const&)
-                0x080026e8                void _bn::assert::show_args<char [16], int>(char const*, char const*, char const*, int, char const (&) [16], int const&)
-                0x080026e8                void _bn::assert::show_args<char [26], int>(char const*, char const*, char const*, int, char const (&) [26], int const&)
-                0x08002e98                bn::bg_blocks_manager::(anonymous namespace)::_create_impl(bn::bg_blocks_manager::(anonymous namespace)::create_data&&) [clone .lto_priv.0]
-                0x08008224                void _bn::assert::show_args<char [27], bn::fixed_t<12> >(char const*, char const*, char const*, int, char const (&) [27], bn::fixed_t<12> const&)
-                0x08008224                void _bn::assert::show_args<char [25], bn::fixed_t<12> >(char const*, char const*, char const*, int, char const (&) [25], bn::fixed_t<12> const&)
-                0x0800838c                bn::display_manager::(anonymous namespace)::static_data::~static_data() [clone .lto_priv.0]
-                0x0800838c                bn::display_manager::(anonymous namespace)::static_data::~static_data() [clone .lto_priv.0]
- .text.startup  0x080083dc     0x2074 /tmp/ccYUFq4M.ltrans0.ltrans.o
-                0x080083dc                main
- .text          0x0800a450     0x8b5c /tmp/ccYUFq4M.ltrans1.ltrans.o
-                0x0800a598                bn::hw::link::(anonymous namespace)::_resetStateCallback() [clone .lto_priv.0]
-                0x0800b370                bn::hblank_effects_manager::(anonymous namespace)::item_type::_output_values_ptr() [clone .lto_priv.0]
-                0x0800b3b0                operator delete(void*)
-                0x0800b3bc                operator delete(void*, unsigned int)
-                0x0800b3c8                operator delete[](void*)
-                0x0800b3d4                operator delete[](void*, unsigned int)
-                0x0800b3e0                bn::hw::log(bn::istring_base const&) [clone .isra.0]
-                0x0800b434                bn::ostringstream::ostringstream(bn::istring_base&)
-                0x0800b434                bn::ostringstream::ostringstream(bn::istring_base&)
-                0x0800b43c                bn::string_view::string_view(char const*) [clone .isra.0]
-                0x0800b458                bn::palettes_bank::_apply_global_effects(int, bn::color*) const
-                0x0800b5a4                bn::palettes_bank::palette::apply_effects(int, bn::color*) const
-                0x0800b6f4                bn::palettes_bank::update()
-                0x0800b828                bn::sprites_manager::(anonymous namespace)::_always_update_indexes_to_commit(bn::sprites_manager_item const&) [clone .lto_priv.0]
-                0x0800b870                bn::sprites_manager::(anonymous namespace)::_update_item_dimensions(bn::sprites_manager_item&) [clone .lto_priv.0]
-                0x0800b948                bn::camera_ptr::~camera_ptr() [clone .isra.0]
-                0x0800b974                bn::lc::LinkConnection::stop() [clone .constprop.0]
-                0x0800b9a0                VgmStop()
-                0x0800ba60                gbt_refresh_pattern_ptr.lto_priv.0
-                0x0800bae4                gbt_run_startup_commands.part.0.lto_priv.0
-                0x0800bb78                bn::hw::audio::(anonymous namespace)::_commit() [clone .lto_priv.0]
-                0x0800c2d8                bn::hw::audio::(anonymous namespace)::_vblank_handler() [clone .lto_priv.0]
-                0x0800c428                bn::hw::bgs::commit_data::commit_data() [clone .constprop.0] [clone .isra.0]
-                0x0800c484                bn::bg_blocks_manager::(anonymous namespace)::items_list::items_list() [clone .constprop.0] [clone .isra.0]
-                0x0800c4d0                bn::sprite_affine_mats_manager::(anonymous namespace)::static_data::static_data() [clone .constprop.0] [clone .isra.0]
-                0x0800c574                bn::sprite_tiles_manager::(anonymous namespace)::static_data::static_data() [clone .constprop.0] [clone .isra.0]
-                0x0800c6a0                bn::display_manager::(anonymous namespace)::static_data::static_data() [clone .constprop.0] [clone .isra.0]
-                0x0800c730                bn::hdma_manager::(anonymous namespace)::static_data::static_data() [clone .constprop.0] [clone .isra.0]
-                0x0800c764                bn::hblank_effects_manager::(anonymous namespace)::static_external_data::static_external_data() [clone .constprop.0] [clone .isra.0]
-                0x0800c83c                bn::core::(anonymous namespace)::static_data::static_data() [clone .constprop.0] [clone .isra.0]
-                0x0800c8a4                bn::sprite_ptr::set_camera(bn::camera_ptr const&) [clone .isra.0]
-                0x0800c978                bn::sprite_affine_mats_manager::(anonymous namespace)::item_type::sprite_double_size(int, bn::sprite_shape_size const&) const [clone .isra.0]
-                0x0800cb24                bn::palettes_bank::palettes_bank() [clone .isra.0]
-                0x0800cc70                bn::istring::push_back(char)
-                0x0800ccb4                bn::sprite_affine_mats_manager::decrease_usages(int)
-                0x0800cd98                bn::hw::link::_timer_intr()
-                0x0800ce8c                bn::hw::link::_serial_intr()
-                0x0800d110                bn::iunordered_map<unsigned int, bn::audio_manager::sound_data_type, bn::identity_hasher, bn::equal_to<unsigned int> >::operator()(unsigned int, unsigned int const&) [clone .constprop.0]
-                0x0800d32c                bn::sprite_tiles_ptr::~sprite_tiles_ptr() [clone .isra.0]
-                0x0800d56c                bn::sprites_manager::set_blending_enabled(void*, bool) [clone .constprop.0]
-                0x0800d5ec                bn::hw::audio::(anonymous namespace)::_add_sound_to_queue(int, unsigned short) [clone .lto_priv.0]
-                0x0800d6b8                bn::sorted_sprites::sorter::insert(bn::sprites_manager_item&) [clone .constprop.0]
-                0x0800d8c0                bn::sprites_manager::create(bn::fixed_point_t<12> const&, bn::sprite_shape_size const&, bn::sprite_tiles_ptr&&, bn::sprite_palette_ptr&&)
-                0x0800da90                bn::hw::audio::(anonymous namespace)::_erase_sound_from_queue(unsigned short) [clone .lto_priv.0]
-                0x0800db28                bn::hw::audio::(anonymous namespace)::_check_sounds_queue() [clone .part.0] [clone .lto_priv.0]
-                0x0800dbc8                bn::hw::link::(anonymous namespace)::_sendDataCallback() [clone .lto_priv.0]
-                0x0800dcac                bn::hw::link::(anonymous namespace)::_receiveResponseCallback(bn::lc::LinkResponse const&) [clone .lto_priv.0]
-                0x0800de70                bn::sound_item::play() const [clone .isra.0]
-                0x0800df84                bn::sprite_tiles_manager::(anonymous namespace)::_hw_commit(bn::tile const*, bn::compression_type, int, int) [clone .lto_priv.0]
-                0x0800e01c                bn::ostringstream::append(int)
-                0x0800e1a8                void _bn::assert::show_args<char [16], int, char [4], int>(char const*, char const*, char const*, int, char const (&) [16], int const&, char const (&) [4], int const&) [clone .constprop.0]
-                0x0800e208                bn::keypad_manager::update()
-                0x0800e338                bn::ostringstream::append(char const*)
-                0x0800e7bc                bn::hw::show::error(bn::system_font const&, bn::string_view const&, bn::string_view const&, bn::string_view const&, int, bn::string_view const&, bn::string_view const&) [clone .constprop.0]
-                0x0800eadc                bn::istring::append(char const*) [clone .isra.0]
-                0x0800ec04                bn::sprite_ptr::set_scale(bn::fixed_t<12>, bn::fixed_t<12>) [clone .isra.0]
-                0x0800f33c                void _bn::assert::show_args<char [20], int, char [4], unsigned short>(char const*, char const*, char const*, int, char const (&) [20], int const&, char const (&) [4], unsigned short const&) [clone .constprop.0]
-                0x0800f978                bn::sprite_palette_ptr::create(bn::sprite_palette_item const&)
-                0x0800fac8                bn::ostringstream::append(unsigned int)
-                0x0800fbdc                void _bn::assert::show_args<char [35], unsigned int>(char const*, char const*, char const*, int, char const (&) [35], unsigned int const&) [clone .constprop.0]
-                0x0800fc2c                bn::ostringstream::append(void const*)
-                0x08010560                bn::ostringstream::_append_fraction(unsigned int, int)
-                0x08010670                bn::palettes_bank::decrease_usages(int)
-                0x080108fc                bn::sprites_manager::decrease_usages(void*)
-                0x08010af4                bn::bg_palette_ptr::~bg_palette_ptr() [clone .isra.0]
-                0x08010b0c                bn::bg_blocks_manager::(anonymous namespace)::items_list::insert_after(int, bn::bg_blocks_manager::(anonymous namespace)::item_type const&) [clone .constprop.0]
-                0x08010e24                bn::bg_blocks_manager::(anonymous namespace)::item_type::~item_type() [clone .isra.0]
-                0x0801107c                bn::sprite_tiles_manager::update()
-                0x080112a8                bn::sprite_tiles_manager::(anonymous namespace)::_find_impl(bn::tile const*, bn::compression_type, int) [clone .lto_priv.0]
-                0x08011958                bn::sprite_tiles_manager::create(bn::span<bn::tile const> const&, bn::compression_type) [clone .isra.0]
-                0x08011a54                bn::sprite_ptr::create(bn::fixed_t<12>, bn::fixed_t<12>, bn::sprite_item const&, int)
-                0x08011cc0                operator new(unsigned int)
-                0x08011cf0                operator new[](unsigned int)
-                0x08011d20                malloc
-                0x08011d2c                bn::sprite_shape_size::tiles_count(bn::bpp_mode) const [clone .part.0] [clone .isra.0]
-                0x08011e0c                bn::sprite_shape_size::tiles_count(bn::bpp_mode) const [clone .isra.0]
-                0x08011ef4                bn::sprites_manager::set_tiles(void*, bn::sprite_tiles_ptr&&)
-                0x080120c8                bn::regular_bg_ptr::create(bn::fixed_t<12>, bn::fixed_t<12>, bn::regular_bg_item const&) [clone .constprop.0]
- .text.startup  0x08012fac      0x318 /tmp/ccYUFq4M.ltrans1.ltrans.o
+ .text          0x08000270     0x890c /tmp/ccktRJzG.ltrans0.ltrans.o
+                0x08000734                char_map(char)
+                0x08000a7c                Beryl::set_x(bn::fixed_t<12>)
+                0x08000ab8                void bn::ostringstream::append_args<char [4], int>(char const (&) [4], int const&)
+                0x08000ad0                bn::audio_manager::(anonymous namespace)::static_data::~static_data() [clone .lto_priv.0]
+                0x08000ad0                bn::audio_manager::(anonymous namespace)::static_data::~static_data() [clone .lto_priv.0]
+                0x08000ad4                bn::regular_bg_tiles_item::valid_tiles_count(int, bn::bpp_mode)
+                0x08000b10                bn::bg_blocks_manager::log_status()
+                0x08001670                bn::bg_blocks_manager::decrease_usages(int)
+                0x08001718                bn::bg_blocks_manager::(anonymous namespace)::static_data::~static_data() [clone .lto_priv.0]
+                0x08001718                bn::bg_blocks_manager::(anonymous namespace)::static_data::~static_data() [clone .lto_priv.0]
+                0x08001778                bn::bgs_manager::(anonymous namespace)::item_type::update_regular_hw_position() [clone .lto_priv.0]
+                0x080017d8                bn::camera_ptr::position() const
+                0x080017ec                bn::bgs_manager::update_regular_map_tiles_cbb(int, int)
+                0x080018ac                bn::bgs_manager::update_regular_map_palette_bpp(int, bn::bpp_mode)
+                0x0800197c                _bn::assert::show(char const*, char const*, char const*, int, bn::istring_base const&)
+                0x08001994                void _bn::assert::show_args<char [38]>(char const*, char const*, char const*, int, char const (&) [38])
+                0x08001994                void _bn::assert::show_args<char [32]>(char const*, char const*, char const*, int, char const (&) [32])
+                0x08001994                void _bn::assert::show_args<char [16]>(char const*, char const*, char const*, int, char const (&) [16])
+                0x08001994                void _bn::assert::show_args<char [66]>(char const*, char const*, char const*, int, char const (&) [66])
+                0x08001994                void _bn::assert::show_args<char [33]>(char const*, char const*, char const*, int, char const (&) [33])
+                0x08001994                void _bn::assert::show_args<char [17]>(char const*, char const*, char const*, int, char const (&) [17])
+                0x08001994                void _bn::assert::show_args<char [23]>(char const*, char const*, char const*, int, char const (&) [23])
+                0x08001994                void _bn::assert::show_args<char [37]>(char const*, char const*, char const*, int, char const (&) [37])
+                0x08001994                void _bn::assert::show_args<char [22]>(char const*, char const*, char const*, int, char const (&) [22])
+                0x08001994                void _bn::assert::show_args<char [27]>(char const*, char const*, char const*, int, char const (&) [27])
+                0x08001994                void _bn::assert::show_args<char [14]>(char const*, char const*, char const*, int, char const (&) [14])
+                0x08001994                void _bn::assert::show_args<char [35]>(char const*, char const*, char const*, int, char const (&) [35])
+                0x08001994                void _bn::assert::show_args<char [19]>(char const*, char const*, char const*, int, char const (&) [19])
+                0x08001994                void _bn::assert::show_args<char [26]>(char const*, char const*, char const*, int, char const (&) [26])
+                0x08001994                void _bn::assert::show_args<char [13]>(char const*, char const*, char const*, int, char const (&) [13])
+                0x08001994                void _bn::assert::show_args<char [18]>(char const*, char const*, char const*, int, char const (&) [18])
+                0x08001994                void _bn::assert::show_args<char [46]>(char const*, char const*, char const*, int, char const (&) [46])
+                0x08001994                void _bn::assert::show_args<char [31]>(char const*, char const*, char const*, int, char const (&) [31])
+                0x08001994                void _bn::assert::show_args<char [15]>(char const*, char const*, char const*, int, char const (&) [15])
+                0x08001994                void _bn::assert::show_args<char [54]>(char const*, char const*, char const*, int, char const (&) [54])
+                0x080019d4                bn::bgs_manager::(anonymous namespace)::static_data::~static_data() [clone .lto_priv.0]
+                0x080019d4                bn::bgs_manager::(anonymous namespace)::static_data::~static_data() [clone .lto_priv.0]
+                0x08001a04                bn::bgs_manager::decrease_usages(void*)
+                0x08001c00                _ZN2bn7ivectorINS_14regular_bg_ptrEE5clearEvQnt27is_trivially_destructible_vIT_E.lto_priv.0
+                0x08001f44                _bn::assert::show(char const*, char const*, char const*, int)
+                0x08001f5c                void bn::ostringstream::append<12>(bn::fixed_t<12>)
+                0x08002024                bn::ivector<bn::sprite_ptr>::push_back(bn::sprite_ptr const&) [clone .part.0] [clone .lto_priv.0]
+                0x08002024                bn::ivector<bn::regular_bg_ptr>::push_back(bn::regular_bg_ptr const&) [clone .part.0] [clone .lto_priv.0]
+                0x0800204c                bn::optional<TextElement>::value() [clone .part.0] [clone .lto_priv.0]
+                0x0800204c                bn::optional<Rake>::value() [clone .part.0] [clone .lto_priv.0]
+                0x08002074                bn::optional<bn::bg_palette_ptr>::operator->() const [clone .part.0] [clone .lto_priv.0]
+                0x08002074                bn::optional<bn::affine_bg_tiles_ptr>::operator->() const [clone .part.0] [clone .lto_priv.0]
+                0x0800209c                bn::bg_blocks_manager::(anonymous namespace)::item_type::regular_tiles_offset() const [clone .lto_priv.0]
+                0x08002918                bn::optional<bn::bg_palette_ptr>::operator->() [clone .part.0] [clone .lto_priv.0]
+                0x08002918                bn::optional<bn::regular_bg_tiles_ptr>::operator->() [clone .part.0] [clone .lto_priv.0]
+                0x08002940                bn::optional<bn::regular_bg_map_ptr>::operator*() [clone .part.0] [clone .lto_priv.0]
+                0x08002968                void _bn::assert::show_args<char [27], int>(char const*, char const*, char const*, int, char const (&) [27], int const&)
+                0x08002968                void _bn::assert::show_args<char [24], int>(char const*, char const*, char const*, int, char const (&) [24], int const&)
+                0x08002968                void _bn::assert::show_args<char [17], int>(char const*, char const*, char const*, int, char const (&) [17], int const&)
+                0x08002968                void _bn::assert::show_args<char [15], int>(char const*, char const*, char const*, int, char const (&) [15], int const&)
+                0x08002968                void _bn::assert::show_args<char [22], int>(char const*, char const*, char const*, int, char const (&) [22], int const&)
+                0x08002968                void _bn::assert::show_args<char [39], int>(char const*, char const*, char const*, int, char const (&) [39], int const&)
+                0x08002968                void _bn::assert::show_args<char [25], int>(char const*, char const*, char const*, int, char const (&) [25], int const&)
+                0x08002968                void _bn::assert::show_args<char [16], int>(char const*, char const*, char const*, int, char const (&) [16], int const&)
+                0x08002968                void _bn::assert::show_args<char [26], int>(char const*, char const*, char const*, int, char const (&) [26], int const&)
+                0x080029b8                Beryl::set_frame(int)
+                0x08003118                bn::bg_blocks_manager::(anonymous namespace)::_create_impl(bn::bg_blocks_manager::(anonymous namespace)::create_data&&) [clone .lto_priv.0]
+                0x080083d0                bn::core::update()
+                0x0800844c                void _bn::assert::show_args<char [27], bn::fixed_t<12> >(char const*, char const*, char const*, int, char const (&) [27], bn::fixed_t<12> const&)
+                0x0800844c                void _bn::assert::show_args<char [25], bn::fixed_t<12> >(char const*, char const*, char const*, int, char const (&) [25], bn::fixed_t<12> const&)
+                0x0800844c                void _bn::assert::show_args<char [38], bn::fixed_t<12> >(char const*, char const*, char const*, int, char const (&) [38], bn::fixed_t<12> const&)
+                0x0800849c                bn::sound::play(bn::sound_item, bn::fixed_t<12>)
+                0x080085b4                bn::display_manager::(anonymous namespace)::static_data::~static_data() [clone .lto_priv.0]
+                0x080085b4                bn::display_manager::(anonymous namespace)::static_data::~static_data() [clone .lto_priv.0]
+                0x08008600                bn::span<bn::color const>::_build_end(bn::color const*, int)
+                0x08008660                operator new(unsigned int)
+                0x08008690                operator delete(void*)
+                0x0800869c                operator delete(void*, unsigned int)
+                0x080086a8                operator new[](unsigned int)
+                0x080086d8                operator delete[](void*)
+                0x080086e4                operator delete[](void*, unsigned int)
+                0x080086f0                bn::memory_manager::(anonymous namespace)::static_data::~static_data() [clone .lto_priv.0]
+                0x080086f0                bn::memory_manager::(anonymous namespace)::static_data::~static_data() [clone .lto_priv.0]
+                0x08008724                bn::sprite_palette_ptr::create(bn::sprite_palette_item const&)
+ .text.startup  0x08008b7c      0x804 /tmp/ccktRJzG.ltrans0.ltrans.o
+                0x08008b7c                main
+ .text          0x08009380     0x8470 /tmp/ccktRJzG.ltrans1.ltrans.o
+                0x08009380                bn::hw::link::(anonymous namespace)::_resetStateCallback() [clone .lto_priv.0]
+                0x0800958c                bmp16_drawg_b1cts
+                0x0800964c                dummy_drawg
+                0x08009650                dummy_erase
+                0x08009c64                bmp16_erase
+                0x08009db0                bn::ostringstream::ostringstream(bn::istring_base&)
+                0x08009db0                bn::ostringstream::ostringstream(bn::istring_base&)
+                0x08009db8                bn::ostringstream::append(char const*)
+                0x08009e44                bn::palettes_bank::find_bpp_4(bn::span<bn::color const> const&, unsigned short)
+                0x08009fec                bn::palettes_bank::_apply_global_effects(int, bn::color*) const
+                0x0800a138                bn::palettes_bank::palette::apply_effects(int, bn::color*) const
+                0x0800a288                bn::palettes_bank::update()
+                0x0800a3bc                bn::palettes_manager::(anonymous namespace)::static_data::~static_data() [clone .lto_priv.0]
+                0x0800a3bc                bn::palettes_manager::(anonymous namespace)::static_data::~static_data() [clone .lto_priv.0]
+                0x0800a3c0                bn::sprite_affine_mats_manager::(anonymous namespace)::_update_flipped_identity(int) [clone .lto_priv.0]
+                0x0800a47c                bool bn::sprite_affine_mats_manager::(anonymous namespace)::_sprite_double_size<32, 16>(int, int, int, int, int) [clone .lto_priv.0]
+                0x0800a500                bool bn::sprite_affine_mats_manager::(anonymous namespace)::_sprite_double_size<16, 32>(int, int, int, int, int) [clone .lto_priv.0]
+                0x0800a584                bn::sprite_affine_mats_manager::(anonymous namespace)::static_data::~static_data() [clone .lto_priv.0]
+                0x0800a584                bn::sprite_affine_mats_manager::(anonymous namespace)::static_data::~static_data() [clone .lto_priv.0]
+                0x0800a5c0                bn::sprites_manager::(anonymous namespace)::_always_update_indexes_to_commit(bn::sprites_manager_item const&) [clone .lto_priv.0]
+                0x0800a608                bn::sprites_manager::(anonymous namespace)::_update_item_dimensions(bn::sprites_manager_item&) [clone .lto_priv.0]
+                0x0800a6e0                VgmStop()
+                0x0800a7a0                gbt_refresh_pattern_ptr.lto_priv.0
+                0x0800a824                gbt_run_startup_commands.part.0.lto_priv.0
+                0x0800a8b8                bn::hw::audio::(anonymous namespace)::_commit() [clone .lto_priv.0]
+                0x0800b018                bn::hw::audio::(anonymous namespace)::_vblank_handler() [clone .lto_priv.0]
+                0x0800b168                bn::best_fit_allocator::free(void*) [clone .constprop.0]
+                0x0800b284                bn::istring::push_back(char)
+                0x0800b2c8                bn::sprite_affine_mats_manager::decrease_usages(int)
+                0x0800b340                bn::hw::link::_timer_intr()
+                0x0800b434                bn::hw::link::_serial_intr()
+                0x0800b738                bn::iunordered_map<unsigned int, bn::audio_manager::sound_data_type, bn::identity_hasher, bn::equal_to<unsigned int> >::operator()(unsigned int, unsigned int const&) [clone .constprop.0]
+                0x0800b954                bn::sprite_tiles_manager::update()
+                0x0800bb84                bn::hw::audio::(anonymous namespace)::_add_sound_to_queue(int, unsigned short) [clone .lto_priv.0]
+                0x0800bc50                bn::sprites_manager::create(bn::fixed_point_t<12> const&, bn::sprite_shape_size const&, bn::sprite_tiles_ptr&&, bn::sprite_palette_ptr&&)
+                0x0800be20                bn::sprites_manager::set_new_affine_mat(void*, bn::affine_mat_attributes&)
+                0x0800c1c0                bn::hw::audio::(anonymous namespace)::_erase_sound_from_queue(unsigned short) [clone .lto_priv.0]
+                0x0800c258                bn::hw::audio::(anonymous namespace)::_check_sounds_queue() [clone .part.0] [clone .lto_priv.0]
+                0x0800c2f8                bn::hw::link::(anonymous namespace)::_sendDataCallback() [clone .lto_priv.0]
+                0x0800c3dc                bn::hw::link::(anonymous namespace)::_receiveResponseCallback(bn::lc::LinkResponse const&) [clone .lto_priv.0]
+                0x0800c538                bn::sprites_manager::(anonymous namespace)::static_data::~static_data() [clone .lto_priv.0]
+                0x0800c538                bn::sprites_manager::(anonymous namespace)::static_data::~static_data() [clone .lto_priv.0]
+                0x0800c59c                bn::hw::audio::(anonymous namespace)::static_data::~static_data() [clone .lto_priv.0]
+                0x0800c59c                bn::hw::audio::(anonymous namespace)::static_data::~static_data() [clone .lto_priv.0]
+                0x0800c5a0                bn::ostringstream::append(int)
+                0x0800c72c                bn::palettes_bank::log_status() const
+                0x0800cb78                void _bn::assert::show_args<char [20], int, char [4], unsigned short>(char const*, char const*, char const*, int, char const (&) [20], int const&, char const (&) [4], unsigned short const&) [clone .constprop.0]
+                0x0800cbe0                bn::ostringstream::append(unsigned int)
+                0x0800ccf4                void _bn::assert::show_args<char [35], unsigned int>(char const*, char const*, char const*, int, char const (&) [35], unsigned int const&) [clone .constprop.0]
+                0x0800cd44                bn::ostringstream::append(void const*)
+                0x0800ce64                bn::sprite_tiles_manager::log_status()
+                0x0800d5f8                bn::ostringstream::_append_fraction(unsigned int, int)
+                0x0800d708                bn::palettes_bank::decrease_usages(int)
+                0x0800d994                bn::sprites_manager::decrease_usages(void*)
+                0x0800db8c                bn::bg_blocks_manager::(anonymous namespace)::items_list::insert_after(int, bn::bg_blocks_manager::(anonymous namespace)::item_type const&) [clone .constprop.0]
+                0x0800de60                bn::sprite_tiles_ptr::create(bn::sprite_tiles_item const&)
+                0x0800dfe4                bn::sprite_tiles_manager::(anonymous namespace)::_find_impl(bn::tile const*, bn::compression_type, int) [clone .lto_priv.0]
+                0x0800e280                bn::sprite_tiles_manager::(anonymous namespace)::_hw_commit(bn::tile const*, bn::compression_type, int, int) [clone .lto_priv.0]
+                0x0800e5cc                bn::sprite_tiles_manager::(anonymous namespace)::_create_impl(bn::tile const*, bn::compression_type, int) [clone .lto_priv.0]
+                0x0800e7cc                bn::sprites_manager::set_tiles(void*, bn::sprite_tiles_ptr&&)
+                0x0800e9a0                bn::best_fit_allocator::alloc(int) [clone .constprop.0]
+                0x0800eb04                malloc
+                0x0800f9f0                play_room(int) [clone .constprop.0]
+ .text          0x080117f0     0x2524 /tmp/ccktRJzG.ltrans2.ltrans.o
+                0x08011960                bn::lc::LinkConnection::stop() [clone .constprop.0]
+                0x0801198c                bn::hw::bgs::commit_data::commit_data() [clone .constprop.0] [clone .isra.0]
+                0x080119e8                bn::bg_blocks_manager::(anonymous namespace)::items_list::items_list() [clone .constprop.0] [clone .isra.0]
+                0x08011a34                bn::sprite_affine_mats_manager::(anonymous namespace)::static_data::static_data() [clone .constprop.0] [clone .isra.0]
+                0x08011ad8                bn::sprite_tiles_manager::(anonymous namespace)::static_data::static_data() [clone .constprop.0] [clone .isra.0]
+                0x08011c04                bn::display_manager::(anonymous namespace)::static_data::static_data() [clone .constprop.0] [clone .isra.0]
+                0x08011c94                bn::hdma_manager::(anonymous namespace)::static_data::static_data() [clone .constprop.0] [clone .isra.0]
+                0x08011cc8                bn::hblank_effects_manager::(anonymous namespace)::static_external_data::static_external_data() [clone .constprop.0] [clone .isra.0]
+                0x08011da0                bn::hw::log(bn::istring_base const&) [clone .isra.0]
+                0x08011df4                bn::string_view::string_view(char const*) [clone .isra.0]
+                0x08011e10                bn::core::(anonymous namespace)::static_data::static_data() [clone .constprop.0] [clone .isra.0]
+                0x08011e78                bn::sprite_ptr::set_scale(bn::fixed_t<12>, bn::fixed_t<12>) [clone .isra.0]
+                0x08012154                bn::sprite_ptr::set_rotation_angle(bn::fixed_t<12>) [clone .isra.0]
+                0x08012320                bn::sprite_ptr::set_camera(bn::camera_ptr const&) [clone .isra.0]
+                0x080123f4                bn::camera_ptr::~camera_ptr() [clone .isra.0]
+                0x08012420                bn::sprite_ptr::set_x(bn::fixed_t<12>) [clone .isra.0]
+                0x08012468                bn::sprite_affine_mats_manager::(anonymous namespace)::item_type::sprite_double_size(int, bn::sprite_shape_size const&) const [clone .isra.0]
+                0x08012614                bn::bg_palette_ptr::~bg_palette_ptr() [clone .isra.0]
+                0x0801262c                bn::palettes_bank::palettes_bank() [clone .isra.0]
+                0x08012700                bn::bg_blocks_manager::(anonymous namespace)::create_data::~create_data() [clone .isra.0]
+                0x08012744                bn::bg_blocks_manager::(anonymous namespace)::item_type::~item_type() [clone .isra.0]
+                0x08012790                TextElement::~TextElement() [clone .isra.0]
+                0x080127f8                Rake::~Rake() [clone .isra.0]
+                0x0801282c                void _bn::assert::show_args<char [16], int, char [4], int>(char const*, char const*, char const*, int, char const (&) [16], int const&, char const (&) [4], int const&) [clone .constprop.0]
+                0x0801288c                bn::istring::append(char const*) [clone .isra.0]
+                0x08012974                void _bn::assert::show_args<char [27], unsigned char>(char const*, char const*, char const*, int, char const (&) [27], unsigned char const&) [clone .constprop.0]
+                0x080129c8                bn::palettes_bank::create_bpp_4(bn::span<bn::color const> const&, unsigned short, bool) [clone .constprop.0]
+                0x08012c24                bn::palettes_bank::colors_hash(bn::span<bn::color const> const&) [clone .isra.0]
+                0x08012c68                bn::sorted_sprites::sorter::insert(bn::sprites_manager_item&) [clone .constprop.0]
+                0x08012e70                bn::sprite_tiles_ptr::~sprite_tiles_ptr() [clone .isra.0]
+                0x080130b0                bn::sound_item::play() const [clone .isra.0]
+                0x08013164                bn::palettes_bank::create_bpp_8(bn::span<bn::color const> const&, bn::compression_type, bool) [clone .constprop.0]
+                0x0801336c                bn::(anonymous namespace)::_create_impl(bn::sprite_palette_item const&, bool) [clone .constprop.0]
+                0x080133e4                bn::istring::append(char const*, int) [clone .isra.0]
+                0x08013474                bn::hw::show::error(bn::system_font const&, bn::string_view const&, bn::string_view const&, bn::string_view const&, int, bn::string_view const&, bn::string_view const&) [clone .constprop.0]
+                0x08013798                void bn::ostringstream::append_args<int, char [34], bn::string_view>(int const&, char const (&) [34], bn::string_view const&) [clone .constprop.0] [clone .isra.0]
+                0x08013840                bn::sprite_tiles_manager::create(bn::span<bn::tile const> const&, bn::compression_type) [clone .isra.0]
+                0x0801393c                bn::iunordered_map<bn::tile const*, int, bn::hash<bn::tile const*>, bn::equal_to<bn::tile const*> >::erase(bn::iunordered_map<bn::tile const*, int, bn::hash<bn::tile const*>, bn::equal_to<bn::tile const*> >::const_iterator const&) [clone .constprop.0] [clone .isra.0]
+                0x08013b48                bn::sprite_shape_size::tiles_count(bn::bpp_mode) const [clone .part.0] [clone .isra.0]
+                0x08013c28                bn::sprite_shape_size::tiles_count(bn::bpp_mode) const [clone .isra.0]
+ .text.startup  0x08013d14      0x318 /tmp/ccktRJzG.ltrans2.ltrans.o
  .text.__libc_init_array
-                0x080132c4       0x50 bn_hw_common.bn_noflto.o
-                0x080132c4                __libc_init_array
+                0x0801402c       0x50 bn_hw_common.bn_noflto.o
+                0x0801402c                __libc_init_array
  .text.__aeabi_atexit
-                0x08013314        0x4 bn_hw_common.bn_noflto.o
-                0x08013314                __aeabi_atexit
+                0x0801407c        0x4 bn_hw_common.bn_noflto.o
+                0x0801407c                __aeabi_atexit
  .text._ZN3_bn6assert9show_argsIA40_cEEvPKcS4_S4_iRKT_
-                0x08013318       0x48 bn_hw_common.bn_noflto.o
-                0x08013318                void _bn::assert::show_args<char [40]>(char const*, char const*, char const*, int, char const (&) [40])
+                0x08014080       0x48 bn_hw_common.bn_noflto.o
+                0x08014080                void _bn::assert::show_args<char [40]>(char const*, char const*, char const*, int, char const (&) [40])
  .text.__aeabi_idiv0
-                0x08013360       0x24 bn_hw_common.bn_noflto.o
-                0x08013360                __aeabi_idiv0
+                0x080140c8       0x24 bn_hw_common.bn_noflto.o
+                0x080140c8                __aeabi_idiv0
  .text.VBlankIntrWait
-                0x08013384        0x4 tonc_bios.o
-                0x08013384                VBlankIntrWait
+                0x080140ec        0x4 tonc_bios.o
+                0x080140ec                VBlankIntrWait
  .text.memset16
-                0x08013388       0x3c tonc_memset.o
-                0x08013388                memset16
- .text          0x080133c4      0x26c posprintf.o
-                0x080133c8                posprintf
- .text          0x08013630      0x314 mm_effect.o
-                0x08013630                mmResetEffects
-                0x0801365c                mmEffect
-                0x08013672                mmEffectEx
-                0x08013772                mmEffectActive
-                0x080137a6                mmEffectVolume
-                0x080137c2                mmEffectPanning
-                0x080137d6                mmEffectRate
-                0x080137ea                mmEffectCancel
-                0x08013824                mmEffectRelease
-                0x0801384a                mmEffectScaleRate
-                0x0801385e                mmSetEffectsVolume
-                0x0801386c                mmEffectCancelAll
-                0x080138ac                mmUpdateEffects
- .text          0x08013944       0x14 mm_main.o
-                0x08013944                mpp_call_r7
-                0x08013946                mpp_call_r1
-                0x08013948                mpp_call_r2
-                0x0801394a                mpp_call_r3
-                0x0801394c                mmSetEventHandler
- .text          0x08013958     0x1570 mm_mas.o
-                0x080139cc                mmStart
-                0x080139ec                mmJingle
-                0x080139f2                mmPlayModule
-                0x08013abc                mmPause
-                0x08013ad8                mmResume
-                0x08013ae8                mmActive
-                0x08013aee                mmActiveSub
-                0x08013af4                mmSetModuleVolume
-                0x08013b04                mmSetJingleVolume
-                0x08013b40                mmGetPositionTick
-                0x08013b46                mmGetPositionRow
-                0x08013b4c                mmGetPosition
-                0x08013b52                mmPosition
-                0x08013b6c                mmSetModuleTempo
-                0x08013b9e                mmSetModulePitch
-                0x08013be0                mmStop
-                0x08013ca6                mppUpdateSub
-                0x08013e02                mpp_Process_VolumeCommand
-                0x0801403a                mpp_Process_Effect
-                0x08014788                ST3_FREQTABLE
-                0x08014ba8                IT_PitchTable
- .text          0x08014ec8      0x12c mm_main_gba.o
-                0x08014ec8                mmInit
-                0x08014f1c                mmSetVBlankHandler
-                0x08014f22                mmFrame
- .text          0x08014ff4      0x1e0 mm_mixer_gba.o
-                0x08014ff4                mmMixerSetSource
-                0x08015008                mmMixerSetRead
-                0x08015016                mmMixerSetFreq
-                0x08015026                mmMixerMulFreq
-                0x0801503a                mmMixerStopChannel
-                0x0801504c                mmMixerChannelActive
-                0x0801505e                mmMixerSetVolume
-                0x0801506c                mmMixerSetPan
-                0x0801507a                mmMixerInit
- .text          0x080151d4       0x3c /opt/devkitpro/devkitARM/bin/../lib/gcc/arm-none-eabi/14.2.0/thumb/libgcc.a(_call_via_rX.o)
-                0x080151d4                _call_via_r0
-                0x080151d8                _call_via_r1
-                0x080151dc                _call_via_r2
-                0x080151e0                _call_via_r3
-                0x080151e4                _call_via_r4
-                0x080151e8                _call_via_r5
-                0x080151ec                _call_via_r6
-                0x080151f0                _call_via_r7
-                0x080151f4                _call_via_r8
-                0x080151f8                _call_via_r9
-                0x080151fc                _call_via_sl
-                0x08015200                _call_via_fp
-                0x08015204                _call_via_ip
-                0x08015208                _call_via_sp
-                0x0801520c                _call_via_lr
- .text          0x08015210      0x290 /opt/devkitpro/devkitARM/bin/../lib/gcc/arm-none-eabi/14.2.0/thumb/libgcc.a(_arm_muldf3.o)
-                0x08015210                __aeabi_dmul
-                0x08015210                __muldf3
- .text          0x080154a0      0x424 /opt/devkitpro/devkitARM/bin/../lib/gcc/arm-none-eabi/14.2.0/thumb/libgcc.a(_arm_addsubdf3.o)
-                0x080154a0                __aeabi_drsub
-                0x080154a8                __aeabi_dsub
-                0x080154a8                __subdf3
-                0x080154ac                __adddf3
-                0x080154ac                __aeabi_dadd
-                0x080157bc                __aeabi_ui2d
-                0x080157bc                __floatunsidf
-                0x080157e0                __aeabi_i2d
-                0x080157e0                __floatsidf
-                0x08015808                __extendsfdf2
-                0x08015808                __aeabi_f2d
-                0x08015850                __aeabi_ul2d
-                0x08015850                __floatundidf
-                0x08015864                __floatdidf
-                0x08015864                __aeabi_l2d
- .text          0x080158c4       0x5c /opt/devkitpro/devkitARM/bin/../lib/gcc/arm-none-eabi/14.2.0/thumb/libgcc.a(_arm_fixdfsi.o)
-                0x080158c4                __aeabi_d2iz
-                0x080158c4                __fixdfsi
- .text.__stub   0x08015920      0x118 linker stubs
+                0x080140f0       0x3c tonc_memset.o
+                0x080140f0                memset16
+ .text          0x0801412c      0x26c posprintf.o
+                0x08014130                posprintf
+ .text          0x08014398      0x314 mm_effect.o
+                0x08014398                mmResetEffects
+                0x080143c4                mmEffect
+                0x080143da                mmEffectEx
+                0x080144da                mmEffectActive
+                0x0801450e                mmEffectVolume
+                0x0801452a                mmEffectPanning
+                0x0801453e                mmEffectRate
+                0x08014552                mmEffectCancel
+                0x0801458c                mmEffectRelease
+                0x080145b2                mmEffectScaleRate
+                0x080145c6                mmSetEffectsVolume
+                0x080145d4                mmEffectCancelAll
+                0x08014614                mmUpdateEffects
+ .text          0x080146ac       0x14 mm_main.o
+                0x080146ac                mpp_call_r7
+                0x080146ae                mpp_call_r1
+                0x080146b0                mpp_call_r2
+                0x080146b2                mpp_call_r3
+                0x080146b4                mmSetEventHandler
+ .text          0x080146c0     0x1570 mm_mas.o
+                0x08014734                mmStart
+                0x08014754                mmJingle
+                0x0801475a                mmPlayModule
+                0x08014824                mmPause
+                0x08014840                mmResume
+                0x08014850                mmActive
+                0x08014856                mmActiveSub
+                0x0801485c                mmSetModuleVolume
+                0x0801486c                mmSetJingleVolume
+                0x080148a8                mmGetPositionTick
+                0x080148ae                mmGetPositionRow
+                0x080148b4                mmGetPosition
+                0x080148ba                mmPosition
+                0x080148d4                mmSetModuleTempo
+                0x08014906                mmSetModulePitch
+                0x08014948                mmStop
+                0x08014a0e                mppUpdateSub
+                0x08014b6a                mpp_Process_VolumeCommand
+                0x08014da2                mpp_Process_Effect
+                0x080154f0                ST3_FREQTABLE
+                0x08015910                IT_PitchTable
+ .text          0x08015c30      0x12c mm_main_gba.o
+                0x08015c30                mmInit
+                0x08015c84                mmSetVBlankHandler
+                0x08015c8a                mmFrame
+ .text          0x08015d5c      0x1e0 mm_mixer_gba.o
+                0x08015d5c                mmMixerSetSource
+                0x08015d70                mmMixerSetRead
+                0x08015d7e                mmMixerSetFreq
+                0x08015d8e                mmMixerMulFreq
+                0x08015da2                mmMixerStopChannel
+                0x08015db4                mmMixerChannelActive
+                0x08015dc6                mmMixerSetVolume
+                0x08015dd4                mmMixerSetPan
+                0x08015de2                mmMixerInit
+ .text          0x08015f3c       0x3c /opt/devkitpro/devkitARM/bin/../lib/gcc/arm-none-eabi/14.2.0/thumb/libgcc.a(_call_via_rX.o)
+                0x08015f3c                _call_via_r0
+                0x08015f40                _call_via_r1
+                0x08015f44                _call_via_r2
+                0x08015f48                _call_via_r3
+                0x08015f4c                _call_via_r4
+                0x08015f50                _call_via_r5
+                0x08015f54                _call_via_r6
+                0x08015f58                _call_via_r7
+                0x08015f5c                _call_via_r8
+                0x08015f60                _call_via_r9
+                0x08015f64                _call_via_sl
+                0x08015f68                _call_via_fp
+                0x08015f6c                _call_via_ip
+                0x08015f70                _call_via_sp
+                0x08015f74                _call_via_lr
+ .text          0x08015f78      0x290 /opt/devkitpro/devkitARM/bin/../lib/gcc/arm-none-eabi/14.2.0/thumb/libgcc.a(_arm_muldf3.o)
+                0x08015f78                __aeabi_dmul
+                0x08015f78                __muldf3
+ .text          0x08016208      0x424 /opt/devkitpro/devkitARM/bin/../lib/gcc/arm-none-eabi/14.2.0/thumb/libgcc.a(_arm_addsubdf3.o)
+                0x08016208                __aeabi_drsub
+                0x08016210                __aeabi_dsub
+                0x08016210                __subdf3
+                0x08016214                __adddf3
+                0x08016214                __aeabi_dadd
+                0x08016524                __aeabi_ui2d
+                0x08016524                __floatunsidf
+                0x08016548                __aeabi_i2d
+                0x08016548                __floatsidf
+                0x08016570                __extendsfdf2
+                0x08016570                __aeabi_f2d
+                0x080165b8                __aeabi_ul2d
+                0x080165b8                __floatundidf
+                0x080165cc                __floatdidf
+                0x080165cc                __aeabi_l2d
+ .text          0x0801662c       0x5c /opt/devkitpro/devkitARM/bin/../lib/gcc/arm-none-eabi/14.2.0/thumb/libgcc.a(_arm_fixdfsi.o)
+                0x0801662c                __aeabi_d2iz
+                0x0801662c                __fixdfsi
+ .text.__stub   0x08016688      0x118 linker stubs
  *(.gnu.linkonce.t.*)
  *(.text.*personality*)
  *(.gnu.warning)
  *(.glue_7t)
- .glue_7t       0x08015a88        0x0 linker stubs
+ .glue_7t       0x080167f0        0x0 linker stubs
  *(.glue_7)
- .glue_7        0x08015a88        0x0 linker stubs
+ .glue_7        0x080167f0        0x0 linker stubs
  *(.vfp11_veneer)
- .vfp11_veneer  0x08015a88        0x0 linker stubs
-                0x08015a88                        . = ALIGN (0x4)
-                0x08015a88                        __text_end = .
+ .vfp11_veneer  0x080167f0        0x0 linker stubs
+                0x080167f0                        . = ALIGN (0x4)
+                0x080167f0                        __text_end = .
 
-.v4_bx          0x08015a88        0x0
- .v4_bx         0x08015a88        0x0 linker stubs
+.v4_bx          0x080167f0        0x0
+ .v4_bx         0x080167f0        0x0 linker stubs
 
-.iplt           0x08015a88        0x0
- .iplt          0x08015a88        0x0 /opt/devkitpro/devkitARM/bin/../lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/gba_crt0.o
+.iplt           0x080167f0        0x0
+ .iplt          0x080167f0        0x0 /opt/devkitpro/devkitARM/bin/../lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/gba_crt0.o
 
-.fini           0x08015a88        0xc
+.fini           0x080167f0        0xc
  *(.fini)
- .fini          0x08015a88        0x4 /opt/devkitpro/devkitARM/bin/../lib/gcc/arm-none-eabi/14.2.0/thumb/crti.o
-                0x08015a88                _fini
- .fini          0x08015a8c        0x8 /opt/devkitpro/devkitARM/bin/../lib/gcc/arm-none-eabi/14.2.0/thumb/crtn.o
-                0x08015a94                        . = ALIGN (0x4)
+ .fini          0x080167f0        0x4 /opt/devkitpro/devkitARM/bin/../lib/gcc/arm-none-eabi/14.2.0/thumb/crti.o
+                0x080167f0                _fini
+ .fini          0x080167f4        0x8 /opt/devkitpro/devkitARM/bin/../lib/gcc/arm-none-eabi/14.2.0/thumb/crtn.o
+                0x080167fc                        . = ALIGN (0x4)
 
-.rodata         0x08015a94   0x3be2ec
+.rodata         0x080167fc   0x3fa0e4
  *(.rodata)
- .rodata        0x08015a94    0x3e020 beryl_bn_gfx.o
-                0x08015a94                beryl_bn_gfxTiles
-                0x08053a94                beryl_bn_gfxPal
- .rodata        0x08053ab4     0xfbc0 bg_berylsroom_bn_gfx.o
-                0x08053ab4                bg_berylsroom_bn_gfxTiles
-                0x0805b654                bg_berylsroom_bn_gfxMap
-                0x08063654                bg_berylsroom_bn_gfxPal
- .rodata        0x08063674      0x820 castor_bn_gfx.o
-                0x08063674                castor_bn_gfxTiles
-                0x08063e74                castor_bn_gfxPal
- .rodata        0x08063e94      0x820 dialogue_back_bn_gfx.o
-                0x08063e94                dialogue_back_bn_gfxTiles
-                0x08064694                dialogue_back_bn_gfxPal
- .rodata        0x080646b4     0x7420 font_bn_gfx.o
-                0x080646b4                font_bn_gfxTiles
-                0x0806bab4                font_bn_gfxPal
- .rodata        0x0806bad4     0x7760 starsbackground_bn_gfx.o
-                0x0806bad4                starsbackground_bn_gfxTiles
-                0x08072a14                starsbackground_bn_gfxMap
-                0x08073214                starsbackground_bn_gfxPal
- .rodata        0x08073234      0x820 ui_bubble_bn_gfx.o
-                0x08073234                ui_bubble_bn_gfxTiles
-                0x08073a34                ui_bubble_bn_gfxPal
- .rodata        0x08073a54    0x149a0 /tmp/ccYUFq4M.ltrans0.ltrans.o
- .rodata        0x080883f4     0x177c /tmp/ccYUFq4M.ltrans1.ltrans.o
- .rodata        0x08089b70      0xef8 verdana9.o
-                0x08089b70                verdana9Font
-                0x08089b88                verdana9Glyphs
-                0x0808a988                verdana9Widths
+ .rodata        0x080167fc    0x3e020 beryl_bn_gfx.o
+                0x080167fc                beryl_bn_gfxTiles
+                0x080547fc                beryl_bn_gfxPal
+ .rodata        0x0805481c     0xfbc0 bg_berylsroom_bn_gfx.o
+                0x0805481c                bg_berylsroom_bn_gfxTiles
+                0x0805c3bc                bg_berylsroom_bn_gfxMap
+                0x080643bc                bg_berylsroom_bn_gfxPal
+ .rodata        0x080643dc      0x820 castor_bn_gfx.o
+                0x080643dc                castor_bn_gfxTiles
+                0x08064bdc                castor_bn_gfxPal
+ .rodata        0x08064bfc      0x820 dialogue_back_bn_gfx.o
+                0x08064bfc                dialogue_back_bn_gfxTiles
+                0x080653fc                dialogue_back_bn_gfxPal
+ .rodata        0x0806541c     0x7420 font_bn_gfx.o
+                0x0806541c                font_bn_gfxTiles
+                0x0806c81c                font_bn_gfxPal
+ .rodata        0x0806c83c     0x2020 rake01_bn_gfx.o
+                0x0806c83c                rake01_bn_gfxTiles
+                0x0806e83c                rake01_bn_gfxPal
+ .rodata        0x0806e85c      0x820 star_bn_gfx.o
+                0x0806e85c                star_bn_gfxTiles
+                0x0806f05c                star_bn_gfxPal
+ .rodata        0x0806f07c     0x7760 starsbackground_bn_gfx.o
+                0x0806f07c                starsbackground_bn_gfxTiles
+                0x08075fbc                starsbackground_bn_gfxMap
+                0x080767bc                starsbackground_bn_gfxPal
+ .rodata        0x080767dc      0x820 ui_bubble_bn_gfx.o
+                0x080767dc                ui_bubble_bn_gfxTiles
+                0x08076fdc                ui_bubble_bn_gfxPal
+ .rodata        0x08076ffc      0x5f2 /tmp/ccktRJzG.ltrans0.ltrans.o
+                0x08077518                bn::sprite_items::beryl
+ *fill*         0x080775ee        0x2 ff
+ .rodata        0x080775f0    0x15320 /tmp/ccktRJzG.ltrans1.ltrans.o
+ .rodata        0x0808c910     0x184a /tmp/ccktRJzG.ltrans2.ltrans.o
+ *fill*         0x0808e15a        0x2 ff
+ .rodata        0x0808e15c      0xef8 verdana9.o
+                0x0808e15c                verdana9Font
+                0x0808e174                verdana9Glyphs
+                0x0808ef74                verdana9Widths
  *all.rodata*(*)
  *(.roda)
  *(.rodata.*)
  .rodata._bn_audio_soundbank_bin
-                0x0808aa68   0x347468 _bn_audio_soundbank.bin.o
-                0x0808aa68                _bn_audio_soundbank_bin
-                0x083d1ed0                _bn_audio_soundbank_bin_end
+                0x0808f054   0x37f8f0 _bn_audio_soundbank.bin.o
+                0x0808f054                _bn_audio_soundbank_bin
+                0x0840e944                _bn_audio_soundbank_bin_end
  .rodata.str1.4
-                0x083d1ed0     0x1076 /tmp/ccYUFq4M.ltrans0.ltrans.o
+                0x0840e944      0xcc1 /tmp/ccktRJzG.ltrans0.ltrans.o
  .rodata.str1.4
-                0x083d1ed0     0x11d1 /tmp/ccYUFq4M.ltrans1.ltrans.o
+                0x0840e944     0x13ae /tmp/ccktRJzG.ltrans1.ltrans.o
+ .rodata.str1.4
+                0x0840e944      0x675 /tmp/ccktRJzG.ltrans2.ltrans.o
  .rodata.__cxa_pure_virtual.str1.4
-                0x083d1ed0     0x1ea1 bn_hw_common.bn_noflto.o
+                0x0840e944     0x1f8d bn_hw_common.bn_noflto.o
                                  0x4f (size before relaxing)
  .rodata.__aeabi_idiv0.str1.4
-                0x083d3d71       0x38 bn_hw_common.bn_noflto.o
- *fill*         0x083d3d71        0x3 ff
+                0x084108d1       0x38 bn_hw_common.bn_noflto.o
+ *fill*         0x084108d1        0x3 ff
  .rodata._ZN2bn2hw8game_pak12_GLOBAL__N_1L8rom_dataE
-                0x083d3d74        0xc bn_hw_game_pak.bn_ewram.o
+                0x084108d4        0xc bn_hw_game_pak.bn_ewram.o
  *(.gnu.linkonce.r*)
-                0x083d3d80                        . = ALIGN (0x4)
+                0x084108e0                        . = ALIGN (0x4)
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x083d3d80                        __exidx_start = .
+                0x084108e0                        __exidx_start = .
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x083d3d80                        __exidx_end = .
+                0x084108e0                        __exidx_end = .
 
-.ctors          0x083d3d80        0x0
+.ctors          0x084108e0        0x0
  *crtbegin.o(.ctors)
  *(EXCLUDE_FILE(*crtend.o) .ctors)
  *(SORT_BY_NAME(.ctors.*))
  *(.ctors)
-                0x083d3d80                        . = ALIGN (0x4)
+                0x084108e0                        . = ALIGN (0x4)
 
-.dtors          0x083d3d80        0x0
+.dtors          0x084108e0        0x0
  *crtbegin.o(.dtors)
  *(EXCLUDE_FILE(*crtend.o) .dtors)
  *(SORT_BY_NAME(.dtors.*))
  *(.dtors)
-                0x083d3d80                        . = ALIGN (0x4)
+                0x084108e0                        . = ALIGN (0x4)
 
-.eh_frame       0x083d3d80        0x4
+.eh_frame       0x084108e0        0x4
  *(.eh_frame)
- .eh_frame      0x083d3d80        0x0 /opt/devkitpro/devkitARM/bin/../lib/gcc/arm-none-eabi/14.2.0/thumb/crtbegin.o
- .eh_frame      0x083d3d80        0x4 /opt/devkitpro/devkitARM/bin/../lib/gcc/arm-none-eabi/14.2.0/thumb/crtend.o
-                0x083d3d84                        . = ALIGN (0x4)
+ .eh_frame      0x084108e0        0x0 /opt/devkitpro/devkitARM/bin/../lib/gcc/arm-none-eabi/14.2.0/thumb/crtbegin.o
+ .eh_frame      0x084108e0        0x4 /opt/devkitpro/devkitARM/bin/../lib/gcc/arm-none-eabi/14.2.0/thumb/crtend.o
+                0x084108e4                        . = ALIGN (0x4)
 
 .gcc_except_table
-                0x083d3d84        0x0
+                0x084108e4        0x0
  *(.gcc_except_table)
-                0x083d3d84                        . = ALIGN (0x4)
-                0x083d3d84                        __iwram_lma = .
+                0x084108e4                        . = ALIGN (0x4)
+                0x084108e4                        __iwram_lma = .
 
-.iwram          0x03000000     0x2320 load address 0x083d3d84
+.iwram          0x03000000     0x2320 load address 0x084108e4
                 0x03000000                        __iwram_start__ = ABSOLUTE (.)
  *(.iwram .iwram*)
  .iwram         0x03000000      0x290 bn_sprites_manager.bn_iwram.o
@@ -957,7 +1027,7 @@ Linker script and memory map
  *iwram.*(.text* .data*)
                 0x0300231c                        . = ALIGN (0x4)
                 0x03002320                        __iwram_end__ = ABSOLUTE (.)
-                0x083d60a4                        __data_lma = (__iwram_lma + SIZEOF (.iwram))
+                0x08412c04                        __data_lma = (__iwram_lma + SIZEOF (.iwram))
 
 .bss            0x03002320      0x870
                 0x03002320                        __bss_start = ABSOLUTE (.)
@@ -969,10 +1039,11 @@ Linker script and memory map
                 0x03002320        0x1 /opt/devkitpro/devkitARM/bin/../lib/gcc/arm-none-eabi/14.2.0/thumb/crtbegin.o
  *fill*         0x03002321        0x3 
  .bss.object.0  0x03002324       0x18 /opt/devkitpro/devkitARM/bin/../lib/gcc/arm-none-eabi/14.2.0/thumb/crtbegin.o
- .bss           0x0300233c      0x50c /tmp/ccYUFq4M.ltrans0.ltrans.o
-                0x0300233c                IRQ_VectorTable
+ .bss           0x0300233c      0x50c /tmp/ccktRJzG.ltrans0.ltrans.o
+                0x0300233c                globals
+                0x03002340                IRQ_VectorTable
                 0x03002798                _ZN2bn22hblank_effects_manager12_GLOBAL__N_113internal_dataE.lto_priv.0
- .bss           0x03002848        0x4 /tmp/ccYUFq4M.ltrans1.ltrans.o
+ .bss           0x03002848        0x4 /tmp/ccktRJzG.ltrans2.ltrans.o
                 0x03002848                fake_heap_end
  .bss           0x0300284c       0x2d mm_effect.o
                 0x03002870                mm_sfx_bitmask
@@ -1007,7 +1078,7 @@ Linker script and memory map
                 0x03002b90                        . = ALIGN (0x4)
                 0x03002b90                        __bss_end__ = ABSOLUTE (.)
 
-.data           0x03002b90        0x4 load address 0x083d60a4
+.data           0x03002b90        0x4 load address 0x08412c04
                 0x03002b90                        __data_start__ = ABSOLUTE (.)
  *(.data*)
  .data.__dso_handle
@@ -1015,45 +1086,45 @@ Linker script and memory map
                 0x03002b90                __dso_handle
  *(.gnu.linkonce.d*)
                 0x03002b94                        . = ALIGN (0x4)
-                0x083d60a8                        __preinit_lma = (__data_lma + SIZEOF (.data))
+                0x08412c08                        __preinit_lma = (__data_lma + SIZEOF (.data))
 
-.igot.plt       0x03002b94        0x0 load address 0x083d60a8
+.igot.plt       0x03002b94        0x0 load address 0x08412c08
  .igot.plt      0x03002b94        0x0 /opt/devkitpro/devkitARM/bin/../lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/gba_crt0.o
 
-.preinit_array  0x03002b94        0x0 load address 0x083d60a8
+.preinit_array  0x03002b94        0x0 load address 0x08412c08
                 0x03002b94                        __preinit_array_start = ABSOLUTE (.)
  *(.preinit_array)
                 0x03002b94                        __preinit_array_end = ABSOLUTE (.)
-                0x083d60a8                        __init_lma = (__preinit_lma + SIZEOF (.preinit_array))
+                0x08412c08                        __init_lma = (__preinit_lma + SIZEOF (.preinit_array))
 
-.init_array     0x03002b94        0x8 load address 0x083d60a8
+.init_array     0x03002b94        0x8 load address 0x08412c08
                 0x03002b94                        __init_array_start = ABSOLUTE (.)
  *(SORT_BY_NAME(.init_array.*))
  *(.init_array)
  .init_array    0x03002b94        0x4 /opt/devkitpro/devkitARM/bin/../lib/gcc/arm-none-eabi/14.2.0/thumb/crtbegin.o
- .init_array    0x03002b98        0x4 /tmp/ccYUFq4M.ltrans1.ltrans.o
+ .init_array    0x03002b98        0x4 /tmp/ccktRJzG.ltrans2.ltrans.o
                 0x03002b9c                        __init_array_end = ABSOLUTE (.)
-                0x083d60b0                        __fini_lma = (__init_lma + SIZEOF (.init_array))
+                0x08412c10                        __fini_lma = (__init_lma + SIZEOF (.init_array))
 
-.fini_array     0x03002b9c        0x4 load address 0x083d60b0
+.fini_array     0x03002b9c        0x4 load address 0x08412c10
                 0x03002b9c                        __fini_array_start = ABSOLUTE (.)
  *(SORT_BY_NAME(.fini_array.*))
  *(.fini_array)
  .fini_array    0x03002b9c        0x4 /opt/devkitpro/devkitARM/bin/../lib/gcc/arm-none-eabi/14.2.0/thumb/crtbegin.o
                 0x03002ba0                        __fini_array_end = ABSOLUTE (.)
-                0x083d60b4                        __jcr_lma = (__fini_lma + SIZEOF (.fini_array))
+                0x08412c14                        __jcr_lma = (__fini_lma + SIZEOF (.fini_array))
 
 .jcr
  *(.jcr)
                 0x03002ba0                        __data_end__ = ABSOLUTE (.)
-                0x083d60b4                        __iwram_overlay_lma = (__jcr_lma + SIZEOF (.jcr))
+                0x08412c14                        __iwram_overlay_lma = (__jcr_lma + SIZEOF (.jcr))
                 0x03002ba0                        __iwram_overlay_start = .
 
-.iwram0         0x03002ba0        0x0 load address 0x083d60b4
+.iwram0         0x03002ba0        0x0 load address 0x08412c14
  *(.iwram0)
                 0x03002ba0                        . = ALIGN (0x4)
-                0x083d60b4                        PROVIDE (__load_start_iwram0 = LOADADDR (.iwram0))
-                0x083d60b4                        PROVIDE (__load_stop_iwram0 = (LOADADDR (.iwram0) + SIZEOF (.iwram0)))
+                0x08412c14                        PROVIDE (__load_start_iwram0 = LOADADDR (.iwram0))
+                0x08412c14                        PROVIDE (__load_stop_iwram0 = (LOADADDR (.iwram0) + SIZEOF (.iwram0)))
 
 .iwram1         0x03002ba0        0x0
  *(.iwram1)
@@ -1109,40 +1180,41 @@ Linker script and memory map
                 [!provide]                        PROVIDE (__load_start_iwram9 = LOADADDR (.iwram9))
                 [!provide]                        PROVIDE (__load_stop_iwram9 = (LOADADDR (.iwram9) + SIZEOF (.iwram9)))
                 0x03002ba0                        __iwram_overlay_end = .
-                0x083d60b4                        __ewram_lma = (__iwram_overlay_lma + (__iwram_overlay_end - __iwram_overlay_start))
+                0x08412c14                        __ewram_lma = (__iwram_overlay_lma + (__iwram_overlay_end - __iwram_overlay_start))
                 0x03002ba0                        __iheap_start = .
                 0x02000000                        __ewram_start = ORIGIN (ewram)
 
-.ewram          0x02000000       0xf4 load address 0x083d60b4
+.ewram          0x02000000       0xf4 load address 0x08412c14
  *(.ewram*)
- .ewram         0x02000000       0x10 /tmp/ccYUFq4M.ltrans0.ltrans.o
+ .ewram         0x02000000       0x10 /tmp/ccktRJzG.ltrans0.ltrans.o
                 0x02000004                Vgm
- .ewram         0x02000010       0x48 /tmp/ccYUFq4M.ltrans1.ltrans.o
+ .ewram         0x02000010       0x48 /tmp/ccktRJzG.ltrans1.ltrans.o
+                0x02000010                __tte_main_context
  .ewram         0x02000058       0x9c bn_hw_game_pak.bn_ewram.o
                 0x02000058                bn::hw::game_pak::_slow_game_pak()
                 0x020000f4                        . = ALIGN (0x4)
                 0x020000f4                        __ewram_end = ABSOLUTE (.)
-                0x083d61a8                        __pad_lma = (__ewram_lma + SIZEOF (.ewram))
+                0x08412d08                        __pad_lma = (__ewram_lma + SIZEOF (.ewram))
 
 .sbss           0x020000f4     0x8204
                 0x020000f4                        __sbss_start__ = ABSOLUTE (.)
  *(.sbss*)
- .sbss          0x020000f4     0x8204 /tmp/ccYUFq4M.ltrans0.ltrans.o
+ .sbss          0x020000f4     0x8204 /tmp/ccktRJzG.ltrans0.ltrans.o
                 0x020000f4                _ZN2bn15cameras_manager12_GLOBAL__N_14dataE.lto_priv.0
-                0x0200012c                _ZN2bn4core12_GLOBAL__N_14dataE.lto_priv.0
-                0x02000174                _ZN2bn2hw5audio12_GLOBAL__N_14dataE.lto_priv.0
-                0x020001c0                _ZN2bn12hdma_manager12_GLOBAL__N_14dataE.lto_priv.0
-                0x020001f8                _ZN2bn14memory_manager12_GLOBAL__N_14dataE.lto_priv.0
-                0x02000208                _ZN2bn14keypad_manager12_GLOBAL__N_14dataE.lto_priv.0
+                0x0200012c                _ZN2bn14keypad_manager12_GLOBAL__N_14dataE.lto_priv.0
+                0x02000144                _ZN2bn4core12_GLOBAL__N_14dataE.lto_priv.0
+                0x0200018c                _ZN2bn2hw5audio12_GLOBAL__N_14dataE.lto_priv.0
+                0x020001d8                _ZN2bn12hdma_manager12_GLOBAL__N_14dataE.lto_priv.0
+                0x02000210                _ZN2bn14memory_manager12_GLOBAL__N_14dataE.lto_priv.0
                 0x02000220                gbt.lto_priv.0
-                0x020002b8                _ZN2bn17bg_blocks_manager12_GLOBAL__N_14dataE.lto_priv.0
-                0x0200049c                _ZN2bn20sprite_tiles_manager12_GLOBAL__N_14dataE.lto_priv.0
-                0x02002660                _ZN2bn2hw4link12_GLOBAL__N_14dataE.lto_priv.0
-                0x02002790                _ZN2bn22hblank_effects_manager12_GLOBAL__N_113external_dataE.lto_priv.0
-                0x020041d4                _ZN2bn11bgs_manager12_GLOBAL__N_14dataE.lto_priv.0
-                0x02004480                _ZN2bn13audio_manager12_GLOBAL__N_14dataE.lto_priv.0
-                0x020045f4                _ZN2bn16palettes_manager12_GLOBAL__N_14dataE.lto_priv.0
-                0x0200533c                _ZN2bn15display_manager12_GLOBAL__N_14dataE.lto_priv.0
+                0x020002b8                _ZN2bn11bgs_manager12_GLOBAL__N_14dataE.lto_priv.0
+                0x02000564                _ZN2bn17bg_blocks_manager12_GLOBAL__N_14dataE.lto_priv.0
+                0x02000748                _ZN2bn20sprite_tiles_manager12_GLOBAL__N_14dataE.lto_priv.0
+                0x02001dbc                _ZN2bn16palettes_manager12_GLOBAL__N_14dataE.lto_priv.0
+                0x02002b04                _ZN2bn15display_manager12_GLOBAL__N_14dataE.lto_priv.0
+                0x020036f8                _ZN2bn13audio_manager12_GLOBAL__N_14dataE.lto_priv.0
+                0x0200386c                _ZN2bn2hw4link12_GLOBAL__N_14dataE.lto_priv.0
+                0x0200399c                _ZN2bn22hblank_effects_manager12_GLOBAL__N_113external_dataE.lto_priv.0
                 0x020053e0                _ZN2bn26sprite_affine_mats_manager12_GLOBAL__N_14dataE.lto_priv.0
                 0x02005ca8                _ZN2bn15sprites_manager12_GLOBAL__N_14dataE.lto_priv.0
                 0x020082f8                        . = ALIGN (0x4)
@@ -1150,13 +1222,13 @@ Linker script and memory map
                 0x020082f8                        __end__ = ABSOLUTE (.)
                 0x020082f8                        __eheap_start = ABSOLUTE (.)
 
-.pad            0x020082f8        0x8 load address 0x083d61a8
+.pad            0x020082f8        0x8 load address 0x08412d08
                 0x020082f8        0x4 LONG 0x52416b64
                 0x020082fc        0x4 LONG 0x4d
                 0x02008300                        . = ALIGN (0x4)
-                0x083d61b0                        __rom_end__ = (__pad_lma + SIZEOF (.pad))
+                0x08412d10                        __rom_end__ = (__pad_lma + SIZEOF (.pad))
 
-.rel.dyn        0x02008300        0x0 load address 0x083d61b0
+.rel.dyn        0x02008300        0x0 load address 0x08412d10
  .rel.iplt      0x02008300        0x0 /opt/devkitpro/devkitARM/bin/../lib/gcc/arm-none-eabi/14.2.0/../../../../arm-none-eabi/lib/thumb/gba_crt0.o
 
 .stab
@@ -1181,8 +1253,9 @@ Linker script and memory map
  *(.comment)
  .comment       0x00000000       0x23 /opt/devkitpro/devkitARM/bin/../lib/gcc/arm-none-eabi/14.2.0/thumb/crtbegin.o
                                  0x24 (size before relaxing)
- .comment       0x00000023       0x24 /tmp/ccYUFq4M.ltrans0.ltrans.o
- .comment       0x00000023       0x24 /tmp/ccYUFq4M.ltrans1.ltrans.o
+ .comment       0x00000023       0x24 /tmp/ccktRJzG.ltrans0.ltrans.o
+ .comment       0x00000023       0x24 /tmp/ccktRJzG.ltrans1.ltrans.o
+ .comment       0x00000023       0x24 /tmp/ccktRJzG.ltrans2.ltrans.o
  .comment       0x00000023       0x24 bn_sprites_manager.bn_iwram.o
  .comment       0x00000023       0x24 bn_hw_common.bn_noflto.o
  .comment       0x00000023       0x24 bn_hw_game_pak.bn_ewram.o
@@ -1201,423 +1274,431 @@ Linker script and memory map
 .debug_sfnames
  *(.debug_sfnames)
 
-.debug_aranges  0x00000000      0x5c8
+.debug_aranges  0x00000000      0x5e8
  *(.debug_aranges)
  .debug_aranges
-                0x00000000       0x28 /tmp/ccYUFq4M.ltrans0.ltrans.o
+                0x00000000       0x28 /tmp/ccktRJzG.ltrans0.ltrans.o
  .debug_aranges
-                0x00000028       0x20 /tmp/ccYUFq4M.ltrans1.ltrans.o
+                0x00000028       0x20 /tmp/ccktRJzG.ltrans1.ltrans.o
  .debug_aranges
-                0x00000048       0x30 bn_sprites_manager.bn_iwram.o
+                0x00000048       0x20 /tmp/ccktRJzG.ltrans2.ltrans.o
  .debug_aranges
-                0x00000078       0x58 bn_hw_common.bn_noflto.o
+                0x00000068       0x30 bn_sprites_manager.bn_iwram.o
  .debug_aranges
-                0x000000d0       0x20 bn_hw_game_pak.bn_ewram.o
+                0x00000098       0x58 bn_hw_common.bn_noflto.o
  .debug_aranges
-                0x000000f0       0x28 bn_hw_palettes.bn_iwram.o
+                0x000000f0       0x20 bn_hw_game_pak.bn_ewram.o
  .debug_aranges
-                0x00000118       0x20 bn_hw_bg_blocks.o
+                0x00000110       0x28 bn_hw_palettes.bn_iwram.o
  .debug_aranges
-                0x00000138       0x20 bn_hw_hblank_effects.o
+                0x00000138       0x20 bn_hw_bg_blocks.o
  .debug_aranges
-                0x00000158       0x20 bn_hw_palettes_asm.o
+                0x00000158       0x20 bn_hw_hblank_effects.o
  .debug_aranges
-                0x00000178       0x20 clr_blend_fast.o
+                0x00000178       0x20 bn_hw_palettes_asm.o
  .debug_aranges
-                0x00000198       0x20 clr_fade_fast.o
+                0x00000198       0x20 clr_blend_fast.o
  .debug_aranges
-                0x000001b8      0x130 tonc_bios.o
+                0x000001b8       0x20 clr_fade_fast.o
  .debug_aranges
-                0x000002e8       0x28 tonc_memset.o
+                0x000001d8      0x130 tonc_bios.o
  .debug_aranges
-                0x00000310       0x20 irq_handler.o
+                0x00000308       0x28 tonc_memset.o
  .debug_aranges
-                0x00000330       0x20 posprintf.o
+                0x00000330       0x20 irq_handler.o
  .debug_aranges
-                0x00000350       0x38 lmul.o
+                0x00000350       0x20 posprintf.o
  .debug_aranges
-                0x00000388       0x30 memcpy.o
+                0x00000370       0x38 lmul.o
  .debug_aranges
-                0x000003b8       0x38 memmove.o
+                0x000003a8       0x30 memcpy.o
  .debug_aranges
-                0x000003f0       0x38 memset.o
+                0x000003d8       0x38 memmove.o
  .debug_aranges
-                0x00000428       0x28 rmemcpy.o
+                0x00000410       0x38 memset.o
  .debug_aranges
-                0x00000450       0x20 sdiv32.o
+                0x00000448       0x28 rmemcpy.o
  .debug_aranges
-                0x00000470       0x20 udiv32.o
+                0x00000470       0x20 sdiv32.o
  .debug_aranges
-                0x00000490       0x20 huffman.o
+                0x00000490       0x20 udiv32.o
  .debug_aranges
-                0x000004b0       0x20 lz77.o
+                0x000004b0       0x20 huffman.o
  .debug_aranges
-                0x000004d0       0x20 running_length.o
+                0x000004d0       0x20 lz77.o
  .debug_aranges
-                0x000004f0       0x20 mm_effect.o
+                0x000004f0       0x20 running_length.o
  .debug_aranges
-                0x00000510       0x20 mm_main.o
+                0x00000510       0x20 mm_effect.o
  .debug_aranges
-                0x00000530       0x28 mm_mas.o
+                0x00000530       0x20 mm_main.o
  .debug_aranges
-                0x00000558       0x20 mm_mas_arm.o
+                0x00000550       0x28 mm_mas.o
  .debug_aranges
-                0x00000578       0x28 mm_main_gba.o
+                0x00000578       0x20 mm_mas_arm.o
  .debug_aranges
-                0x000005a0       0x28 mm_mixer_gba.o
+                0x00000598       0x28 mm_main_gba.o
+ .debug_aranges
+                0x000005c0       0x28 mm_mixer_gba.o
 
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000   0x1c2c35
+.debug_info     0x00000000   0x1c6b86
  *(.debug_info)
- .debug_info    0x00000000    0x291c0 /tmp/ccYUFq4M.ltrans0.ltrans.o
- .debug_info    0x000291c0    0x1eaf0 /tmp/ccYUFq4M.ltrans1.ltrans.o
- .debug_info    0x00047cb0     0xf5b8 /tmp/ccTS1GPQ.debug.temp.o
-                0x00047cb0                main.cpp.02c0f55f
- .debug_info    0x00057268     0x96a3 /tmp/ccG32DcI.debug.temp.o
-                0x00057268                bn_affine_bg_animate_actions.cpp.b5e2c8b9
- .debug_info    0x0006090b     0xdb21 /tmp/ccHjkJou.debug.temp.o
-                0x0006090b                bn_audio_manager.cpp.89bc560f
- .debug_info    0x0006e42c     0x45a8 /tmp/cc5RA772.debug.temp.o
-                0x0006e42c                bn_best_fit_allocator.cpp.36ff329c
- .debug_info    0x000729d4    0x1c99a /tmp/cc3FRq93.debug.temp.o
-                0x000729d4                bn_bg_blocks_manager.cpp.315772da
- .debug_info    0x0008f36e    0x1e88a /tmp/ccFiOCYE.debug.temp.o
-                0x0008f36e                bn_bgs_manager.cpp.2896f2e4
- .debug_info    0x000adbf8     0x4d11 /tmp/cceSLdlk.debug.temp.o
-                0x000adbf8                bn_cameras_manager.cpp.8f724f12
- .debug_info    0x000b2909     0x64b3 /tmp/ccddVuPU.debug.temp.o
-                0x000b2909                bn_core.cpp.bb23befe
- .debug_info    0x000b8dbc    0x13e13 /tmp/cc08BAG9.debug.temp.o
-                0x000b8dbc                bn_display_manager.cpp.b8828ff9
- .debug_info    0x000ccbcf     0x4c6f /tmp/cc3JWvj8.debug.temp.o
-                0x000ccbcf                bn_gpio_manager.cpp.3fdd2ce1
- .debug_info    0x000d183e    0x39148 /tmp/cc8rDF4z.debug.temp.o
-                0x000d183e                bn_hblank_effects_manager.cpp.09b542e7
- .debug_info    0x0010a986     0x1d27 /tmp/ccK9bzAI.debug.temp.o
-                0x0010a986                bn_hdma_manager.cpp.a6285ce1
- .debug_info    0x0010c6ad     0x4a03 /tmp/ccsHmEVJ.debug.temp.o
-                0x0010c6ad                bn_keypad_manager.cpp.a9f2be93
- .debug_info    0x001110b0     0x4dbc /tmp/ccNdvfHi.debug.temp.o
-                0x001110b0                bn_link_manager.cpp.811020bf
- .debug_info    0x00115e6c     0x4cb7 /tmp/ccv16uvU.debug.temp.o
-                0x00115e6c                bn_memory_manager.cpp.deabf9b4
- .debug_info    0x0011ab23     0xf0a6 /tmp/ccgHNtnY.debug.temp.o
-                0x0011ab23                bn_palettes_manager.cpp.e0e03341
- .debug_info    0x00129bc9     0xf973 /tmp/cc2zxHzJ.debug.temp.o
-                0x00129bc9                bn_sprite_affine_mats_manager.cpp.06629dd2
- .debug_info    0x0013953c     0x8e56 /tmp/cckOim5u.debug.temp.o
-                0x0013953c                bn_sprite_animate_actions.cpp.51c0c25f
- .debug_info    0x00142392    0x145e9 /tmp/ccpAo6ZT.debug.temp.o
-                0x00142392                bn_sprite_text_generator.cpp.db265e72
- .debug_info    0x0015697b     0xde85 /tmp/ccsch08I.debug.temp.o
-                0x0015697b                bn_sprite_tiles_manager.cpp.535fb3fd
- .debug_info    0x00164800    0x1a647 /tmp/cch7dZSB.debug.temp.o
-                0x00164800                bn_sprites_manager.cpp.7b02a43a
- .debug_info    0x0017ee47     0x5df9 /tmp/ccZnE881.debug.temp.o
-                0x0017ee47                bn_sstream.cpp.ee7996c3
- .debug_info    0x00184c40    0x10961 /tmp/ccqtYPlM.debug.temp.o
-                0x00184c40                bn_translation_unit.cpp.f744d1cb
- .debug_info    0x001955a1     0x59a1 /tmp/cc1QHINi.debug.temp.o
-                0x001955a1                bn_hw_audio.cpp.5922584d
- .debug_info    0x0019af42     0x155e /tmp/ccZXdSq4.debug.temp.o
-                0x0019af42                bn_hw_cstdlib.cpp.16f60d95
- .debug_info    0x0019c4a0     0x5b63 /tmp/ccGqtSRM.debug.temp.o
-                0x0019c4a0                bn_hw_link.cpp.a3c4f2b2
- .debug_info    0x001a2003     0x49b3 /tmp/ccY4Hidb.debug.temp.o
-                0x001a2003                bn_hw_palettes.cpp.4be6ba20
- .debug_info    0x001a69b6     0x5f99 /tmp/cc5uz4HI.debug.temp.o
-                0x001a69b6                bn_hw_show.cpp.f89484b9
- .debug_info    0x001ac94f      0x549 /tmp/ccqMGPn8.debug.temp.o
-                0x001ac94f                bn_hw_sram.cpp.39d7767c
- .debug_info    0x001ace98      0x6c7 /tmp/cc57V5xn.debug.temp.o
-                0x001ace98                bn_hw_system_font.cpp.849f8ae3
- .debug_info    0x001ad55f     0x41c0 /tmp/ccWLBXNn.debug.temp.o
-                0x001ad55f                bn_hw_text.cpp.44c530c1
- .debug_info    0x001b171f      0x64e /tmp/cc9iKQyH.debug.temp.o
-                0x001b171f                vgm.cpp.d559327b
- .debug_info    0x001b1d6d      0x594 /tmp/cct0QBXz.debug.temp.o
-                0x001b1d6d                tonc_color.c.b3762d91
- .debug_info    0x001b2301      0x5e1 /tmp/cc5x1eSp.debug.temp.o
-                0x001b2301                tonc_sbmp16.c.f2ae494c
- .debug_info    0x001b28e2      0x596 /tmp/ccsseAeA.debug.temp.o
-                0x001b28e2                bmp16_drawg_b1cs.c.c2c5ef08
- .debug_info    0x001b2e78      0x4cf /tmp/ccoos1Y9.debug.temp.o
-                0x001b2e78                tte_init_bmp.c.9b0c580c
- .debug_info    0x001b3347      0x9be /tmp/ccLVyW56.debug.temp.o
-                0x001b3347                tte_main.c.eb02a301
- .debug_info    0x001b3d05      0x1b3 /tmp/ccU5pnRm.debug.temp.o
-                0x001b3d05                interrupts_gba.c.629263ff
- .debug_info    0x001b3eb8     0x119b /tmp/cc4lckLv.debug.temp.o
-                0x001b3eb8                gbt_player.c.0480fa31
- .debug_info    0x001b5053     0xa5b1 bn_sprites_manager.bn_iwram.o
- .debug_info    0x001bf604     0x19e4 bn_hw_common.bn_noflto.o
- .debug_info    0x001c0fe8      0x614 bn_hw_game_pak.bn_ewram.o
- .debug_info    0x001c15fc     0x1104 bn_hw_palettes.bn_iwram.o
- .debug_info    0x001c2700       0x23 bn_hw_bg_blocks.o
- .debug_info    0x001c2723       0x24 bn_hw_hblank_effects.o
- .debug_info    0x001c2747       0x23 bn_hw_palettes_asm.o
- .debug_info    0x001c276a       0x30 clr_blend_fast.o
- .debug_info    0x001c279a       0x23 clr_fade_fast.o
- .debug_info    0x001c27bd      0x1c8 tonc_bios.o
- .debug_info    0x001c2985       0x3a tonc_memset.o
- .debug_info    0x001c29bf       0x24 irq_handler.o
- .debug_info    0x001c29e3       0x24 posprintf.o
- .debug_info    0x001c2a07       0x22 lmul.o
- .debug_info    0x001c2a29       0x22 memcpy.o
- .debug_info    0x001c2a4b       0x22 memmove.o
- .debug_info    0x001c2a6d       0x22 memset.o
- .debug_info    0x001c2a8f       0x22 rmemcpy.o
- .debug_info    0x001c2ab1       0x23 sdiv32.o
- .debug_info    0x001c2ad4       0x24 udiv32.o
- .debug_info    0x001c2af8       0x24 huffman.o
- .debug_info    0x001c2b1c       0x24 lz77.o
- .debug_info    0x001c2b40       0x24 running_length.o
- .debug_info    0x001c2b64       0x24 mm_effect.o
- .debug_info    0x001c2b88       0x23 mm_main.o
- .debug_info    0x001c2bab       0x22 mm_mas.o
- .debug_info    0x001c2bcd       0x24 mm_mas_arm.o
- .debug_info    0x001c2bf1       0x22 mm_main_gba.o
- .debug_info    0x001c2c13       0x22 mm_mixer_gba.o
+ .debug_info    0x00000000    0x232dd /tmp/ccktRJzG.ltrans0.ltrans.o
+ .debug_info    0x000232dd    0x1fc6e /tmp/ccktRJzG.ltrans1.ltrans.o
+ .debug_info    0x00042f4b     0x715d /tmp/ccktRJzG.ltrans2.ltrans.o
+ .debug_info    0x0004a0a8    0x11111 /tmp/ccJmOrco.debug.temp.o
+                0x0004a0a8                main.cpp.b73c60e4
+ .debug_info    0x0005b1b9     0x96a3 /tmp/ccdYGhJh.debug.temp.o
+                0x0005b1b9                bn_affine_bg_animate_actions.cpp.b5e2c8b9
+ .debug_info    0x0006485c     0xdb21 /tmp/ccMI1Ney.debug.temp.o
+                0x0006485c                bn_audio_manager.cpp.89bc560f
+ .debug_info    0x0007237d     0x45a8 /tmp/ccTtwinI.debug.temp.o
+                0x0007237d                bn_best_fit_allocator.cpp.36ff329c
+ .debug_info    0x00076925    0x1c99a /tmp/ccHNglKc.debug.temp.o
+                0x00076925                bn_bg_blocks_manager.cpp.315772da
+ .debug_info    0x000932bf    0x1e88a /tmp/ccoTCAQH.debug.temp.o
+                0x000932bf                bn_bgs_manager.cpp.2896f2e4
+ .debug_info    0x000b1b49     0x4d11 /tmp/ccWQbbWA.debug.temp.o
+                0x000b1b49                bn_cameras_manager.cpp.8f724f12
+ .debug_info    0x000b685a     0x64b3 /tmp/ccLVDvXv.debug.temp.o
+                0x000b685a                bn_core.cpp.bb23befe
+ .debug_info    0x000bcd0d    0x13e13 /tmp/cc8dwAhG.debug.temp.o
+                0x000bcd0d                bn_display_manager.cpp.b8828ff9
+ .debug_info    0x000d0b20     0x4c6f /tmp/ccCKwPX8.debug.temp.o
+                0x000d0b20                bn_gpio_manager.cpp.3fdd2ce1
+ .debug_info    0x000d578f    0x39148 /tmp/ccL5qha7.debug.temp.o
+                0x000d578f                bn_hblank_effects_manager.cpp.09b542e7
+ .debug_info    0x0010e8d7     0x1d27 /tmp/ccIWzpi3.debug.temp.o
+                0x0010e8d7                bn_hdma_manager.cpp.a6285ce1
+ .debug_info    0x001105fe     0x4a03 /tmp/cc6rI9UN.debug.temp.o
+                0x001105fe                bn_keypad_manager.cpp.a9f2be93
+ .debug_info    0x00115001     0x4dbc /tmp/ccdBckBY.debug.temp.o
+                0x00115001                bn_link_manager.cpp.811020bf
+ .debug_info    0x00119dbd     0x4cb7 /tmp/cc9Ar874.debug.temp.o
+                0x00119dbd                bn_memory_manager.cpp.deabf9b4
+ .debug_info    0x0011ea74     0xf0a6 /tmp/ccPPwzAe.debug.temp.o
+                0x0011ea74                bn_palettes_manager.cpp.e0e03341
+ .debug_info    0x0012db1a     0xf973 /tmp/ccfBXiql.debug.temp.o
+                0x0012db1a                bn_sprite_affine_mats_manager.cpp.06629dd2
+ .debug_info    0x0013d48d     0x8e56 /tmp/ccPb7YZs.debug.temp.o
+                0x0013d48d                bn_sprite_animate_actions.cpp.51c0c25f
+ .debug_info    0x001462e3    0x145e9 /tmp/ccpFBV35.debug.temp.o
+                0x001462e3                bn_sprite_text_generator.cpp.db265e72
+ .debug_info    0x0015a8cc     0xde85 /tmp/ccw5A3n2.debug.temp.o
+                0x0015a8cc                bn_sprite_tiles_manager.cpp.535fb3fd
+ .debug_info    0x00168751    0x1a647 /tmp/cc0PuC2Y.debug.temp.o
+                0x00168751                bn_sprites_manager.cpp.7b02a43a
+ .debug_info    0x00182d98     0x5df9 /tmp/ccqj43oK.debug.temp.o
+                0x00182d98                bn_sstream.cpp.ee7996c3
+ .debug_info    0x00188b91    0x10961 /tmp/ccMhhL7N.debug.temp.o
+                0x00188b91                bn_translation_unit.cpp.f744d1cb
+ .debug_info    0x001994f2     0x59a1 /tmp/ccYDf9vv.debug.temp.o
+                0x001994f2                bn_hw_audio.cpp.5922584d
+ .debug_info    0x0019ee93     0x155e /tmp/cc46nfuk.debug.temp.o
+                0x0019ee93                bn_hw_cstdlib.cpp.16f60d95
+ .debug_info    0x001a03f1     0x5b63 /tmp/cc0iZ13Q.debug.temp.o
+                0x001a03f1                bn_hw_link.cpp.a3c4f2b2
+ .debug_info    0x001a5f54     0x49b3 /tmp/ccC0Hgtu.debug.temp.o
+                0x001a5f54                bn_hw_palettes.cpp.4be6ba20
+ .debug_info    0x001aa907     0x5f99 /tmp/cc0Jd66m.debug.temp.o
+                0x001aa907                bn_hw_show.cpp.f89484b9
+ .debug_info    0x001b08a0      0x549 /tmp/ccyJvEEr.debug.temp.o
+                0x001b08a0                bn_hw_sram.cpp.39d7767c
+ .debug_info    0x001b0de9      0x6c7 /tmp/cce9htz3.debug.temp.o
+                0x001b0de9                bn_hw_system_font.cpp.849f8ae3
+ .debug_info    0x001b14b0     0x41c0 /tmp/cc5qDKJT.debug.temp.o
+                0x001b14b0                bn_hw_text.cpp.44c530c1
+ .debug_info    0x001b5670      0x64e /tmp/ccUAgzWV.debug.temp.o
+                0x001b5670                vgm.cpp.d559327b
+ .debug_info    0x001b5cbe      0x594 /tmp/ccFegeKA.debug.temp.o
+                0x001b5cbe                tonc_color.c.b3762d91
+ .debug_info    0x001b6252      0x5e1 /tmp/ccP5YWZw.debug.temp.o
+                0x001b6252                tonc_sbmp16.c.f2ae494c
+ .debug_info    0x001b6833      0x596 /tmp/ccVhvxKW.debug.temp.o
+                0x001b6833                bmp16_drawg_b1cs.c.c2c5ef08
+ .debug_info    0x001b6dc9      0x4cf /tmp/ccsFfXOc.debug.temp.o
+                0x001b6dc9                tte_init_bmp.c.9b0c580c
+ .debug_info    0x001b7298      0x9be /tmp/cclfgkLM.debug.temp.o
+                0x001b7298                tte_main.c.eb02a301
+ .debug_info    0x001b7c56      0x1b3 /tmp/ccv3O3sm.debug.temp.o
+                0x001b7c56                interrupts_gba.c.629263ff
+ .debug_info    0x001b7e09     0x119b /tmp/ccjdAPvD.debug.temp.o
+                0x001b7e09                gbt_player.c.0480fa31
+ .debug_info    0x001b8fa4     0xa5b1 bn_sprites_manager.bn_iwram.o
+ .debug_info    0x001c3555     0x19e4 bn_hw_common.bn_noflto.o
+ .debug_info    0x001c4f39      0x614 bn_hw_game_pak.bn_ewram.o
+ .debug_info    0x001c554d     0x1104 bn_hw_palettes.bn_iwram.o
+ .debug_info    0x001c6651       0x23 bn_hw_bg_blocks.o
+ .debug_info    0x001c6674       0x24 bn_hw_hblank_effects.o
+ .debug_info    0x001c6698       0x23 bn_hw_palettes_asm.o
+ .debug_info    0x001c66bb       0x30 clr_blend_fast.o
+ .debug_info    0x001c66eb       0x23 clr_fade_fast.o
+ .debug_info    0x001c670e      0x1c8 tonc_bios.o
+ .debug_info    0x001c68d6       0x3a tonc_memset.o
+ .debug_info    0x001c6910       0x24 irq_handler.o
+ .debug_info    0x001c6934       0x24 posprintf.o
+ .debug_info    0x001c6958       0x22 lmul.o
+ .debug_info    0x001c697a       0x22 memcpy.o
+ .debug_info    0x001c699c       0x22 memmove.o
+ .debug_info    0x001c69be       0x22 memset.o
+ .debug_info    0x001c69e0       0x22 rmemcpy.o
+ .debug_info    0x001c6a02       0x23 sdiv32.o
+ .debug_info    0x001c6a25       0x24 udiv32.o
+ .debug_info    0x001c6a49       0x24 huffman.o
+ .debug_info    0x001c6a6d       0x24 lz77.o
+ .debug_info    0x001c6a91       0x24 running_length.o
+ .debug_info    0x001c6ab5       0x24 mm_effect.o
+ .debug_info    0x001c6ad9       0x23 mm_main.o
+ .debug_info    0x001c6afc       0x22 mm_mas.o
+ .debug_info    0x001c6b1e       0x24 mm_mas_arm.o
+ .debug_info    0x001c6b42       0x22 mm_main_gba.o
+ .debug_info    0x001c6b64       0x22 mm_mixer_gba.o
 
-.debug_abbrev   0x00000000    0x171cf
+.debug_abbrev   0x00000000    0x173f1
  *(.debug_abbrev)
- .debug_abbrev  0x00000000      0x37c /tmp/ccYUFq4M.ltrans0.ltrans.o
- .debug_abbrev  0x0000037c      0x38c /tmp/ccYUFq4M.ltrans1.ltrans.o
- .debug_abbrev  0x00000708      0xdde /tmp/ccTS1GPQ.debug.temp.o
- .debug_abbrev  0x000014e6      0xa09 /tmp/ccG32DcI.debug.temp.o
- .debug_abbrev  0x00001eef      0xde4 /tmp/ccHjkJou.debug.temp.o
- .debug_abbrev  0x00002cd3      0x882 /tmp/cc5RA772.debug.temp.o
- .debug_abbrev  0x00003555      0xdd0 /tmp/cc3FRq93.debug.temp.o
- .debug_abbrev  0x00004325     0x10f6 /tmp/ccFiOCYE.debug.temp.o
- .debug_abbrev  0x0000541b      0x9f8 /tmp/cceSLdlk.debug.temp.o
- .debug_abbrev  0x00005e13      0xb46 /tmp/ccddVuPU.debug.temp.o
- .debug_abbrev  0x00006959      0xcb1 /tmp/cc08BAG9.debug.temp.o
- .debug_abbrev  0x0000760a      0x921 /tmp/cc3JWvj8.debug.temp.o
- .debug_abbrev  0x00007f2b     0x1054 /tmp/cc8rDF4z.debug.temp.o
- .debug_abbrev  0x00008f7f      0x606 /tmp/ccK9bzAI.debug.temp.o
- .debug_abbrev  0x00009585      0x8b3 /tmp/ccsHmEVJ.debug.temp.o
- .debug_abbrev  0x00009e38      0x991 /tmp/ccNdvfHi.debug.temp.o
- .debug_abbrev  0x0000a7c9      0x910 /tmp/ccv16uvU.debug.temp.o
- .debug_abbrev  0x0000b0d9      0xdc2 /tmp/ccgHNtnY.debug.temp.o
- .debug_abbrev  0x0000be9b      0xead /tmp/cc2zxHzJ.debug.temp.o
- .debug_abbrev  0x0000cd48      0x9c1 /tmp/cckOim5u.debug.temp.o
- .debug_abbrev  0x0000d709      0xcab /tmp/ccpAo6ZT.debug.temp.o
- .debug_abbrev  0x0000e3b4      0xdee /tmp/ccsch08I.debug.temp.o
- .debug_abbrev  0x0000f1a2      0xeea /tmp/cch7dZSB.debug.temp.o
- .debug_abbrev  0x0001008c      0x79e /tmp/ccZnE881.debug.temp.o
- .debug_abbrev  0x0001082a      0xcbf /tmp/ccqtYPlM.debug.temp.o
- .debug_abbrev  0x000114e9      0xb98 /tmp/cc1QHINi.debug.temp.o
- .debug_abbrev  0x00012081      0x519 /tmp/ccZXdSq4.debug.temp.o
- .debug_abbrev  0x0001259a      0x9dc /tmp/ccGqtSRM.debug.temp.o
- .debug_abbrev  0x00012f76      0x7d4 /tmp/ccY4Hidb.debug.temp.o
- .debug_abbrev  0x0001374a      0x9c8 /tmp/cc5uz4HI.debug.temp.o
- .debug_abbrev  0x00014112      0x192 /tmp/ccqMGPn8.debug.temp.o
- .debug_abbrev  0x000142a4      0x228 /tmp/cc57V5xn.debug.temp.o
- .debug_abbrev  0x000144cc      0x70d /tmp/ccWLBXNn.debug.temp.o
- .debug_abbrev  0x00014bd9      0x1a4 /tmp/cc9iKQyH.debug.temp.o
- .debug_abbrev  0x00014d7d       0xf4 /tmp/cct0QBXz.debug.temp.o
- .debug_abbrev  0x00014e71      0x1c6 /tmp/cc5x1eSp.debug.temp.o
- .debug_abbrev  0x00015037      0x174 /tmp/ccsseAeA.debug.temp.o
- .debug_abbrev  0x000151ab      0x1b1 /tmp/ccoos1Y9.debug.temp.o
- .debug_abbrev  0x0001535c      0x266 /tmp/ccLVyW56.debug.temp.o
- .debug_abbrev  0x000155c2       0xed /tmp/ccU5pnRm.debug.temp.o
- .debug_abbrev  0x000156af      0x187 /tmp/cc4lckLv.debug.temp.o
- .debug_abbrev  0x00015836      0xabc bn_sprites_manager.bn_iwram.o
- .debug_abbrev  0x000162f2      0x606 bn_hw_common.bn_noflto.o
- .debug_abbrev  0x000168f8      0x1e0 bn_hw_game_pak.bn_ewram.o
- .debug_abbrev  0x00016ad8      0x4db bn_hw_palettes.bn_iwram.o
- .debug_abbrev  0x00016fb3       0x14 bn_hw_bg_blocks.o
- .debug_abbrev  0x00016fc7       0x14 bn_hw_hblank_effects.o
- .debug_abbrev  0x00016fdb       0x14 bn_hw_palettes_asm.o
- .debug_abbrev  0x00016fef       0x28 clr_blend_fast.o
- .debug_abbrev  0x00017017       0x14 clr_fade_fast.o
- .debug_abbrev  0x0001702b       0x26 tonc_bios.o
- .debug_abbrev  0x00017051       0x26 tonc_memset.o
- .debug_abbrev  0x00017077       0x14 irq_handler.o
- .debug_abbrev  0x0001708b       0x14 posprintf.o
- .debug_abbrev  0x0001709f       0x12 lmul.o
- .debug_abbrev  0x000170b1       0x12 memcpy.o
- .debug_abbrev  0x000170c3       0x12 memmove.o
- .debug_abbrev  0x000170d5       0x12 memset.o
- .debug_abbrev  0x000170e7       0x12 rmemcpy.o
- .debug_abbrev  0x000170f9       0x14 sdiv32.o
- .debug_abbrev  0x0001710d       0x14 udiv32.o
- .debug_abbrev  0x00017121       0x14 huffman.o
- .debug_abbrev  0x00017135       0x14 lz77.o
- .debug_abbrev  0x00017149       0x14 running_length.o
- .debug_abbrev  0x0001715d       0x14 mm_effect.o
- .debug_abbrev  0x00017171       0x14 mm_main.o
- .debug_abbrev  0x00017185       0x12 mm_mas.o
- .debug_abbrev  0x00017197       0x14 mm_mas_arm.o
- .debug_abbrev  0x000171ab       0x12 mm_main_gba.o
- .debug_abbrev  0x000171bd       0x12 mm_mixer_gba.o
+ .debug_abbrev  0x00000000      0x360 /tmp/ccktRJzG.ltrans0.ltrans.o
+ .debug_abbrev  0x00000360      0x3a3 /tmp/ccktRJzG.ltrans1.ltrans.o
+ .debug_abbrev  0x00000703      0x215 /tmp/ccktRJzG.ltrans2.ltrans.o
+ .debug_abbrev  0x00000918      0xdf0 /tmp/ccJmOrco.debug.temp.o
+ .debug_abbrev  0x00001708      0xa09 /tmp/ccdYGhJh.debug.temp.o
+ .debug_abbrev  0x00002111      0xde4 /tmp/ccMI1Ney.debug.temp.o
+ .debug_abbrev  0x00002ef5      0x882 /tmp/ccTtwinI.debug.temp.o
+ .debug_abbrev  0x00003777      0xdd0 /tmp/ccHNglKc.debug.temp.o
+ .debug_abbrev  0x00004547     0x10f6 /tmp/ccoTCAQH.debug.temp.o
+ .debug_abbrev  0x0000563d      0x9f8 /tmp/ccWQbbWA.debug.temp.o
+ .debug_abbrev  0x00006035      0xb46 /tmp/ccLVDvXv.debug.temp.o
+ .debug_abbrev  0x00006b7b      0xcb1 /tmp/cc8dwAhG.debug.temp.o
+ .debug_abbrev  0x0000782c      0x921 /tmp/ccCKwPX8.debug.temp.o
+ .debug_abbrev  0x0000814d     0x1054 /tmp/ccL5qha7.debug.temp.o
+ .debug_abbrev  0x000091a1      0x606 /tmp/ccIWzpi3.debug.temp.o
+ .debug_abbrev  0x000097a7      0x8b3 /tmp/cc6rI9UN.debug.temp.o
+ .debug_abbrev  0x0000a05a      0x991 /tmp/ccdBckBY.debug.temp.o
+ .debug_abbrev  0x0000a9eb      0x910 /tmp/cc9Ar874.debug.temp.o
+ .debug_abbrev  0x0000b2fb      0xdc2 /tmp/ccPPwzAe.debug.temp.o
+ .debug_abbrev  0x0000c0bd      0xead /tmp/ccfBXiql.debug.temp.o
+ .debug_abbrev  0x0000cf6a      0x9c1 /tmp/ccPb7YZs.debug.temp.o
+ .debug_abbrev  0x0000d92b      0xcab /tmp/ccpFBV35.debug.temp.o
+ .debug_abbrev  0x0000e5d6      0xdee /tmp/ccw5A3n2.debug.temp.o
+ .debug_abbrev  0x0000f3c4      0xeea /tmp/cc0PuC2Y.debug.temp.o
+ .debug_abbrev  0x000102ae      0x79e /tmp/ccqj43oK.debug.temp.o
+ .debug_abbrev  0x00010a4c      0xcbf /tmp/ccMhhL7N.debug.temp.o
+ .debug_abbrev  0x0001170b      0xb98 /tmp/ccYDf9vv.debug.temp.o
+ .debug_abbrev  0x000122a3      0x519 /tmp/cc46nfuk.debug.temp.o
+ .debug_abbrev  0x000127bc      0x9dc /tmp/cc0iZ13Q.debug.temp.o
+ .debug_abbrev  0x00013198      0x7d4 /tmp/ccC0Hgtu.debug.temp.o
+ .debug_abbrev  0x0001396c      0x9c8 /tmp/cc0Jd66m.debug.temp.o
+ .debug_abbrev  0x00014334      0x192 /tmp/ccyJvEEr.debug.temp.o
+ .debug_abbrev  0x000144c6      0x228 /tmp/cce9htz3.debug.temp.o
+ .debug_abbrev  0x000146ee      0x70d /tmp/cc5qDKJT.debug.temp.o
+ .debug_abbrev  0x00014dfb      0x1a4 /tmp/ccUAgzWV.debug.temp.o
+ .debug_abbrev  0x00014f9f       0xf4 /tmp/ccFegeKA.debug.temp.o
+ .debug_abbrev  0x00015093      0x1c6 /tmp/ccP5YWZw.debug.temp.o
+ .debug_abbrev  0x00015259      0x174 /tmp/ccVhvxKW.debug.temp.o
+ .debug_abbrev  0x000153cd      0x1b1 /tmp/ccsFfXOc.debug.temp.o
+ .debug_abbrev  0x0001557e      0x266 /tmp/cclfgkLM.debug.temp.o
+ .debug_abbrev  0x000157e4       0xed /tmp/ccv3O3sm.debug.temp.o
+ .debug_abbrev  0x000158d1      0x187 /tmp/ccjdAPvD.debug.temp.o
+ .debug_abbrev  0x00015a58      0xabc bn_sprites_manager.bn_iwram.o
+ .debug_abbrev  0x00016514      0x606 bn_hw_common.bn_noflto.o
+ .debug_abbrev  0x00016b1a      0x1e0 bn_hw_game_pak.bn_ewram.o
+ .debug_abbrev  0x00016cfa      0x4db bn_hw_palettes.bn_iwram.o
+ .debug_abbrev  0x000171d5       0x14 bn_hw_bg_blocks.o
+ .debug_abbrev  0x000171e9       0x14 bn_hw_hblank_effects.o
+ .debug_abbrev  0x000171fd       0x14 bn_hw_palettes_asm.o
+ .debug_abbrev  0x00017211       0x28 clr_blend_fast.o
+ .debug_abbrev  0x00017239       0x14 clr_fade_fast.o
+ .debug_abbrev  0x0001724d       0x26 tonc_bios.o
+ .debug_abbrev  0x00017273       0x26 tonc_memset.o
+ .debug_abbrev  0x00017299       0x14 irq_handler.o
+ .debug_abbrev  0x000172ad       0x14 posprintf.o
+ .debug_abbrev  0x000172c1       0x12 lmul.o
+ .debug_abbrev  0x000172d3       0x12 memcpy.o
+ .debug_abbrev  0x000172e5       0x12 memmove.o
+ .debug_abbrev  0x000172f7       0x12 memset.o
+ .debug_abbrev  0x00017309       0x12 rmemcpy.o
+ .debug_abbrev  0x0001731b       0x14 sdiv32.o
+ .debug_abbrev  0x0001732f       0x14 udiv32.o
+ .debug_abbrev  0x00017343       0x14 huffman.o
+ .debug_abbrev  0x00017357       0x14 lz77.o
+ .debug_abbrev  0x0001736b       0x14 running_length.o
+ .debug_abbrev  0x0001737f       0x14 mm_effect.o
+ .debug_abbrev  0x00017393       0x14 mm_main.o
+ .debug_abbrev  0x000173a7       0x12 mm_mas.o
+ .debug_abbrev  0x000173b9       0x14 mm_mas_arm.o
+ .debug_abbrev  0x000173cd       0x12 mm_main_gba.o
+ .debug_abbrev  0x000173df       0x12 mm_mixer_gba.o
 
-.debug_line     0x00000000    0x3cc42
+.debug_line     0x00000000    0x3da74
  *(.debug_line)
- .debug_line    0x00000000    0x16d23 /tmp/ccYUFq4M.ltrans0.ltrans.o
- .debug_line    0x00016d23     0xf041 /tmp/ccYUFq4M.ltrans1.ltrans.o
- .debug_line    0x00025d64      0xaf5 /tmp/ccTS1GPQ.debug.temp.o
- .debug_line    0x00026859      0x73e /tmp/ccG32DcI.debug.temp.o
- .debug_line    0x00026f97      0x9a0 /tmp/ccHjkJou.debug.temp.o
- .debug_line    0x00027937      0x615 /tmp/cc5RA772.debug.temp.o
- .debug_line    0x00027f4c      0xb96 /tmp/cc3FRq93.debug.temp.o
- .debug_line    0x00028ae2      0xda4 /tmp/ccFiOCYE.debug.temp.o
- .debug_line    0x00029886      0x701 /tmp/cceSLdlk.debug.temp.o
- .debug_line    0x00029f87      0xaae /tmp/ccddVuPU.debug.temp.o
- .debug_line    0x0002aa35      0xcdb /tmp/cc08BAG9.debug.temp.o
- .debug_line    0x0002b710      0x727 /tmp/cc3JWvj8.debug.temp.o
- .debug_line    0x0002be37     0x1f37 /tmp/cc8rDF4z.debug.temp.o
- .debug_line    0x0002dd6e      0x5df /tmp/ccK9bzAI.debug.temp.o
- .debug_line    0x0002e34d      0x6b4 /tmp/ccsHmEVJ.debug.temp.o
- .debug_line    0x0002ea01      0x7c9 /tmp/ccNdvfHi.debug.temp.o
- .debug_line    0x0002f1ca      0x85e /tmp/ccv16uvU.debug.temp.o
- .debug_line    0x0002fa28      0xace /tmp/ccgHNtnY.debug.temp.o
- .debug_line    0x000304f6      0xad5 /tmp/cc2zxHzJ.debug.temp.o
- .debug_line    0x00030fcb      0x6d7 /tmp/cckOim5u.debug.temp.o
- .debug_line    0x000316a2      0x9e9 /tmp/ccpAo6ZT.debug.temp.o
- .debug_line    0x0003208b      0x944 /tmp/ccsch08I.debug.temp.o
- .debug_line    0x000329cf      0xc8b /tmp/cch7dZSB.debug.temp.o
- .debug_line    0x0003365a      0x635 /tmp/ccZnE881.debug.temp.o
- .debug_line    0x00033c8f      0xb2e /tmp/ccqtYPlM.debug.temp.o
- .debug_line    0x000347bd      0x8ff /tmp/cc1QHINi.debug.temp.o
- .debug_line    0x000350bc      0x462 /tmp/ccZXdSq4.debug.temp.o
- .debug_line    0x0003551e      0x75c /tmp/ccGqtSRM.debug.temp.o
- .debug_line    0x00035c7a      0x6c5 /tmp/ccY4Hidb.debug.temp.o
- .debug_line    0x0003633f      0x85f /tmp/cc5uz4HI.debug.temp.o
- .debug_line    0x00036b9e      0x35d /tmp/ccqMGPn8.debug.temp.o
- .debug_line    0x00036efb      0x31a /tmp/cc57V5xn.debug.temp.o
- .debug_line    0x00037215      0x68e /tmp/ccWLBXNn.debug.temp.o
- .debug_line    0x000378a3      0x24f /tmp/cc9iKQyH.debug.temp.o
- .debug_line    0x00037af2      0x10b /tmp/cct0QBXz.debug.temp.o
- .debug_line    0x00037bfd      0x10e /tmp/cc5x1eSp.debug.temp.o
- .debug_line    0x00037d0b      0x116 /tmp/ccsseAeA.debug.temp.o
- .debug_line    0x00037e21      0x112 /tmp/ccoos1Y9.debug.temp.o
- .debug_line    0x00037f33      0x157 /tmp/ccLVyW56.debug.temp.o
- .debug_line    0x0003808a      0x180 /tmp/ccU5pnRm.debug.temp.o
- .debug_line    0x0003820a      0x184 /tmp/cc4lckLv.debug.temp.o
- .debug_line    0x0003838e     0x1000 bn_sprites_manager.bn_iwram.o
- .debug_line    0x0003938e      0x689 bn_hw_common.bn_noflto.o
- .debug_line    0x00039a17      0x507 bn_hw_game_pak.bn_ewram.o
- .debug_line    0x00039f1e      0x748 bn_hw_palettes.bn_iwram.o
- .debug_line    0x0003a666       0xa3 bn_hw_bg_blocks.o
- .debug_line    0x0003a709       0xbc bn_hw_hblank_effects.o
- .debug_line    0x0003a7c5       0x93 bn_hw_palettes_asm.o
- .debug_line    0x0003a858       0xb3 clr_blend_fast.o
- .debug_line    0x0003a90b       0xb2 clr_fade_fast.o
- .debug_line    0x0003a9bd      0x2ce tonc_bios.o
- .debug_line    0x0003ac8b       0xd1 tonc_memset.o
- .debug_line    0x0003ad5c       0xee irq_handler.o
- .debug_line    0x0003ae4a      0x1c8 posprintf.o
- .debug_line    0x0003b012       0xce lmul.o
- .debug_line    0x0003b0e0       0xe4 memcpy.o
- .debug_line    0x0003b1c4       0xc4 memmove.o
- .debug_line    0x0003b288       0xee memset.o
- .debug_line    0x0003b376       0xd1 rmemcpy.o
- .debug_line    0x0003b447       0x9f sdiv32.o
- .debug_line    0x0003b4e6      0x108 udiv32.o
- .debug_line    0x0003b5ee       0xbb huffman.o
- .debug_line    0x0003b6a9      0x101 lz77.o
- .debug_line    0x0003b7aa       0xd9 running_length.o
- .debug_line    0x0003b883      0x22a mm_effect.o
- .debug_line    0x0003baad       0x9b mm_main.o
- .debug_line    0x0003bb48      0xa8a mm_mas.o
- .debug_line    0x0003c5d2      0x210 mm_mas_arm.o
- .debug_line    0x0003c7e2      0x12e mm_main_gba.o
- .debug_line    0x0003c910      0x332 mm_mixer_gba.o
+ .debug_line    0x00000000    0x14462 /tmp/ccktRJzG.ltrans0.ltrans.o
+ .debug_line    0x00014462     0xedf0 /tmp/ccktRJzG.ltrans1.ltrans.o
+ .debug_line    0x00023252     0x3900 /tmp/ccktRJzG.ltrans2.ltrans.o
+ .debug_line    0x00026b52      0xb39 /tmp/ccJmOrco.debug.temp.o
+ .debug_line    0x0002768b      0x73e /tmp/ccdYGhJh.debug.temp.o
+ .debug_line    0x00027dc9      0x9a0 /tmp/ccMI1Ney.debug.temp.o
+ .debug_line    0x00028769      0x615 /tmp/ccTtwinI.debug.temp.o
+ .debug_line    0x00028d7e      0xb96 /tmp/ccHNglKc.debug.temp.o
+ .debug_line    0x00029914      0xda4 /tmp/ccoTCAQH.debug.temp.o
+ .debug_line    0x0002a6b8      0x701 /tmp/ccWQbbWA.debug.temp.o
+ .debug_line    0x0002adb9      0xaae /tmp/ccLVDvXv.debug.temp.o
+ .debug_line    0x0002b867      0xcdb /tmp/cc8dwAhG.debug.temp.o
+ .debug_line    0x0002c542      0x727 /tmp/ccCKwPX8.debug.temp.o
+ .debug_line    0x0002cc69     0x1f37 /tmp/ccL5qha7.debug.temp.o
+ .debug_line    0x0002eba0      0x5df /tmp/ccIWzpi3.debug.temp.o
+ .debug_line    0x0002f17f      0x6b4 /tmp/cc6rI9UN.debug.temp.o
+ .debug_line    0x0002f833      0x7c9 /tmp/ccdBckBY.debug.temp.o
+ .debug_line    0x0002fffc      0x85e /tmp/cc9Ar874.debug.temp.o
+ .debug_line    0x0003085a      0xace /tmp/ccPPwzAe.debug.temp.o
+ .debug_line    0x00031328      0xad5 /tmp/ccfBXiql.debug.temp.o
+ .debug_line    0x00031dfd      0x6d7 /tmp/ccPb7YZs.debug.temp.o
+ .debug_line    0x000324d4      0x9e9 /tmp/ccpFBV35.debug.temp.o
+ .debug_line    0x00032ebd      0x944 /tmp/ccw5A3n2.debug.temp.o
+ .debug_line    0x00033801      0xc8b /tmp/cc0PuC2Y.debug.temp.o
+ .debug_line    0x0003448c      0x635 /tmp/ccqj43oK.debug.temp.o
+ .debug_line    0x00034ac1      0xb2e /tmp/ccMhhL7N.debug.temp.o
+ .debug_line    0x000355ef      0x8ff /tmp/ccYDf9vv.debug.temp.o
+ .debug_line    0x00035eee      0x462 /tmp/cc46nfuk.debug.temp.o
+ .debug_line    0x00036350      0x75c /tmp/cc0iZ13Q.debug.temp.o
+ .debug_line    0x00036aac      0x6c5 /tmp/ccC0Hgtu.debug.temp.o
+ .debug_line    0x00037171      0x85f /tmp/cc0Jd66m.debug.temp.o
+ .debug_line    0x000379d0      0x35d /tmp/ccyJvEEr.debug.temp.o
+ .debug_line    0x00037d2d      0x31a /tmp/cce9htz3.debug.temp.o
+ .debug_line    0x00038047      0x68e /tmp/cc5qDKJT.debug.temp.o
+ .debug_line    0x000386d5      0x24f /tmp/ccUAgzWV.debug.temp.o
+ .debug_line    0x00038924      0x10b /tmp/ccFegeKA.debug.temp.o
+ .debug_line    0x00038a2f      0x10e /tmp/ccP5YWZw.debug.temp.o
+ .debug_line    0x00038b3d      0x116 /tmp/ccVhvxKW.debug.temp.o
+ .debug_line    0x00038c53      0x112 /tmp/ccsFfXOc.debug.temp.o
+ .debug_line    0x00038d65      0x157 /tmp/cclfgkLM.debug.temp.o
+ .debug_line    0x00038ebc      0x180 /tmp/ccv3O3sm.debug.temp.o
+ .debug_line    0x0003903c      0x184 /tmp/ccjdAPvD.debug.temp.o
+ .debug_line    0x000391c0     0x1000 bn_sprites_manager.bn_iwram.o
+ .debug_line    0x0003a1c0      0x689 bn_hw_common.bn_noflto.o
+ .debug_line    0x0003a849      0x507 bn_hw_game_pak.bn_ewram.o
+ .debug_line    0x0003ad50      0x748 bn_hw_palettes.bn_iwram.o
+ .debug_line    0x0003b498       0xa3 bn_hw_bg_blocks.o
+ .debug_line    0x0003b53b       0xbc bn_hw_hblank_effects.o
+ .debug_line    0x0003b5f7       0x93 bn_hw_palettes_asm.o
+ .debug_line    0x0003b68a       0xb3 clr_blend_fast.o
+ .debug_line    0x0003b73d       0xb2 clr_fade_fast.o
+ .debug_line    0x0003b7ef      0x2ce tonc_bios.o
+ .debug_line    0x0003babd       0xd1 tonc_memset.o
+ .debug_line    0x0003bb8e       0xee irq_handler.o
+ .debug_line    0x0003bc7c      0x1c8 posprintf.o
+ .debug_line    0x0003be44       0xce lmul.o
+ .debug_line    0x0003bf12       0xe4 memcpy.o
+ .debug_line    0x0003bff6       0xc4 memmove.o
+ .debug_line    0x0003c0ba       0xee memset.o
+ .debug_line    0x0003c1a8       0xd1 rmemcpy.o
+ .debug_line    0x0003c279       0x9f sdiv32.o
+ .debug_line    0x0003c318      0x108 udiv32.o
+ .debug_line    0x0003c420       0xbb huffman.o
+ .debug_line    0x0003c4db      0x101 lz77.o
+ .debug_line    0x0003c5dc       0xd9 running_length.o
+ .debug_line    0x0003c6b5      0x22a mm_effect.o
+ .debug_line    0x0003c8df       0x9b mm_main.o
+ .debug_line    0x0003c97a      0xa8a mm_mas.o
+ .debug_line    0x0003d404      0x210 mm_mas_arm.o
+ .debug_line    0x0003d614      0x12e mm_main_gba.o
+ .debug_line    0x0003d742      0x332 mm_mixer_gba.o
 
-.debug_frame    0x00000000     0x1a38
+.debug_frame    0x00000000     0x1bcc
  *(.debug_frame)
- .debug_frame   0x00000000      0x63c /tmp/ccYUFq4M.ltrans0.ltrans.o
- .debug_frame   0x0000063c     0x1200 /tmp/ccYUFq4M.ltrans1.ltrans.o
- .debug_frame   0x0000183c       0x94 bn_sprites_manager.bn_iwram.o
- .debug_frame   0x000018d0       0xec bn_hw_common.bn_noflto.o
- .debug_frame   0x000019bc       0x34 bn_hw_game_pak.bn_ewram.o
- .debug_frame   0x000019f0       0x48 bn_hw_palettes.bn_iwram.o
+ .debug_frame   0x00000000      0x7f0 /tmp/ccktRJzG.ltrans0.ltrans.o
+ .debug_frame   0x000007f0      0xc70 /tmp/ccktRJzG.ltrans1.ltrans.o
+ .debug_frame   0x00001460      0x570 /tmp/ccktRJzG.ltrans2.ltrans.o
+ .debug_frame   0x000019d0       0x94 bn_sprites_manager.bn_iwram.o
+ .debug_frame   0x00001a64       0xec bn_hw_common.bn_noflto.o
+ .debug_frame   0x00001b50       0x34 bn_hw_game_pak.bn_ewram.o
+ .debug_frame   0x00001b84       0x48 bn_hw_palettes.bn_iwram.o
 
-.debug_str      0x00000000    0x92b73
+.debug_str      0x00000000    0x9489c
  *(.debug_str)
- .debug_str     0x00000000      0x681 /tmp/ccYUFq4M.ltrans0.ltrans.o
- .debug_str     0x00000000      0xa93 /tmp/ccYUFq4M.ltrans1.ltrans.o
- .debug_str     0x00000000     0xfe55 /tmp/ccTS1GPQ.debug.temp.o
- .debug_str     0x00000000     0x942e /tmp/ccG32DcI.debug.temp.o
- .debug_str     0x00000000     0xbcc7 /tmp/ccHjkJou.debug.temp.o
- .debug_str     0x00000000     0x2a33 /tmp/cc5RA772.debug.temp.o
- .debug_str     0x00000000    0x16417 /tmp/cc3FRq93.debug.temp.o
- .debug_str     0x00000000    0x1b581 /tmp/ccFiOCYE.debug.temp.o
- .debug_str     0x00000000     0x3d1e /tmp/cceSLdlk.debug.temp.o
- .debug_str     0x00000000     0x551b /tmp/ccddVuPU.debug.temp.o
- .debug_str     0x00000000    0x16bd5 /tmp/cc08BAG9.debug.temp.o
- .debug_str     0x00000000     0x329a /tmp/cc3JWvj8.debug.temp.o
- .debug_str     0x00000000    0x4a0ee /tmp/cc8rDF4z.debug.temp.o
- .debug_str     0x00000000     0x164a /tmp/ccK9bzAI.debug.temp.o
- .debug_str     0x00000000     0x37f9 /tmp/ccsHmEVJ.debug.temp.o
- .debug_str     0x00000000     0x3b1e /tmp/ccNdvfHi.debug.temp.o
- .debug_str     0x00000000     0x31f2 /tmp/ccv16uvU.debug.temp.o
- .debug_str     0x00000000     0xc466 /tmp/ccgHNtnY.debug.temp.o
- .debug_str     0x00000000     0xf50b /tmp/cc2zxHzJ.debug.temp.o
- .debug_str     0x00000000     0x82ba /tmp/cckOim5u.debug.temp.o
- .debug_str     0x00000000    0x1029b /tmp/ccpAo6ZT.debug.temp.o
- .debug_str     0x00000000     0xb50f /tmp/ccsch08I.debug.temp.o
- .debug_str     0x00000000    0x184fe /tmp/cch7dZSB.debug.temp.o
- .debug_str     0x00000000     0x3dc7 /tmp/ccZnE881.debug.temp.o
- .debug_str     0x00000000     0xc004 /tmp/ccqtYPlM.debug.temp.o
- .debug_str     0x00000000     0x3426 /tmp/cc1QHINi.debug.temp.o
- .debug_str     0x00000000     0x10ef /tmp/ccZXdSq4.debug.temp.o
- .debug_str     0x00000000     0x45da /tmp/ccGqtSRM.debug.temp.o
- .debug_str     0x00000000     0x2bfa /tmp/ccY4Hidb.debug.temp.o
- .debug_str     0x00000000     0x4032 /tmp/cc5uz4HI.debug.temp.o
- .debug_str     0x00000000      0x59f /tmp/ccqMGPn8.debug.temp.o
- .debug_str     0x00000000      0x605 /tmp/cc57V5xn.debug.temp.o
- .debug_str     0x00000000     0x29f5 /tmp/ccWLBXNn.debug.temp.o
- .debug_str     0x00000000      0x5f3 /tmp/cc9iKQyH.debug.temp.o
- .debug_str     0x00000000      0x2e3 /tmp/cct0QBXz.debug.temp.o
- .debug_str     0x00000000      0x329 /tmp/cc5x1eSp.debug.temp.o
- .debug_str     0x00000000      0x372 /tmp/ccsseAeA.debug.temp.o
- .debug_str     0x00000000      0x3a0 /tmp/ccoos1Y9.debug.temp.o
- .debug_str     0x00000000      0x5a3 /tmp/ccLVyW56.debug.temp.o
- .debug_str     0x00000000      0x34e /tmp/ccU5pnRm.debug.temp.o
- .debug_str     0x00000000      0xade /tmp/cc4lckLv.debug.temp.o
- .debug_str     0x00000000    0x92b73 bn_sprites_manager.bn_iwram.o
+ .debug_str     0x00000000      0x7db /tmp/ccktRJzG.ltrans0.ltrans.o
+ .debug_str     0x00000000      0x867 /tmp/ccktRJzG.ltrans1.ltrans.o
+ .debug_str     0x00000000      0xb4a /tmp/ccktRJzG.ltrans2.ltrans.o
+ .debug_str     0x00000000    0x117e1 /tmp/ccJmOrco.debug.temp.o
+ .debug_str     0x00000000     0x942e /tmp/ccdYGhJh.debug.temp.o
+ .debug_str     0x00000000     0xbcc7 /tmp/ccMI1Ney.debug.temp.o
+ .debug_str     0x00000000     0x2a33 /tmp/ccTtwinI.debug.temp.o
+ .debug_str     0x00000000    0x16417 /tmp/ccHNglKc.debug.temp.o
+ .debug_str     0x00000000    0x1b581 /tmp/ccoTCAQH.debug.temp.o
+ .debug_str     0x00000000     0x3d1e /tmp/ccWQbbWA.debug.temp.o
+ .debug_str     0x00000000     0x551b /tmp/ccLVDvXv.debug.temp.o
+ .debug_str     0x00000000    0x16bd5 /tmp/cc8dwAhG.debug.temp.o
+ .debug_str     0x00000000     0x329a /tmp/ccCKwPX8.debug.temp.o
+ .debug_str     0x00000000    0x4a0ee /tmp/ccL5qha7.debug.temp.o
+ .debug_str     0x00000000     0x164a /tmp/ccIWzpi3.debug.temp.o
+ .debug_str     0x00000000     0x37f9 /tmp/cc6rI9UN.debug.temp.o
+ .debug_str     0x00000000     0x3b1e /tmp/ccdBckBY.debug.temp.o
+ .debug_str     0x00000000     0x31f2 /tmp/cc9Ar874.debug.temp.o
+ .debug_str     0x00000000     0xc466 /tmp/ccPPwzAe.debug.temp.o
+ .debug_str     0x00000000     0xf50b /tmp/ccfBXiql.debug.temp.o
+ .debug_str     0x00000000     0x82ba /tmp/ccPb7YZs.debug.temp.o
+ .debug_str     0x00000000    0x1029b /tmp/ccpFBV35.debug.temp.o
+ .debug_str     0x00000000     0xb50f /tmp/ccw5A3n2.debug.temp.o
+ .debug_str     0x00000000    0x184fe /tmp/cc0PuC2Y.debug.temp.o
+ .debug_str     0x00000000     0x3dc7 /tmp/ccqj43oK.debug.temp.o
+ .debug_str     0x00000000     0xc004 /tmp/ccMhhL7N.debug.temp.o
+ .debug_str     0x00000000     0x3426 /tmp/ccYDf9vv.debug.temp.o
+ .debug_str     0x00000000     0x10ef /tmp/cc46nfuk.debug.temp.o
+ .debug_str     0x00000000     0x45da /tmp/cc0iZ13Q.debug.temp.o
+ .debug_str     0x00000000     0x2bfa /tmp/ccC0Hgtu.debug.temp.o
+ .debug_str     0x00000000     0x4032 /tmp/cc0Jd66m.debug.temp.o
+ .debug_str     0x00000000      0x59f /tmp/ccyJvEEr.debug.temp.o
+ .debug_str     0x00000000      0x605 /tmp/cce9htz3.debug.temp.o
+ .debug_str     0x00000000     0x29f5 /tmp/cc5qDKJT.debug.temp.o
+ .debug_str     0x00000000      0x5f3 /tmp/ccUAgzWV.debug.temp.o
+ .debug_str     0x00000000      0x2e3 /tmp/ccFegeKA.debug.temp.o
+ .debug_str     0x00000000      0x329 /tmp/ccP5YWZw.debug.temp.o
+ .debug_str     0x00000000      0x372 /tmp/ccVhvxKW.debug.temp.o
+ .debug_str     0x00000000      0x3a0 /tmp/ccsFfXOc.debug.temp.o
+ .debug_str     0x00000000      0x5a3 /tmp/cclfgkLM.debug.temp.o
+ .debug_str     0x00000000      0x34e /tmp/ccv3O3sm.debug.temp.o
+ .debug_str     0x00000000      0xade /tmp/ccjdAPvD.debug.temp.o
+ .debug_str     0x00000000    0x9489c bn_sprites_manager.bn_iwram.o
                                0xb5b3 (size before relaxing)
- .debug_str     0x00092b73     0x11b2 bn_hw_common.bn_noflto.o
- .debug_str     0x00092b73      0x5e7 bn_hw_game_pak.bn_ewram.o
- .debug_str     0x00092b73      0x971 bn_hw_palettes.bn_iwram.o
- .debug_str     0x00092b73       0x9e bn_hw_bg_blocks.o
- .debug_str     0x00092b73       0xa3 bn_hw_hblank_effects.o
- .debug_str     0x00092b73       0xa1 bn_hw_palettes_asm.o
- .debug_str     0x00092b73       0xbe clr_blend_fast.o
- .debug_str     0x00092b73       0xae clr_fade_fast.o
- .debug_str     0x00092b73      0x262 tonc_bios.o
- .debug_str     0x00092b73       0xbe tonc_memset.o
- .debug_str     0x00092b73       0xac irq_handler.o
- .debug_str     0x00092b73       0xac posprintf.o
- .debug_str     0x00092b73       0xa4 lmul.o
- .debug_str     0x00092b73       0xa6 memcpy.o
- .debug_str     0x00092b73       0xa7 memmove.o
- .debug_str     0x00092b73       0xa6 memset.o
- .debug_str     0x00092b73       0xa7 rmemcpy.o
- .debug_str     0x00092b73       0xaa sdiv32.o
- .debug_str     0x00092b73       0xaa udiv32.o
- .debug_str     0x00092b73       0xb1 huffman.o
- .debug_str     0x00092b73       0xae lz77.o
- .debug_str     0x00092b73       0xb8 running_length.o
- .debug_str     0x00092b73       0xac mm_effect.o
- .debug_str     0x00092b73       0xaa mm_main.o
- .debug_str     0x00092b73       0xa9 mm_mas.o
- .debug_str     0x00092b73       0xad mm_mas_arm.o
- .debug_str     0x00092b73       0xb2 mm_main_gba.o
- .debug_str     0x00092b73       0xb3 mm_mixer_gba.o
+ .debug_str     0x0009489c     0x11b2 bn_hw_common.bn_noflto.o
+ .debug_str     0x0009489c      0x5e7 bn_hw_game_pak.bn_ewram.o
+ .debug_str     0x0009489c      0x971 bn_hw_palettes.bn_iwram.o
+ .debug_str     0x0009489c       0x9e bn_hw_bg_blocks.o
+ .debug_str     0x0009489c       0xa3 bn_hw_hblank_effects.o
+ .debug_str     0x0009489c       0xa1 bn_hw_palettes_asm.o
+ .debug_str     0x0009489c       0xbe clr_blend_fast.o
+ .debug_str     0x0009489c       0xae clr_fade_fast.o
+ .debug_str     0x0009489c      0x262 tonc_bios.o
+ .debug_str     0x0009489c       0xbe tonc_memset.o
+ .debug_str     0x0009489c       0xac irq_handler.o
+ .debug_str     0x0009489c       0xac posprintf.o
+ .debug_str     0x0009489c       0xa4 lmul.o
+ .debug_str     0x0009489c       0xa6 memcpy.o
+ .debug_str     0x0009489c       0xa7 memmove.o
+ .debug_str     0x0009489c       0xa6 memset.o
+ .debug_str     0x0009489c       0xa7 rmemcpy.o
+ .debug_str     0x0009489c       0xaa sdiv32.o
+ .debug_str     0x0009489c       0xaa udiv32.o
+ .debug_str     0x0009489c       0xb1 huffman.o
+ .debug_str     0x0009489c       0xae lz77.o
+ .debug_str     0x0009489c       0xb8 running_length.o
+ .debug_str     0x0009489c       0xac mm_effect.o
+ .debug_str     0x0009489c       0xaa mm_main.o
+ .debug_str     0x0009489c       0xa9 mm_mas.o
+ .debug_str     0x0009489c       0xad mm_mas_arm.o
+ .debug_str     0x0009489c       0xb2 mm_main_gba.o
+ .debug_str     0x0009489c       0xb3 mm_mixer_gba.o
 
-.debug_loc      0x00000000    0x5e9fc
+.debug_loc      0x00000000    0x5fab2
  *(.debug_loc)
- .debug_loc     0x00000000    0x37efe /tmp/ccYUFq4M.ltrans0.ltrans.o
- .debug_loc     0x00037efe    0x257c1 /tmp/ccYUFq4M.ltrans1.ltrans.o
- .debug_loc     0x0005d6bf      0xbc1 bn_sprites_manager.bn_iwram.o
- .debug_loc     0x0005e280      0x309 bn_hw_common.bn_noflto.o
- .debug_loc     0x0005e589      0x102 bn_hw_game_pak.bn_ewram.o
- .debug_loc     0x0005e68b      0x371 bn_hw_palettes.bn_iwram.o
+ .debug_loc     0x00000000    0x323ae /tmp/ccktRJzG.ltrans0.ltrans.o
+ .debug_loc     0x000323ae    0x23cd0 /tmp/ccktRJzG.ltrans1.ltrans.o
+ .debug_loc     0x0005607e     0x86f7 /tmp/ccktRJzG.ltrans2.ltrans.o
+ .debug_loc     0x0005e775      0xbc1 bn_sprites_manager.bn_iwram.o
+ .debug_loc     0x0005f336      0x309 bn_hw_common.bn_noflto.o
+ .debug_loc     0x0005f63f      0x102 bn_hw_game_pak.bn_ewram.o
+ .debug_loc     0x0005f741      0x371 bn_hw_palettes.bn_iwram.o
 
 .debug_macinfo
  *(.debug_macinfo)
@@ -1663,107 +1744,113 @@ Linker script and memory map
  .ARM.attributes
                 0x000000e8       0x1a font_bn_gfx.o
  .ARM.attributes
-                0x00000102       0x1a starsbackground_bn_gfx.o
+                0x00000102       0x1a rake01_bn_gfx.o
  .ARM.attributes
-                0x0000011c       0x1a ui_bubble_bn_gfx.o
+                0x0000011c       0x1a star_bn_gfx.o
  .ARM.attributes
-                0x00000136       0x28 /tmp/ccYUFq4M.ltrans0.ltrans.o
+                0x00000136       0x1a starsbackground_bn_gfx.o
  .ARM.attributes
-                0x0000015e       0x28 /tmp/ccYUFq4M.ltrans1.ltrans.o
+                0x00000150       0x1a ui_bubble_bn_gfx.o
  .ARM.attributes
-                0x00000186       0x26 bn_sprites_manager.bn_iwram.o
+                0x0000016a       0x28 /tmp/ccktRJzG.ltrans0.ltrans.o
  .ARM.attributes
-                0x000001ac       0x26 bn_hw_common.bn_noflto.o
+                0x00000192       0x28 /tmp/ccktRJzG.ltrans1.ltrans.o
  .ARM.attributes
-                0x000001d2       0x26 bn_hw_game_pak.bn_ewram.o
+                0x000001ba       0x28 /tmp/ccktRJzG.ltrans2.ltrans.o
  .ARM.attributes
-                0x000001f8       0x26 bn_hw_palettes.bn_iwram.o
+                0x000001e2       0x26 bn_sprites_manager.bn_iwram.o
  .ARM.attributes
-                0x0000021e       0x26 bn_hw_sprite_tiles.bn_iwram.o
+                0x00000208       0x26 bn_hw_common.bn_noflto.o
  .ARM.attributes
-                0x00000244       0x26 bn_hw_sram.bn_ewram.o
+                0x0000022e       0x26 bn_hw_game_pak.bn_ewram.o
  .ARM.attributes
-                0x0000026a       0x1a bn_hw_bg_blocks.o
+                0x00000254       0x26 bn_hw_palettes.bn_iwram.o
  .ARM.attributes
-                0x00000284       0x1a bn_hw_core.o
+                0x0000027a       0x26 bn_hw_sprite_tiles.bn_iwram.o
  .ARM.attributes
-                0x0000029e       0x1a bn_hw_hblank_effects.o
+                0x000002a0       0x26 bn_hw_sram.bn_ewram.o
  .ARM.attributes
-                0x000002b8       0x1a bn_hw_palettes_asm.o
+                0x000002c6       0x1a bn_hw_bg_blocks.o
  .ARM.attributes
-                0x000002d2       0x1a clr_blend_fast.o
+                0x000002e0       0x1a bn_hw_core.o
  .ARM.attributes
-                0x000002ec       0x1a clr_fade_fast.o
+                0x000002fa       0x1a bn_hw_hblank_effects.o
  .ARM.attributes
-                0x00000306       0x1a tonc_bios.o
+                0x00000314       0x1a bn_hw_palettes_asm.o
  .ARM.attributes
-                0x00000320       0x1a tonc_memset.o
+                0x0000032e       0x1a clr_blend_fast.o
  .ARM.attributes
-                0x0000033a       0x1a tonc_nocash.o
+                0x00000348       0x1a clr_fade_fast.o
  .ARM.attributes
-                0x00000354       0x1a verdana9.o
+                0x00000362       0x1a tonc_bios.o
  .ARM.attributes
-                0x0000036e       0x1a irq_handler.o
+                0x0000037c       0x1a tonc_memset.o
  .ARM.attributes
-                0x00000388       0x1a posprintf.o
+                0x00000396       0x1a tonc_nocash.o
  .ARM.attributes
-                0x000003a2       0x1a atan2.o
+                0x000003b0       0x1a verdana9.o
  .ARM.attributes
-                0x000003bc       0x1a coroutine_asm.o
+                0x000003ca       0x1a irq_handler.o
  .ARM.attributes
-                0x000003d6       0x1a fiq_memcpy.o
+                0x000003e4       0x1a posprintf.o
  .ARM.attributes
-                0x000003f0       0x1a lmul.o
+                0x000003fe       0x1a atan2.o
  .ARM.attributes
-                0x0000040a       0x1a memcpy.o
+                0x00000418       0x1a coroutine_asm.o
  .ARM.attributes
-                0x00000424       0x1a memmove.o
+                0x00000432       0x1a fiq_memcpy.o
  .ARM.attributes
-                0x0000043e       0x1a memset.o
+                0x0000044c       0x1a lmul.o
  .ARM.attributes
-                0x00000458       0x1a rmemcpy.o
+                0x00000466       0x1a memcpy.o
  .ARM.attributes
-                0x00000472       0x1a clz.o
+                0x00000480       0x1a memmove.o
  .ARM.attributes
-                0x0000048c       0x1a sdiv32.o
+                0x0000049a       0x1a memset.o
  .ARM.attributes
-                0x000004a6       0x1a sqrt32.o
+                0x000004b4       0x1a rmemcpy.o
  .ARM.attributes
-                0x000004c0       0x1a udiv32.o
+                0x000004ce       0x1a clz.o
  .ARM.attributes
-                0x000004da       0x1a huffman.o
+                0x000004e8       0x1a sdiv32.o
  .ARM.attributes
-                0x000004f4       0x1a lz77.o
+                0x00000502       0x1a sqrt32.o
  .ARM.attributes
-                0x0000050e       0x1a running_length.o
+                0x0000051c       0x1a udiv32.o
  .ARM.attributes
-                0x00000528       0x1a mm_effect.o
+                0x00000536       0x1a huffman.o
  .ARM.attributes
-                0x00000542       0x1a mm_main.o
+                0x00000550       0x1a lz77.o
  .ARM.attributes
-                0x0000055c       0x1a mm_mas.o
+                0x0000056a       0x1a running_length.o
  .ARM.attributes
-                0x00000576       0x1a mm_mas_arm.o
+                0x00000584       0x1a mm_effect.o
  .ARM.attributes
-                0x00000590       0x1a mm_init_default.o
+                0x0000059e       0x1a mm_main.o
  .ARM.attributes
-                0x000005aa       0x1a mm_main_gba.o
+                0x000005b8       0x1a mm_mas.o
  .ARM.attributes
-                0x000005c4       0x1a mm_mixer_gba.o
+                0x000005d2       0x1a mm_mas_arm.o
  .ARM.attributes
-                0x000005de       0x1c /opt/devkitpro/devkitARM/bin/../lib/gcc/arm-none-eabi/14.2.0/thumb/libgcc.a(_call_via_rX.o)
+                0x000005ec       0x1a mm_init_default.o
  .ARM.attributes
-                0x000005fa       0x1c /opt/devkitpro/devkitARM/bin/../lib/gcc/arm-none-eabi/14.2.0/thumb/libgcc.a(_sync_none.o)
+                0x00000606       0x1a mm_main_gba.o
  .ARM.attributes
-                0x00000616       0x1c /opt/devkitpro/devkitARM/bin/../lib/gcc/arm-none-eabi/14.2.0/thumb/libgcc.a(_arm_muldf3.o)
+                0x00000620       0x1a mm_mixer_gba.o
  .ARM.attributes
-                0x00000632       0x1c /opt/devkitpro/devkitARM/bin/../lib/gcc/arm-none-eabi/14.2.0/thumb/libgcc.a(_arm_addsubdf3.o)
+                0x0000063a       0x1c /opt/devkitpro/devkitARM/bin/../lib/gcc/arm-none-eabi/14.2.0/thumb/libgcc.a(_call_via_rX.o)
  .ARM.attributes
-                0x0000064e       0x1c /opt/devkitpro/devkitARM/bin/../lib/gcc/arm-none-eabi/14.2.0/thumb/libgcc.a(_arm_fixdfsi.o)
+                0x00000656       0x1c /opt/devkitpro/devkitARM/bin/../lib/gcc/arm-none-eabi/14.2.0/thumb/libgcc.a(_sync_none.o)
  .ARM.attributes
-                0x0000066a       0x2a /opt/devkitpro/devkitARM/bin/../lib/gcc/arm-none-eabi/14.2.0/thumb/crtend.o
+                0x00000672       0x1c /opt/devkitpro/devkitARM/bin/../lib/gcc/arm-none-eabi/14.2.0/thumb/libgcc.a(_arm_muldf3.o)
  .ARM.attributes
-                0x00000694       0x1c /opt/devkitpro/devkitARM/bin/../lib/gcc/arm-none-eabi/14.2.0/thumb/crtn.o
+                0x0000068e       0x1c /opt/devkitpro/devkitARM/bin/../lib/gcc/arm-none-eabi/14.2.0/thumb/libgcc.a(_arm_addsubdf3.o)
+ .ARM.attributes
+                0x000006aa       0x1c /opt/devkitpro/devkitARM/bin/../lib/gcc/arm-none-eabi/14.2.0/thumb/libgcc.a(_arm_fixdfsi.o)
+ .ARM.attributes
+                0x000006c6       0x2a /opt/devkitpro/devkitARM/bin/../lib/gcc/arm-none-eabi/14.2.0/thumb/crtend.o
+ .ARM.attributes
+                0x000006f0       0x1c /opt/devkitpro/devkitARM/bin/../lib/gcc/arm-none-eabi/14.2.0/thumb/crtn.o
 
 /DISCARD/
  *(.note.GNU-stack)
@@ -1776,59 +1863,62 @@ LOAD bg_berylsroom_bn_gfx.o
 LOAD castor_bn_gfx.o
 LOAD dialogue_back_bn_gfx.o
 LOAD font_bn_gfx.o
+LOAD rake01_bn_gfx.o
+LOAD star_bn_gfx.o
 LOAD starsbackground_bn_gfx.o
 LOAD ui_bubble_bn_gfx.o
 LOAD main.o
-LOAD /tmp/ccYUFq4M.ltrans0.ltrans.o
-LOAD /tmp/ccYUFq4M.ltrans1.ltrans.o
-LOAD /tmp/ccTS1GPQ.debug.temp.o
-LOAD /tmp/ccG32DcI.debug.temp.o
-LOAD /tmp/ccHjkJou.debug.temp.o
-LOAD /tmp/cc5RA772.debug.temp.o
-LOAD /tmp/cc3FRq93.debug.temp.o
-LOAD /tmp/ccFiOCYE.debug.temp.o
-LOAD /tmp/cceSLdlk.debug.temp.o
-LOAD /tmp/ccddVuPU.debug.temp.o
-LOAD /tmp/cc08BAG9.debug.temp.o
-LOAD /tmp/cc3JWvj8.debug.temp.o
-LOAD /tmp/cc8rDF4z.debug.temp.o
-LOAD /tmp/ccK9bzAI.debug.temp.o
-LOAD /tmp/ccsHmEVJ.debug.temp.o
-LOAD /tmp/ccNdvfHi.debug.temp.o
-LOAD /tmp/ccv16uvU.debug.temp.o
-LOAD /tmp/ccgHNtnY.debug.temp.o
-LOAD /tmp/ccC9UA50.debug.temp.o
-LOAD /tmp/ccluG2Ba.debug.temp.o
-LOAD /tmp/cc2zxHzJ.debug.temp.o
-LOAD /tmp/cckOim5u.debug.temp.o
-LOAD /tmp/ccpAo6ZT.debug.temp.o
-LOAD /tmp/ccsch08I.debug.temp.o
-LOAD /tmp/cch7dZSB.debug.temp.o
-LOAD /tmp/ccZnE881.debug.temp.o
-LOAD /tmp/ccqtYPlM.debug.temp.o
-LOAD /tmp/cc1QHINi.debug.temp.o
-LOAD /tmp/ccZXdSq4.debug.temp.o
-LOAD /tmp/cca3YA82.debug.temp.o
-LOAD /tmp/ccGqtSRM.debug.temp.o
-LOAD /tmp/ccruHTqd.debug.temp.o
-LOAD /tmp/ccY4Hidb.debug.temp.o
-LOAD /tmp/cc5uz4HI.debug.temp.o
-LOAD /tmp/ccqMGPn8.debug.temp.o
-LOAD /tmp/cc57V5xn.debug.temp.o
-LOAD /tmp/ccWLBXNn.debug.temp.o
-LOAD /tmp/cc9iKQyH.debug.temp.o
-LOAD /tmp/cct0QBXz.debug.temp.o
-LOAD /tmp/cc5x1eSp.debug.temp.o
-LOAD /tmp/ccw4wvUl.debug.temp.o
-LOAD /tmp/ccsQuUFQ.debug.temp.o
-LOAD /tmp/ccJRIO3n.debug.temp.o
-LOAD /tmp/ccsseAeA.debug.temp.o
-LOAD /tmp/ccoos1Y9.debug.temp.o
-LOAD /tmp/ccLVyW56.debug.temp.o
-LOAD /tmp/ccU5pnRm.debug.temp.o
-LOAD /tmp/ccqVLpb7.debug.temp.o
-LOAD /tmp/ccHkzz4y.debug.temp.o
-LOAD /tmp/cc4lckLv.debug.temp.o
+LOAD /tmp/ccktRJzG.ltrans0.ltrans.o
+LOAD /tmp/ccktRJzG.ltrans1.ltrans.o
+LOAD /tmp/ccktRJzG.ltrans2.ltrans.o
+LOAD /tmp/ccJmOrco.debug.temp.o
+LOAD /tmp/ccdYGhJh.debug.temp.o
+LOAD /tmp/ccMI1Ney.debug.temp.o
+LOAD /tmp/ccTtwinI.debug.temp.o
+LOAD /tmp/ccHNglKc.debug.temp.o
+LOAD /tmp/ccoTCAQH.debug.temp.o
+LOAD /tmp/ccWQbbWA.debug.temp.o
+LOAD /tmp/ccLVDvXv.debug.temp.o
+LOAD /tmp/cc8dwAhG.debug.temp.o
+LOAD /tmp/ccCKwPX8.debug.temp.o
+LOAD /tmp/ccL5qha7.debug.temp.o
+LOAD /tmp/ccIWzpi3.debug.temp.o
+LOAD /tmp/cc6rI9UN.debug.temp.o
+LOAD /tmp/ccdBckBY.debug.temp.o
+LOAD /tmp/cc9Ar874.debug.temp.o
+LOAD /tmp/ccPPwzAe.debug.temp.o
+LOAD /tmp/ccsWdt4t.debug.temp.o
+LOAD /tmp/ccVEI7cy.debug.temp.o
+LOAD /tmp/ccfBXiql.debug.temp.o
+LOAD /tmp/ccPb7YZs.debug.temp.o
+LOAD /tmp/ccpFBV35.debug.temp.o
+LOAD /tmp/ccw5A3n2.debug.temp.o
+LOAD /tmp/cc0PuC2Y.debug.temp.o
+LOAD /tmp/ccqj43oK.debug.temp.o
+LOAD /tmp/ccMhhL7N.debug.temp.o
+LOAD /tmp/ccYDf9vv.debug.temp.o
+LOAD /tmp/cc46nfuk.debug.temp.o
+LOAD /tmp/cc2iIoLl.debug.temp.o
+LOAD /tmp/cc0iZ13Q.debug.temp.o
+LOAD /tmp/ccMhoQrr.debug.temp.o
+LOAD /tmp/ccC0Hgtu.debug.temp.o
+LOAD /tmp/cc0Jd66m.debug.temp.o
+LOAD /tmp/ccyJvEEr.debug.temp.o
+LOAD /tmp/cce9htz3.debug.temp.o
+LOAD /tmp/cc5qDKJT.debug.temp.o
+LOAD /tmp/ccUAgzWV.debug.temp.o
+LOAD /tmp/ccFegeKA.debug.temp.o
+LOAD /tmp/ccP5YWZw.debug.temp.o
+LOAD /tmp/cc0NESwH.debug.temp.o
+LOAD /tmp/ccBfOpYY.debug.temp.o
+LOAD /tmp/ccS6Lyem.debug.temp.o
+LOAD /tmp/ccVhvxKW.debug.temp.o
+LOAD /tmp/ccsFfXOc.debug.temp.o
+LOAD /tmp/cclfgkLM.debug.temp.o
+LOAD /tmp/ccv3O3sm.debug.temp.o
+LOAD /tmp/ccl7HeLA.debug.temp.o
+LOAD /tmp/cc6Z4Mwx.debug.temp.o
+LOAD /tmp/ccjdAPvD.debug.temp.o
 LOAD bn_affine_bg_animate_actions.o
 LOAD bn_audio_manager.o
 LOAD bn_best_fit_allocator.o
@@ -1922,20 +2012,21 @@ LOAD /opt/devkitpro/devkitARM/bin/../lib/gcc/arm-none-eabi/14.2.0/thumb/crtn.o
 OUTPUT(/mnt/c/users/ethan/documents/github/Starlight-Street/Starlight-Street.elf elf32-littlearm)
 LOAD linker stubs
 
-.debug_ranges   0x00000000    0x16cb8
- .debug_ranges  0x00000000     0xdc70 /tmp/ccYUFq4M.ltrans0.ltrans.o
- .debug_ranges  0x0000dc70     0x8710 /tmp/ccYUFq4M.ltrans1.ltrans.o
- .debug_ranges  0x00016380      0x490 bn_sprites_manager.bn_iwram.o
- .debug_ranges  0x00016810       0x98 bn_hw_common.bn_noflto.o
- .debug_ranges  0x000168a8       0x48 bn_hw_game_pak.bn_ewram.o
- .debug_ranges  0x000168f0      0x148 bn_hw_palettes.bn_iwram.o
- .debug_ranges  0x00016a38      0x128 tonc_bios.o
- .debug_ranges  0x00016b60       0x20 tonc_memset.o
- .debug_ranges  0x00016b80       0x30 lmul.o
- .debug_ranges  0x00016bb0       0x28 memcpy.o
- .debug_ranges  0x00016bd8       0x30 memmove.o
- .debug_ranges  0x00016c08       0x30 memset.o
- .debug_ranges  0x00016c38       0x20 rmemcpy.o
- .debug_ranges  0x00016c58       0x20 mm_mas.o
- .debug_ranges  0x00016c78       0x20 mm_main_gba.o
- .debug_ranges  0x00016c98       0x20 mm_mixer_gba.o
+.debug_ranges   0x00000000    0x16fb8
+ .debug_ranges  0x00000000     0xc098 /tmp/ccktRJzG.ltrans0.ltrans.o
+ .debug_ranges  0x0000c098     0x8860 /tmp/ccktRJzG.ltrans1.ltrans.o
+ .debug_ranges  0x000148f8     0x1d88 /tmp/ccktRJzG.ltrans2.ltrans.o
+ .debug_ranges  0x00016680      0x490 bn_sprites_manager.bn_iwram.o
+ .debug_ranges  0x00016b10       0x98 bn_hw_common.bn_noflto.o
+ .debug_ranges  0x00016ba8       0x48 bn_hw_game_pak.bn_ewram.o
+ .debug_ranges  0x00016bf0      0x148 bn_hw_palettes.bn_iwram.o
+ .debug_ranges  0x00016d38      0x128 tonc_bios.o
+ .debug_ranges  0x00016e60       0x20 tonc_memset.o
+ .debug_ranges  0x00016e80       0x30 lmul.o
+ .debug_ranges  0x00016eb0       0x28 memcpy.o
+ .debug_ranges  0x00016ed8       0x30 memmove.o
+ .debug_ranges  0x00016f08       0x30 memset.o
+ .debug_ranges  0x00016f38       0x20 rmemcpy.o
+ .debug_ranges  0x00016f58       0x20 mm_mas.o
+ .debug_ranges  0x00016f78       0x20 mm_main_gba.o
+ .debug_ranges  0x00016f98       0x20 mm_mixer_gba.o

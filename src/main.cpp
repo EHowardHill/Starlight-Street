@@ -38,6 +38,8 @@
 #include "bn_sprite_items_ui_bubble.h"
 #include "bn_sprite_items_dialogue_back.h"
 #include "bn_sprite_items_castor.h"
+#include "bn_sprite_items_rake01.h"
+#include "bn_sprite_items_star.h"
 #include "bn_regular_bg_items_starsbackground.h"
 #include "bn_regular_bg_items_bg_berylsroom.h"
 
@@ -83,6 +85,41 @@ public:
     {
         ticker++;
         spr.set_y(lerp(spr.y().integer(), ideal_y + (int)(degrees_sin((ticker * 2) % 360) * 12), 0.2));
+    }
+};
+
+class Rake
+{
+public:
+    sprite_ptr p_1 = rake01.create_sprite(80, -74, 0);
+    sprite_ptr p_2 = rake01.create_sprite(80, 54, 1);
+    sprite_ptr p_3 = rake01.create_sprite(208, -74, 2);
+    sprite_ptr p_4 = rake01.create_sprite(208, 54, 3);
+    bool first_view = false;
+
+    Rake(camera_ptr &cam, int x)
+    {
+        p_1.set_scale(2, 2);
+        p_2.set_scale(2, 2);
+        p_1.set_camera(cam);
+        p_2.set_camera(cam);
+        p_1.set_x(x);
+        p_2.set_x(x);
+
+        p_3.set_scale(2, 2);
+        p_4.set_scale(2, 2);
+        p_3.set_camera(cam);
+        p_4.set_camera(cam);
+        p_3.set_x(x + 128);
+        p_4.set_x(x + 128);
+    }
+
+    void update()
+    {
+        p_1.set_x(p_1.x() - 2);
+        p_2.set_x(p_2.x() - 2);
+        p_3.set_x(p_3.x() - 2);
+        p_4.set_x(p_4.x() - 2);
     }
 };
 
@@ -350,6 +387,7 @@ public:
     int state = 0;
     int ticker = 0;
     camera_ptr cam = camera_ptr::create(0, 0);
+    bool is_scared = false;
 
     Beryl()
     {
@@ -441,7 +479,7 @@ public:
         }
         else
         {
-            if (b_held())
+            if (b_held() || is_scared)
             {
                 if (right_held())
                 {
@@ -521,41 +559,72 @@ public:
     }
 };
 
-int main()
+void play_room(int current_room_int)
 {
-    init();
-    globals = new global_data();
+    vector<regular_bg_ptr, 3> bgs;
     vector<int, 64> spent_dialogue;
 
-    auto bg = starsbackground.create_bg(0, 48);
-
-    const Room current_room = room_map(ROOM_BEDROOM);
-    auto bg_room = current_room.bg.create_bg(0, 0);
+    Room current_room = room_map(current_room_int);
 
     Beryl b;
-    bg_room.set_camera(b.cam);
     b.set_x(current_room.init_x);
+
+    {
+        auto bg = starsbackground.create_bg(0, 48);
+        auto bg_room = current_room.bg.create_bg(0, 0);
+        bg_room.set_camera(b.cam);
+
+        bgs.push_back(bg);
+        bgs.push_back(bg_room);
+    }
 
     auto action_bubble = ui_bubble.create_sprite(0, -110, 0);
 
+    optional<Rake> r;
+
     int ticker = 0;
-    while (true)
+    bool is_playing = true;
+    while (is_playing)
     {
         b.update();
+
+        if (r.has_value())
+        {
+            r.value().update();
+
+            if (close(b.x().integer(), r.value().p_1.x().integer(), 48))
+            {
+                is_playing = false;
+            }
+        }
 
         if (current_room.loops)
         {
             if (b.x().integer() < -500)
             {
-                auto c_offset = b.x() - b.cam.x();
-                b.set_x(500);
-                b.cam.set_x(500 - c_offset);
+                if (b.is_scared)
+                {
+                    bgs.clear();
+                }
+                else
+                {
+                    auto c_offset = b.x() - b.cam.x();
+                    b.set_x(500);
+                    b.cam.set_x(500 - c_offset);
+                }
             }
             else if (b.x().integer() > 500)
             {
-                auto c_offset = b.x() - b.cam.x();
-                b.set_x(-500);
-                b.cam.set_x(-500 - c_offset);
+                if (b.is_scared)
+                {
+                    bgs.clear();
+                }
+                else
+                {
+                    auto c_offset = b.x() - b.cam.x();
+                    b.set_x(-500);
+                    b.cam.set_x(-500 - c_offset);
+                }
             }
         }
 
@@ -575,44 +644,48 @@ int main()
         }
 
         bool show_bubble = false;
-        for (int i = 0; i < 64; i++)
+        if (!b.is_scared)
         {
-            if (current_room.items[i].x == 0)
+            for (int i = 0; i < 64; i++)
             {
-                i = 64;
-            }
-            else
-            {
-                int action = current_room.items[i].action;
-                bool exists = false;
-
-                for (int t = 0; t < spent_dialogue.size(); t++)
+                if (current_room.items[i].x == 0)
                 {
-                    exists = exists || (spent_dialogue.at(t) == action);
-                    if (exists)
-                        t = spent_dialogue.size();
+                    i = 64;
                 }
-
-                if (close(b.x().integer(), current_room.items[i].x, 5) && !globals->opt_te.has_value() && !(exists && current_room.items[i].automatic))
+                else
                 {
-                    show_bubble = true;
+                    int action = current_room.items[i].action;
+                    bool exists = false;
 
-                    if (current_room.items[i].automatic || a_pressed())
+                    for (int t = 0; t < spent_dialogue.size(); t++)
                     {
-                        if (!exists)
-                        {
-                            spent_dialogue.push_back(action);
-                        }
+                        exists = exists || (spent_dialogue.at(t) == action);
+                        if (exists)
+                            t = spent_dialogue.size();
+                    }
 
-                        TextElement te;
-                        te.setup(-108, -60, 0);
-                        te.conversation = action;
-                        globals->opt_te = te;
-                        i = 64;
+                    if (close(b.x().integer(), current_room.items[i].x, 5) && !globals->opt_te.has_value() && !(exists && current_room.items[i].automatic))
+                    {
+                        show_bubble = true;
+
+                        if (current_room.items[i].automatic || a_pressed())
+                        {
+                            if (!exists)
+                            {
+                                spent_dialogue.push_back(action);
+                            }
+
+                            TextElement te;
+                            te.setup(-108, -60, 0);
+                            te.conversation = action;
+                            globals->opt_te = te;
+                            i = 64;
+                        }
                     }
                 }
             }
         }
+
         if (show_bubble)
         {
             action_bubble.set_y(lerp(action_bubble.y(), -64, 0.2));
@@ -622,11 +695,110 @@ int main()
             action_bubble.set_y(lerp(action_bubble.y(), -110, 0.2));
         }
 
-        if (ticker % 64 == 0) {
+        if (ticker % 64 == 0)
+        {
             BN_LOG("X: ", b.x());
         }
 
+        // Room-specific actions
+        switch (current_room_int)
+        {
+        case ROOM_BEDROOM:
+        {
+            if (spent_dialogue.size() == 9 && b.x() < 50 && b.x() > -240 && !globals->opt_te.has_value())
+            {
+                b.is_scared = true;
+                sound_items::door.play();
+                music::stop();
+                spent_dialogue.push_back(-1);
+
+                Rake rr = {b.cam, 300};
+                r = rr;
+            }
+
+            if (b.is_scared && b.x() < -750)
+            {
+                is_playing = false;
+            }
+            break;
+        }
+        default:
+        {
+            break;
+        }
+        }
+
         ticker++;
+        update();
+    }
+}
+
+void cutscene(int scene)
+{
+    int ticker = 0;
+    switch (scene)
+    {
+    case C_GASP:
+    {
+        sound_items::gasp.play();
+        while (ticker < 350)
+        {
+            ticker++;
+            update();
+        }
+        break;
+    }
+    case C_STARS:
+    {
+        ticker++;
+        vector<sprite_ptr, 16> stars;
+        for (int t = 0; t < 16; t++)
+        {
+            auto s = star.create_sprite(120 - globals->rnd.get_int(240), 150 + globals->rnd.get_int(240));
+            fixed_t<12> scale_rnd = globals->rnd.get_int(3);
+            fixed_t<12> scale = 0.4 + (scale_rnd / 10.0);
+            s.set_scale(scale, scale);
+            s.set_rotation_angle(globals->rnd.get_int(360));
+            stars.push_back(s);
+        }
+        while (ticker < 700)
+        {
+            for (int t = 0; t < 16; t++)
+            {
+                stars.at(t).set_y(stars.at(t).y() - (2 * (stars.at(t).horizontal_scale())));
+
+                if (t % 3 == 0)
+                {
+                    stars.at(t).set_rotation_angle((stars.at(t).rotation_angle() + 1) % 360);
+                }
+            }
+
+            BN_LOG(ticker);
+            ticker++;
+            update();
+        }
+        break;
+    }
+    default:
+    {
+        break;
+    }
+    }
+}
+
+int main()
+{
+    init();
+    globals = new global_data();
+
+    cutscene(C_GASP);
+    play_room(ROOM_BEDROOM);
+    cutscene(C_GASP);
+    cutscene(C_STARS);
+
+    // Stuck end
+    while (true)
+    {
         update();
     }
 

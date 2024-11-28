@@ -64,3 +64,8 @@ constexpr Room room_map(int room_no) {
             return make_room(bn::regular_bg_items::bg_berylsroom, empty_items, 0, 0);
     }
 }
+
+enum CUTSCENES {
+    C_GASP,
+    C_STARS
+};

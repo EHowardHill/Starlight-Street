@@ -9,7 +9,7 @@ def process_half_image(half_image):
     return green_bg.convert('RGB')  # Convert to RGB
 
 def main():
-    input_folder = 'references/chat'
+    input_folder = 'references/chit'
     images = []
 
     # Loop over all PNG files in the "walk" folder

@@ -104,6 +104,8 @@ main.o: /mnt/c/users/ethan/documents/github/Starlight-Street/src/main.cpp \
  /mnt/c/users/ethan/documents/github/Starlight-Street/build/bn_sprite_items_ui_bubble.h \
  /mnt/c/users/ethan/documents/github/Starlight-Street/build/bn_sprite_items_dialogue_back.h \
  /mnt/c/users/ethan/documents/github/Starlight-Street/build/bn_sprite_items_castor.h \
+ /mnt/c/users/ethan/documents/github/Starlight-Street/build/bn_sprite_items_rake01.h \
+ /mnt/c/users/ethan/documents/github/Starlight-Street/build/bn_sprite_items_star.h \
  /mnt/c/users/ethan/documents/github/Starlight-Street/build/bn_regular_bg_items_starsbackground.h \
  /mnt/c/users/ethan/documents/github/Starlight-Street/butano/include/bn_regular_bg_item.h \
  /mnt/c/users/ethan/documents/github/Starlight-Street/butano/include/bn_bg_palette_item.h \
@@ -219,6 +221,8 @@ main.o: /mnt/c/users/ethan/documents/github/Starlight-Street/src/main.cpp \
 /mnt/c/users/ethan/documents/github/Starlight-Street/build/bn_sprite_items_ui_bubble.h:
 /mnt/c/users/ethan/documents/github/Starlight-Street/build/bn_sprite_items_dialogue_back.h:
 /mnt/c/users/ethan/documents/github/Starlight-Street/build/bn_sprite_items_castor.h:
+/mnt/c/users/ethan/documents/github/Starlight-Street/build/bn_sprite_items_rake01.h:
+/mnt/c/users/ethan/documents/github/Starlight-Street/build/bn_sprite_items_star.h:
 /mnt/c/users/ethan/documents/github/Starlight-Street/build/bn_regular_bg_items_starsbackground.h:
 /mnt/c/users/ethan/documents/github/Starlight-Street/butano/include/bn_regular_bg_item.h:
 /mnt/c/users/ethan/documents/github/Starlight-Street/butano/include/bn_bg_palette_item.h:

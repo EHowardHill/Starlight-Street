@@ -1,7 +1,13 @@
+audio/castor.wav
+1732772294.3876486
 audio/click.wav
 1732498911.885889
+audio/door.wav
+1732776868.5805376
 audio/footstep.wav
 1732591774.1851976
+audio/gasp.wav
+1732780191.7588904
 audio/lt01.xm
 1732511482.390192
 audio/st01.xm

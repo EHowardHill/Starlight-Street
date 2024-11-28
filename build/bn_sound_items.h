@@ -5,8 +5,11 @@
 
 namespace bn::sound_items
 {
-    constexpr inline sound_item click(0);
-    constexpr inline sound_item footstep(1);
+    constexpr inline sound_item castor(0);
+    constexpr inline sound_item click(1);
+    constexpr inline sound_item door(2);
+    constexpr inline sound_item footstep(3);
+    constexpr inline sound_item gasp(4);
 }
 
 #endif
