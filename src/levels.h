@@ -13,7 +13,7 @@ struct Room {
     const bn::regular_bg_item &bg;
     const ActionableItem (&items)[64]; // Use reference to array
     int init_x;
-    int init_action;
+    bool loops;
 };
 
 enum Rooms {
@@ -24,7 +24,13 @@ enum Conversations
 {
     C_INITCONV,
     C_BED,
-    C_INITCASTOR
+    C_INITCASTOR,
+    C_BED_LOOP,
+    C_BED_DESK,
+    C_BED_SHELF,
+    C_BED_CLOSET,
+    C_BED_COUCH,
+    C_BED_DOOR,
 };
 
 // Define the actionable items as a constexpr array
@@ -34,7 +40,13 @@ constexpr ActionableItem room_items[1][64] = {
     {
         {-240, C_INITCONV, true},
         {-240, C_BED, false},
-        {64, C_INITCASTOR, true}
+        {64, C_INITCASTOR, true},
+        {-480, C_BED_LOOP, true},
+        {-76, C_BED_DESK, false},
+        {24, C_BED_SHELF, false},
+        {258, C_BED_CLOSET, false},
+        {136, C_BED_COUCH, false},
+        {-344, C_BED_DOOR, false}
     }
 };
 
@@ -47,7 +59,7 @@ constexpr Room room_map(int room_no) {
     constexpr ActionableItem empty_items[64] = {}; // Define the empty array inline
     switch (room_no) {
         case ROOM_BEDROOM:
-            return make_room(bn::regular_bg_items::bg_berylsroom, room_items[ROOM_BEDROOM], -240, C_INITCONV);
+            return make_room(bn::regular_bg_items::bg_berylsroom, room_items[ROOM_BEDROOM], -240, true);
         default:
             return make_room(bn::regular_bg_items::bg_berylsroom, empty_items, 0, 0);
     }

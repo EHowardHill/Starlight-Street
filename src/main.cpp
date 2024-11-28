@@ -75,7 +75,7 @@ bool close(int a, int b, int dist)
 class Castor
 {
 public:
-    sprite_ptr spr = castor.create_sprite(0, -120);
+    sprite_ptr spr = castor.create_sprite(0, -150);
     int ideal_y;
     int ticker;
 
@@ -132,6 +132,7 @@ public:
         line = 0;
         conversation = conversation_;
         active = true;
+        castor.spr.set_visible(false);
 
         a_button.set_z_order(-5);
 
@@ -170,14 +171,14 @@ public:
 
         case CASTOR_APPEAR:
         {
-            Castor c;
-            c.ideal_y = -32;
-            castor = c;
+            castor.spr.set_visible(true);
+            castor.ideal_y = -32;
+            sound_items::castor.play();
             break;
         }
 
         case CASTOR_DISAPPEAR:
-            castor.ideal_y = -120;
+            castor.ideal_y = -150;
             break;
 
         default:
@@ -430,50 +431,91 @@ public:
             {
                 if (globals->opt_te.value().is_talking)
                 {
-                    set_frame(9 + (globals->opt_te.value().dl->emo_id * 2) + ((ticker % 8) > 4));
+                    set_frame(15 + (globals->opt_te.value().dl->emo_id * 2) + ((ticker % 8) > 4));
                 }
                 else
                 {
-                    set_frame(9 + (globals->opt_te.value().dl->emo_id * 2));
+                    set_frame(15 + (globals->opt_te.value().dl->emo_id * 2));
                 }
             }
         }
         else
         {
-            if (right_held())
+            if (b_held())
             {
-                if (ticker % 16 == 0)
+                if (right_held())
                 {
-                    fixed_t<12> vol = globals->rnd.get_int(8) / 8.0;
-                    sound_items::footstep.play(vol);
+                    if (ticker % 16 == 0)
+                    {
+                        fixed_t<12> vol = globals->rnd.get_int(8) / 8.0;
+                        sound_items::footstep.play(vol);
+                    }
+                    facing_left = false;
+                    state = 1;
+                    set_x(x() + 4.0);
                 }
-                facing_left = false;
-                state = 1;
-                set_x(x() + 1.0);
-            }
-            else if (left_held())
-            {
-                if (ticker % 16 == 0)
+                else if (left_held())
                 {
-                    fixed_t<12> vol = globals->rnd.get_int(8) / 8.0;
-                    sound_items::footstep.play(vol);
+                    if (ticker % 16 == 0)
+                    {
+                        fixed_t<12> vol = globals->rnd.get_int(8) / 8.0;
+                        sound_items::footstep.play(vol);
+                    }
+                    facing_left = true;
+                    state = 1;
+                    set_x(x() - 4.0);
                 }
-                facing_left = true;
-                state = 1;
-                set_x(x() - 1.0);
-            }
-            else
-            {
-                state = 0;
-            }
+                else
+                {
+                    state = 0;
+                }
 
-            if (state == 1)
-            {
-                set_frame((ticker / walk_speed) % 8);
+                if (state == 1)
+                {
+                    set_frame(9 + (ticker / walk_speed) % 6);
+                }
+                else
+                {
+                    set_frame(21);
+                }
             }
             else
             {
-                set_frame(8);
+                if (right_held())
+                {
+                    if (ticker % 16 == 0)
+                    {
+                        fixed_t<12> vol = globals->rnd.get_int(8) / 8.0;
+                        sound_items::footstep.play(vol);
+                    }
+                    facing_left = false;
+                    state = 1;
+                    set_x(x() + 1.0);
+                }
+                else if (left_held())
+                {
+                    if (ticker % 16 == 0)
+                    {
+                        fixed_t<12> vol = globals->rnd.get_int(8) / 8.0;
+                        sound_items::footstep.play(vol);
+                    }
+                    facing_left = true;
+                    state = 1;
+                    set_x(x() - 1.0);
+                }
+                else
+                {
+                    state = 0;
+                }
+
+                if (state == 1)
+                {
+                    set_frame((ticker / walk_speed) % 8);
+                }
+                else
+                {
+                    set_frame(8);
+                }
             }
         }
     }
@@ -500,6 +542,22 @@ int main()
     while (true)
     {
         b.update();
+
+        if (current_room.loops)
+        {
+            if (b.x().integer() < -500)
+            {
+                auto c_offset = b.x() - b.cam.x();
+                b.set_x(500);
+                b.cam.set_x(500 - c_offset);
+            }
+            else if (b.x().integer() > 500)
+            {
+                auto c_offset = b.x() - b.cam.x();
+                b.set_x(-500);
+                b.cam.set_x(-500 - c_offset);
+            }
+        }
 
         if (globals->opt_te.has_value())
         {
@@ -555,10 +613,17 @@ int main()
                 }
             }
         }
-        if (show_bubble) {
+        if (show_bubble)
+        {
             action_bubble.set_y(lerp(action_bubble.y(), -64, 0.2));
-        } else {
+        }
+        else
+        {
             action_bubble.set_y(lerp(action_bubble.y(), -110, 0.2));
+        }
+
+        if (ticker % 64 == 0) {
+            BN_LOG("X: ", b.x());
         }
 
         ticker++;

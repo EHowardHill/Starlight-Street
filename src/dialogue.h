@@ -22,6 +22,8 @@ enum Emotions
     EMO_SURPRISED,
     EMO_CONFUSED,
     EMO_SAD,
+    EMO_HAPPY1,
+    EMO_HAPPY2
 };
 
 enum Actions
@@ -33,7 +35,8 @@ enum Actions
     BERYL_RIGHT,
     CASTOR_APPEAR,
     CASTOR_DISAPPEAR,
-    PLAY_WELCOME
+    PLAY_WELCOME,
+    GAME_BRACELET
 };
 
 const DialogueLine gamelines[64][64] = {
@@ -72,4 +75,47 @@ const DialogueLine gamelines[64][64] = {
      {SAY, 0, CH_CASTOR, EMO_NORMAL, "I'll come back to check on you later."},
      {SAY, 0, CH_CASTOR, EMO_NORMAL, "Take care!"},
      {CASTOR_DISAPPEAR, 0, CH_BERYL, EMO_NORMAL, "Well.. I guess that's why it felt familiar."},
-     {EXIT}}};
+     {EXIT}},
+     
+    // Sit back on bed
+    {{SAY, 0, CH_BERYL, EMO_SURPRISED, "Huh.. That's kind of funny."},
+     {SAY, 0, CH_BERYL, EMO_SURPRISED, "It kinda looks like.. No.."},
+     {SAY, 0, CH_BERYL, EMO_SURPRISED, "That can't be right.."},
+     {EXIT}},
+
+    // desk
+    {{SAY, 0, CH_BERYL, EMO_HAPPY2, "Hey.. I think I used to.. draw."},
+     {SAY, 0, CH_BERYL, EMO_HAPPY2, "I wonder if I still have it in me."},
+     {SAY, 0, CH_BERYL, EMO_HAPPY2, "..Those prismacolors were expensive."},
+     {SAY, 0, CH_BERYL, EMO_HAPPY1, "I never wanted to use em."},
+     {SAY, 0, CH_BERYL, EMO_HAPPY1, "They were so pretty though."},
+     {EXIT}},
+
+    // shelf
+    {{SAY, 0, CH_BERYL, EMO_SURPRISED, "That's.. a friendship bracelet!"},
+     {SAY, 0, CH_BERYL, EMO_HAPPY1, "I made when it when I was a kid with.."},
+     {SAY, 0, CH_BERYL, EMO_SAD, "Oh my god, what's her name..."},
+     {GAME_BRACELET, 0, CH_BERYL, EMO_SAD, "?"},
+     {EXIT}},
+
+     // closet
+    {{SAY, 0, CH_BERYL, EMO_NORMAL, "That's.. I don't remember.."},
+     {SAY, 0, CH_BERYL, EMO_NORMAL, "I don't remember what's in there."},
+     {SAY, 0, CH_BERYL, EMO_NORMAL, "I hear something, though..."},
+     {SAY, 0, CH_BERYL, EMO_CONFUSED, "I think... I should leave it closed."},
+     {SAY, 0, CH_BERYL, EMO_CONFUSED, "It gives me a bad feeling."},
+     {EXIT}},
+
+     // closet
+    {{SAY, 0, CH_BERYL, EMO_HAPPY2, "Hey, that's a prize ribbon!"},
+     {SAY, 0, CH_BERYL, EMO_HAPPY1, "I must have won an award."},
+     {SAY, 0, CH_BERYL, EMO_NORMAL, "I don't.. remember what I painted."},
+     {SAY, 0, CH_BERYL, EMO_CONFUSED, "That's.. a little odd."},
+     {EXIT}},
+
+     // closet
+    {{SAY, 0, CH_BERYL, EMO_NORMAL, "Didn't there.."},
+     {SAY, 0, CH_BERYL, EMO_NORMAL, "..used to be a door here?"},
+     {EXIT}},
+     
+     };
