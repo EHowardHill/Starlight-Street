@@ -30,6 +30,7 @@
 #include "bn_music.h"
 #include "bn_music_items.h"
 #include "bn_music_items_info.h"
+#include <bn_music_actions.h>
 
 #include "bn_regular_bg_ptr.h"
 
@@ -40,8 +41,13 @@
 #include "bn_sprite_items_castor.h"
 #include "bn_sprite_items_rake01.h"
 #include "bn_sprite_items_star.h"
+#include "bn_sprite_items_grass.h"
+#include "bn_sprite_items_spr_text.h"
+#include "bn_sprite_items_sign.h"
 #include "bn_regular_bg_items_starsbackground.h"
 #include "bn_regular_bg_items_bg_berylsroom.h"
+#include "bn_regular_bg_items_bg_grass.h"
+#include "bn_regular_bg_items_thx.h"
 
 using namespace bn;
 using namespace core;
@@ -73,6 +79,45 @@ bool close(int a, int b, int dist)
         c = c * -1;
     return c < dist;
 }
+
+// VirtualSprite class definition
+class VirtualSprite
+{
+public:
+    optional<sprite_ptr> spr;
+    const sprite_item *base_item;
+    camera_ptr *camera;
+    fixed_t<12> x;
+    fixed_t<12> y;
+    int index;
+
+    // Constructor with initialization list
+    VirtualSprite(const sprite_item *base_item_, camera_ptr *camera_, int x_ = 0, int y_ = 0, int index_ = 0)
+        : base_item(base_item_), camera(camera_), x(x_), y(y_), index(index_)
+    {
+    }
+
+    void update()
+    {
+        if ((x - camera->x() < -150) || (x - camera->x() > 150))
+        {
+            if (spr.has_value())
+            {
+                spr.reset();
+            }
+        }
+        else
+        {
+            if (!spr.has_value())
+            {
+                auto new_spr = base_item->create_sprite(x, y, index);
+                new_spr.set_z_order(2);
+                new_spr.set_camera(*camera); // Dereference pointer
+                spr = new_spr;               // Assign to optional
+            }
+        }
+    }
+}; // Added semicolon
 
 class Castor
 {
@@ -179,7 +224,6 @@ public:
         db_spr2.set_scale(2, 2);
         db_spr.set_blending_enabled(true);
         db_spr2.set_blending_enabled(true);
-        blending::set_transparency_alpha(0.9);
         spr_dialogue_back.push_back(db_spr);
         spr_dialogue_back.push_back(db_spr2);
 
@@ -204,6 +248,10 @@ public:
 
         case PLAY_WELCOME:
             music_items::welcome.play();
+            break;
+
+        case MUSIC_STOP:
+            music::stop();
             break;
 
         case CASTOR_APPEAR:
@@ -559,20 +607,69 @@ public:
     }
 };
 
+class Grass
+{
+public:
+    vector<sprite_ptr, 3> blades;
+    int init_frame[3];
+    int ticker = 0;
+    camera_ptr *local_camera; // Use pointer instead of reference
+
+    Grass(camera_ptr *cam)
+    { // Accept pointer in the constructor
+        local_camera = cam;
+        for (int t = 0; t < 3; t++)
+        {
+            init_frame[t] = globals->rnd.get_int(10);
+            auto g = grass.create_sprite(-200 + globals->rnd.get_int(400), 64 - globals->rnd.get_int(12), init_frame[t]);
+            g.set_camera(*cam);
+            blades.push_back(g);
+        }
+    }
+
+    void update()
+    {
+        for (int t = 0; t < blades.size(); t++)
+        {
+            blades.at(t).set_tiles(grass.tiles_item(), (ticker + init_frame[t]) % 9);
+
+            auto corrected_x = blades.at(t).x() - local_camera->x(); // Use -> for pointer
+            if (corrected_x < -200)
+            {
+                blades.at(t).set_x(local_camera->x() + 200 + globals->rnd.get_int(150));
+            }
+            else if (corrected_x > 200)
+            {
+                blades.at(t).set_x(local_camera->x() - 200 - globals->rnd.get_int(150));
+            }
+        }
+        ticker++;
+    }
+};
+
 void play_room(int current_room_int)
 {
     vector<regular_bg_ptr, 3> bgs;
     vector<int, 64> spent_dialogue;
+    vector<VirtualSprite, 64> virtual_sprites;
 
     Room current_room = room_map(current_room_int);
 
     Beryl b;
     b.set_x(current_room.init_x);
+    b.cam.set_x(b.x());
 
+    blending::set_transparency_alpha(0.9);
     {
         auto bg = starsbackground.create_bg(0, 48);
         auto bg_room = current_room.bg.create_bg(0, 0);
         bg_room.set_camera(b.cam);
+
+        if (current_room.fadedown)
+        {
+            bg.set_blending_enabled(true);
+            blending::set_transparency_alpha(0);
+        }
 
         bgs.push_back(bg);
         bgs.push_back(bg_room);
@@ -581,12 +678,70 @@ void play_room(int current_room_int)
     auto action_bubble = ui_bubble.create_sprite(0, -110, 0);
 
     optional<Rake> r;
+    optional<Grass> g;
+
+    switch (current_room_int)
+    {
+    case ROOM_GRASS:
+    {
+        Grass gg = {&b.cam};
+        g = gg;
+
+        VirtualSprite text01 = {&spr_text, &b.cam, 400, 0, 0};
+        VirtualSprite text02 = {&spr_text, &b.cam, 400 + 64, 0, 1};
+        VirtualSprite text03 = {&spr_text, &b.cam, 400 + 128, 0, 2};
+        VirtualSprite text04 = {&spr_text, &b.cam, 400 + 192, 0, 3};
+        VirtualSprite text05 = {&spr_text, &b.cam, 400 + 256, 0, 4};
+
+        VirtualSprite sign01 = {&sign, &b.cam, 950, 0, 0};
+        VirtualSprite sign02 = {&sign, &b.cam, 950, 32, 1};
+
+        virtual_sprites.push_back(text01);
+        virtual_sprites.push_back(text02);
+        virtual_sprites.push_back(text03);
+        virtual_sprites.push_back(text04);
+        virtual_sprites.push_back(text05);
+        virtual_sprites.push_back(sign01);
+        virtual_sprites.push_back(sign02);
+        break;
+    }
+    default:
+    {
+        break;
+    }
+    }
+
+    if (current_room.fadedown)
+    {
+        b.cam.set_y(-150);
+    }
 
     int ticker = 0;
     bool is_playing = true;
     while (is_playing)
     {
-        b.update();
+        for (int t = 0; t < virtual_sprites.size(); t++)
+        {
+            virtual_sprites.at(t).update();
+        }
+
+        if (g.has_value())
+        {
+            g.value().update();
+        }
+
+        if (current_room.fadedown)
+        {
+            if (blending::transparency_alpha() < 0.9)
+            {
+                blending::set_transparency_alpha(blending::transparency_alpha() + 0.005);
+            }
+            else
+            {
+                bgs.at(0).set_blending_enabled(false);
+                blending::set_transparency_alpha(0.9);
+            }
+        }
 
         if (r.has_value())
         {
@@ -631,15 +786,18 @@ void play_room(int current_room_int)
         if (globals->opt_te.has_value())
         {
             globals->opt_te.value().update();
+
             if (!globals->opt_te.value().active)
             {
                 globals->opt_te.reset();
             }
 
-            b.cam.set_x(lerp(b.cam.x(), b.x().integer() - 64 + (32 - (64 * b.facing_left)), 0.2));
+            b.cam.set_x(lerp(b.cam.x(), b.x().integer() - 64 + (32 - (64 * b.facing_left)), 0.5));
+            // b.cam.set_x(b.x().integer() - 64 + (32 - (64 * b.facing_left)));
         }
         else
         {
+            // b.cam.set_x(b.x());
             b.cam.set_x(lerp(b.cam.x(), b.x().integer(), 0.5));
         }
 
@@ -695,9 +853,12 @@ void play_room(int current_room_int)
             action_bubble.set_y(lerp(action_bubble.y(), -110, 0.2));
         }
 
+        b.update();
+
         if (ticker % 64 == 0)
         {
             BN_LOG("X: ", b.x());
+            BN_LOG("CAMX: ", b.cam.x());
         }
 
         // Room-specific actions
@@ -722,10 +883,38 @@ void play_room(int current_room_int)
             }
             break;
         }
+        case ROOM_GRASS:
+        {
+            if (!music::playing())
+            {
+                music_items::lt01.play();
+                music_volume_manager::set(0);
+            }
+
+            if (b.x().integer() > 100 && b.x().integer() <= 500)
+            {
+                music_volume_manager::set((b.x() - 100.0) / 400.0);
+            }
+
+            for (int t = 0; t < spent_dialogue.size(); t++)
+            {
+                if (spent_dialogue.at(t) == C_ENDOFDEMO && !globals->opt_te.has_value())
+                {
+                    is_playing = false;
+                }
+            }
+
+            break;
+        }
         default:
         {
             break;
         }
+        }
+
+        if (b.cam.y() < 0)
+        {
+            b.cam.set_y(b.cam.y() + 0.5);
         }
 
         ticker++;
@@ -738,6 +927,16 @@ void cutscene(int scene)
     int ticker = 0;
     switch (scene)
     {
+    case C_2018:
+    {
+        sound_items::v_2018.play();
+        while (ticker < 420)
+        {
+            ticker++;
+            update();
+        }
+        break;
+    }
     case C_GASP:
     {
         sound_items::gasp.play();
@@ -750,6 +949,7 @@ void cutscene(int scene)
     }
     case C_STARS:
     {
+        sound_items::twinkle.play();
         ticker++;
         vector<sprite_ptr, 16> stars;
         for (int t = 0; t < 16; t++)
@@ -773,8 +973,17 @@ void cutscene(int scene)
                 }
             }
 
-            BN_LOG(ticker);
             ticker++;
+            update();
+        }
+        break;
+    }
+    case C_THX:
+    {
+        music_items::st01.play();
+        auto bg_thx = thx.create_bg(0, 0);
+        while (true)
+        {
             update();
         }
         break;
@@ -791,10 +1000,13 @@ int main()
     init();
     globals = new global_data();
 
-    cutscene(C_GASP);
+    cutscene(C_2018);
     play_room(ROOM_BEDROOM);
     cutscene(C_GASP);
     cutscene(C_STARS);
+    play_room(ROOM_GRASS);
+    cutscene(C_STARS);
+    cutscene(C_THX);
 
     // Stuck end
     while (true)

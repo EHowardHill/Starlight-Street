@@ -13,6 +13,8 @@ namespace bn::sound_items_info
         make_pair(sound_item(2), string_view("door")),
         make_pair(sound_item(3), string_view("footstep")),
         make_pair(sound_item(4), string_view("gasp")),
+        make_pair(sound_item(12), string_view("twinkle")),
+        make_pair(sound_item(13), string_view("v_2018")),
     };
 
     constexpr inline span<const pair<sound_item, string_view>> span(array);

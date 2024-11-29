@@ -97,6 +97,8 @@ main.o: /mnt/c/users/ethan/documents/github/Starlight-Street/src/main.cpp \
  /mnt/c/users/ethan/documents/github/Starlight-Street/build/bn_music_items_info.h \
  /mnt/c/users/ethan/documents/github/Starlight-Street/butano/include/bn_span.h \
  /mnt/c/users/ethan/documents/github/Starlight-Street/butano/include/bn_string_view.h \
+ /mnt/c/users/ethan/documents/github/Starlight-Street/butano/include/bn_music_actions.h \
+ /mnt/c/users/ethan/documents/github/Starlight-Street/butano/include/bn_music.h \
  /mnt/c/users/ethan/documents/github/Starlight-Street/butano/include/bn_regular_bg_ptr.h \
  /mnt/c/users/ethan/documents/github/Starlight-Street/build/bn_sprite_items_beryl.h \
  /mnt/c/users/ethan/documents/github/Starlight-Street/butano/include/bn_sprite_item.h \
@@ -106,6 +108,9 @@ main.o: /mnt/c/users/ethan/documents/github/Starlight-Street/src/main.cpp \
  /mnt/c/users/ethan/documents/github/Starlight-Street/build/bn_sprite_items_castor.h \
  /mnt/c/users/ethan/documents/github/Starlight-Street/build/bn_sprite_items_rake01.h \
  /mnt/c/users/ethan/documents/github/Starlight-Street/build/bn_sprite_items_star.h \
+ /mnt/c/users/ethan/documents/github/Starlight-Street/build/bn_sprite_items_grass.h \
+ /mnt/c/users/ethan/documents/github/Starlight-Street/build/bn_sprite_items_spr_text.h \
+ /mnt/c/users/ethan/documents/github/Starlight-Street/build/bn_sprite_items_sign.h \
  /mnt/c/users/ethan/documents/github/Starlight-Street/build/bn_regular_bg_items_starsbackground.h \
  /mnt/c/users/ethan/documents/github/Starlight-Street/butano/include/bn_regular_bg_item.h \
  /mnt/c/users/ethan/documents/github/Starlight-Street/butano/include/bn_bg_palette_item.h \
@@ -113,6 +118,8 @@ main.o: /mnt/c/users/ethan/documents/github/Starlight-Street/src/main.cpp \
  /mnt/c/users/ethan/documents/github/Starlight-Street/butano/include/bn_regular_bg_map_cell.h \
  /mnt/c/users/ethan/documents/github/Starlight-Street/butano/include/bn_regular_bg_tiles_item.h \
  /mnt/c/users/ethan/documents/github/Starlight-Street/build/bn_regular_bg_items_bg_berylsroom.h \
+ /mnt/c/users/ethan/documents/github/Starlight-Street/build/bn_regular_bg_items_bg_grass.h \
+ /mnt/c/users/ethan/documents/github/Starlight-Street/build/bn_regular_bg_items_thx.h \
  /mnt/c/users/ethan/documents/github/Starlight-Street/src/main.h \
  /mnt/c/users/ethan/documents/github/Starlight-Street/src/dialogue.h \
  /mnt/c/users/ethan/documents/github/Starlight-Street/src/levels.h
@@ -214,6 +221,8 @@ main.o: /mnt/c/users/ethan/documents/github/Starlight-Street/src/main.cpp \
 /mnt/c/users/ethan/documents/github/Starlight-Street/build/bn_music_items_info.h:
 /mnt/c/users/ethan/documents/github/Starlight-Street/butano/include/bn_span.h:
 /mnt/c/users/ethan/documents/github/Starlight-Street/butano/include/bn_string_view.h:
+/mnt/c/users/ethan/documents/github/Starlight-Street/butano/include/bn_music_actions.h:
+/mnt/c/users/ethan/documents/github/Starlight-Street/butano/include/bn_music.h:
 /mnt/c/users/ethan/documents/github/Starlight-Street/butano/include/bn_regular_bg_ptr.h:
 /mnt/c/users/ethan/documents/github/Starlight-Street/build/bn_sprite_items_beryl.h:
 /mnt/c/users/ethan/documents/github/Starlight-Street/butano/include/bn_sprite_item.h:
@@ -223,6 +232,9 @@ main.o: /mnt/c/users/ethan/documents/github/Starlight-Street/src/main.cpp \
 /mnt/c/users/ethan/documents/github/Starlight-Street/build/bn_sprite_items_castor.h:
 /mnt/c/users/ethan/documents/github/Starlight-Street/build/bn_sprite_items_rake01.h:
 /mnt/c/users/ethan/documents/github/Starlight-Street/build/bn_sprite_items_star.h:
+/mnt/c/users/ethan/documents/github/Starlight-Street/build/bn_sprite_items_grass.h:
+/mnt/c/users/ethan/documents/github/Starlight-Street/build/bn_sprite_items_spr_text.h:
+/mnt/c/users/ethan/documents/github/Starlight-Street/build/bn_sprite_items_sign.h:
 /mnt/c/users/ethan/documents/github/Starlight-Street/build/bn_regular_bg_items_starsbackground.h:
 /mnt/c/users/ethan/documents/github/Starlight-Street/butano/include/bn_regular_bg_item.h:
 /mnt/c/users/ethan/documents/github/Starlight-Street/butano/include/bn_bg_palette_item.h:
@@ -230,6 +242,8 @@ main.o: /mnt/c/users/ethan/documents/github/Starlight-Street/src/main.cpp \
 /mnt/c/users/ethan/documents/github/Starlight-Street/butano/include/bn_regular_bg_map_cell.h:
 /mnt/c/users/ethan/documents/github/Starlight-Street/butano/include/bn_regular_bg_tiles_item.h:
 /mnt/c/users/ethan/documents/github/Starlight-Street/build/bn_regular_bg_items_bg_berylsroom.h:
+/mnt/c/users/ethan/documents/github/Starlight-Street/build/bn_regular_bg_items_bg_grass.h:
+/mnt/c/users/ethan/documents/github/Starlight-Street/build/bn_regular_bg_items_thx.h:
 /mnt/c/users/ethan/documents/github/Starlight-Street/src/main.h:
 /mnt/c/users/ethan/documents/github/Starlight-Street/src/dialogue.h:
 /mnt/c/users/ethan/documents/github/Starlight-Street/src/levels.h:
