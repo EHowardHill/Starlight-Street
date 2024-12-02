@@ -46,6 +46,7 @@
 #include "bn_sprite_items_sign.h"
 #include "bn_sprite_items_spr_conbini.h"
 #include "bn_sprite_items_gas_station.h"
+#include "bn_sprite_items_answers.h"
 #include "bn_regular_bg_items_starsbackground.h"
 #include "bn_regular_bg_items_bg_berylsroom.h"
 #include "bn_regular_bg_items_bg_grass.h"
@@ -716,6 +717,35 @@ void play_room(int current_room_int)
         virtual_sprites.push_back(sign02);
         break;
     }
+    case ROOM_CONBINI:
+    {
+        VirtualSprite shelf01 = {&spr_conbini, &b.cam, 80, -16, 0};
+        VirtualSprite shelf02 = {&spr_conbini, &b.cam, 80, -16 + 64, 1};
+
+        VirtualSprite shelf03 = {&spr_conbini, &b.cam, 80 + (64 * 1), -16, 2};
+        VirtualSprite shelf04 = {&spr_conbini, &b.cam, 80 + (64 * 1), -16 + 64, 3};
+
+        VirtualSprite shelf05 = {&spr_conbini, &b.cam, 80 + (64 * 2), -16, 4};
+        VirtualSprite shelf06 = {&spr_conbini, &b.cam, 80 + (64 * 2), -16 + 64, 5};
+
+        VirtualSprite shelf07 = {&spr_conbini, &b.cam, 70 + (64 * 3), -16, 6};
+        VirtualSprite shelf08 = {&spr_conbini, &b.cam, 70 + (64 * 3), -16 + 64, 7};
+
+        VirtualSprite shelf09 = {&spr_conbini, &b.cam, 70 + (64 * 4), -16, 8};
+        VirtualSprite shelf10 = {&spr_conbini, &b.cam, 70 + (64 * 4), -16 + 64, 9};
+
+        virtual_sprites.push_back(shelf01);
+        virtual_sprites.push_back(shelf02);
+        virtual_sprites.push_back(shelf03);
+        virtual_sprites.push_back(shelf04);
+        virtual_sprites.push_back(shelf05);
+        virtual_sprites.push_back(shelf06);
+        virtual_sprites.push_back(shelf07);
+        virtual_sprites.push_back(shelf08);
+        virtual_sprites.push_back(shelf09);
+        virtual_sprites.push_back(shelf10);
+        break;
+    }
     default:
     {
         break;
@@ -1031,11 +1061,13 @@ void cutscene(int scene)
                 bg.set_x(-240);
             }
 
-            if (ticker == 850) {
+            if (ticker == 850)
+            {
                 bg = c0102.create_bg(0, 0);
             }
 
-            if (ticker == 1750) {
+            if (ticker == 1750)
+            {
                 bg = c0103.create_bg(0, 0);
             }
 
@@ -1065,7 +1097,7 @@ int main()
     // cutscene(C_STARS);
     // cutscene(C_THX);
 
-    cutscene(C_S1);
+    // cutscene(C_S1);
     play_room(ROOM_CONBINI);
 
     // Stuck end

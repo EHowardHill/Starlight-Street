@@ -63,14 +63,12 @@ constexpr ActionableItem room_items[COUNT_ROOMS][64] = {
         {24, C_BED_SHELF, false},
         {258, C_BED_CLOSET, false},
         {136, C_BED_COUCH, false},
-        {-344, C_BED_DOOR, false}
-    },
+        {-344, C_BED_DOOR, false}},
 
     // Grass
     {
         {1, C_INITGRASS1, true},
-        {900, C_ENDOFDEMO, false}
-    },
+        {900, C_ENDOFDEMO, false}},
 
     // Conbini
     {
@@ -80,9 +78,8 @@ constexpr ActionableItem room_items[COUNT_ROOMS][64] = {
         {230, C_CON_CREAM, false},
         {345, C_CON_CASTOR, false},
         {-495, C_CON_CAR, false},
-        {-415, C_CON_DING, false}
-    }
-    
+        {-415, C_CON_DING, false}}
+
 };
 
 // Function to return a Room object

@@ -11,6 +11,7 @@ enum Characters
 {
     CH_BERYL,
     CH_CASTOR,
+    CH_MEMORY,
     CH_NONE
 };
 
@@ -239,103 +240,109 @@ const DialogueLine gamelines[64][64] = {
      {SAY, 0, CH_BERYL, EMO_NORMAL, "And that's enough."},
      {EXIT}},
 
+    // Numbering doesn't count
+
+    {{CASTOR_APPEAR, 0, CH_BERYL, EMO_SURPRISED, "?"},
+     {SAY, 0, CH_CASTOR, EMO_SURPRISED, "Hello, Beryl.. Are you alright?"},
+     {SAY, 0, CH_BERYL, EMO_NORMAL, "Yeah.. How long is this supposed to last?"},
+     {SAY, 0, CH_BERYL, EMO_NORMAL, "As long as you want it to."},
+     {SAY, 0, CH_BERYL, EMO_CONFUSED, "I don't like these memories..."},
+     {SAY, 0, CH_BERYL, EMO_CONFUSED, "How hard would it be to just.. y'know.."},
+     {SAY, 0, CH_BERYL, EMO_SAD, "Go back to Corner's and stay there."},
+     {SAY, 0, CH_CASTOR, EMO_SAD, "If you don't want to continue.."},
+     {SAY, 0, CH_CASTOR, EMO_SAD, "There is nothing keeping you from staying there."},
+     {SAY, 0, CH_CASTOR, EMO_SAD, "You can even stay forever if you want."},
+     {SAY, 0, CH_BERYL, EMO_CONFUSED, "I don't.. want to stay here forever."},
+     {SAY, 0, CH_CASTOR, EMO_CONFUSED, "If you see things that hurt.."},
+     {SAY, 0, CH_CASTOR, EMO_CONFUSED, "And you want to change your mind.."},
+     {SAY, 0, CH_CASTOR, EMO_CONFUSED, "The option is always available."},
+     {SAY, 0, CH_BERYL, EMO_NORMAL, "So.. what is that monster, anyway?"},
+     {SAY, 0, CH_CASTOR, EMO_NORMAL, "Oh, don't worry about her."},
+     {SAY, 0, CH_BERYL, EMO_NORMAL, "'Her'? What do you mean by 'her'?"},
+     {SAY, 0, CH_CASTOR, EMO_NORMAL, "It's not important, Beryl."},
+     {SAY, 0, CH_BERYL, EMO_NORMAL, "Castor.. Are you hiding something?"},
+     {SAY, 0, CH_CASTOR, EMO_NORMAL, "You look stressed. Be careful."},
+     {SAY, 0, CH_CASTOR, EMO_NORMAL, "If you get upset, it will return."},
+     {SAY, 0, CH_BERYL, EMO_NORMAL, "Maybe I want it to."},
+     {SAY, 0, CH_CASTOR, EMO_NORMAL, "You don't. I can assure you."},
+     {SAY, 0, CH_BERYL, EMO_CONFUSED, "Well... I don't know."},
+     {SAY, 0, CH_BERYL, EMO_SAD, "I don't know anything anymore."},
+     {SAY, 0, CH_CASTOR, EMO_SAD, "Let's move on, shall we?"},
+     {EXIT}},
+
+    {{SAY, 0, CH_BERYL, LAY_STILL, "It's coming back to me..."},
+     {SAY, 0, CH_BERYL, LAY_STILL, "I got bored of theatre my senior year."},
+     {SAY, 0, CH_BERYL, LAY_STILL, "I followed my friends to art class."},
+     {SAY, 0, CH_BERYL, LAY_STILL, "I met a boy. Capricorn."},
+     {SAY, 0, CH_BERYL, LAY_STILL, "We dated maybe six months."},
+     {SAY, 0, CH_BERYL, LAY_STILL, "One day he stopped texting."},
+     {SAY, 0, CH_BERYL, LAY_STILL, "Graduation wasn't long after."},
+     {SAY, 0, CH_BERYL, LAY_STILL, "Everyone went off to college."},
+     {SAY, 0, CH_BERYL, LAY_STILL, "Friendship is based on circumstance."},
+     {SAY, 0, CH_BERYL, LAY_STILL, "I became very alone, very quickly."},
+     {SAY, 0, CH_BERYL, LAY_STILL, "I was looking forward to college..."},
+     {SAY, 0, CH_BERYL, LAY_SIT2, "I thought I was looking forward..."},
+     {SAY, 0, CH_BERYL, LAY_SIT1, "But I spent most of my time, well..."},
+     {SAY, 0, CH_BERYL, LAY_SIT1, "Looking backward."},
+     {EXIT}},
+
+    {{CASTOR_APPEAR, 0, CH_BERYL, EMO_SURPRISED, "?"},
+     {SAY, 0, CH_CASTOR, EMO_SURPRISED, "How are you feeling?"},
+     {SAY, 0, CH_BERYL, EMO_SAD, "Awful.. Just awful.."},
+     {SAY, 0, CH_CASTOR, EMO_NORMAL, "You looked happy around Corner's."},
+     {SAY, 0, CH_CASTOR, EMO_NORMAL, "Remember that? Would you like to stay?"},
+     {SAY, 0, CH_BERYL, EMO_NORMAL, "...You keep saying 'stay'."},
+     {SAY, 0, CH_BERYL, EMO_NORMAL, "What are you after?"},
+     {SAY, 0, CH_BERYL, EMO_NORMAL, "I thought your job was to wake me up."},
+     {SAY, 0, CH_CASTOR, EMO_NORMAL, "My job is to help you be happy."},
+     {SAY, 0, CH_CASTOR, EMO_NORMAL, "Would it make you happier to stay?"},
+     {SAY, 0, CH_BERYL, EMO_CONFUSED, "It might, but..."},
+     {SAY, 0, CH_CASTOR, EMO_CONFUSED, "Very good!"},
+     {SAY, 0, CH_BERYL, EMO_NORMAL, "Castor, may I ask you something?"},
+     {SAY, 0, CH_CASTOR, EMO_NORMAL, "What is it, Beryl?"},
+     {SAY, 0, CH_BERYL, EMO_NORMAL, "Who... are you? Really."},
+     {SAY, 0, CH_CASTOR, EMO_NORMAL, "I'm Castor, I'm-"},
+     {SAY, 0, CH_BERYL, EMO_NORMAL, "Quit lying to me."},
+     {SAY, 0, CH_CASTOR, EMO_NORMAL, "I'm not lying to you, Beryl."},
+     {EXIT}},
+
+    {{SAY, 0, CH_BERYL, EMO_SAD, "Awful.. Just awful.."},
+     {SAY, 0, CH_BERYL, EMO_NORMAL, "You looked happy around Corner's."},
+     {SAY, 0, CH_BERYL, EMO_NORMAL, "Remember that? Would you like to stay?"},
+     {SAY, 0, CH_BERYL, EMO_NORMAL, "...You keep saying 'stay'."},
+     {SAY, 0, CH_BERYL, EMO_NORMAL, "What are you after?"},
+     {SAY, 0, CH_BERYL, EMO_NORMAL, "I thought your job was to wake me up."},
+     {SAY, 0, CH_BERYL, EMO_NORMAL, "My job is to help you be happy."},
+     {SAY, 0, CH_BERYL, EMO_NORMAL, "Would it make you happier to stay?"},
+     {SAY, 0, CH_BERYL, EMO_NORMAL, "It might, but..."},
+     {SAY, 0, CH_BERYL, EMO_NORMAL, "Very good!"},
+     {SAY, 0, CH_BERYL, EMO_NORMAL, "Castor, may I ask you something?"},
+     {SAY, 0, CH_BERYL, EMO_NORMAL, "What is it, Beryl?"},
+     {SAY, 0, CH_BERYL, EMO_NORMAL, "Who... are you? Really."},
+     {SAY, 0, CH_BERYL, EMO_NORMAL, "I'm Castor, I'm-"},
+     {SAY, 0, CH_BERYL, EMO_NORMAL, "Quit lying to me."},
+     {SAY, 0, CH_BERYL, EMO_NORMAL, "I'm not lying to you, Beryl."},
+     {EXIT}},
+
+    {{SAY, 0, CH_MEMORY, EMO_SAD, "I've always been with you, Beryl."},
+     {SAY, 0, CH_MEMORY, EMO_NORMAL, "Nostalgia, my twin, it makes him jealous."},
+     {SAY, 0, CH_MEMORY, EMO_NORMAL, "He lies so you will stay with him."},
+     {SAY, 0, CH_MEMORY, EMO_NORMAL, "Nothing he offers is his to give."},
+     {SAY, 0, CH_MEMORY, EMO_NORMAL, "That happy distraction..."},
+     {SAY, 0, CH_MEMORY, EMO_NORMAL, "It's why you got in that car wreck."},
+     {SAY, 0, CH_MEMORY, EMO_NORMAL, "He put you in this coma."},
+     {SAY, 0, CH_MEMORY, EMO_NORMAL, "Beryl.. you've done crummy things."},
+     {SAY, 0, CH_MEMORY, EMO_NORMAL, "But this experience is a gift."},
+     {SAY, 0, CH_MEMORY, EMO_NORMAL, "All the compromises that led to now..."},
+     {SAY, 0, CH_MEMORY, EMO_NORMAL, "You don't remember them."},
+     {SAY, 0, CH_MEMORY, EMO_NORMAL, "All that's left is the true Beryl."},
+     {SAY, 0, CH_MEMORY, EMO_NORMAL, "Don't fight for what you think the past was."},
+     {SAY, 0, CH_MEMORY, EMO_NORMAL, "Fight for what made the past good."},
+     {EXIT}},
+
 };
 
 /*
-
-
-I was a freshman in high school.
-Mom and dad never liked each other,
-...or at least that's what they said.
-I always thought it wasn't true.
-I guess they finally had enough one day.
-One day, after school, Holly took me to Corners.
-She got me ice cream. It was Dutch chocolate.
-It became a tradition before too long.
-The station has since been remodeled.
-I haven't been in years. No reason.
-It's funny how you forget places like that.
-
-I tried out for theatre sophomore year.
-Holly tried but didn't make it.
-I really wanted the theatre kids to like me.
-One day, after school, I went over to one of the other girls' houses.
-She was the lead in our one-act play.
-She dared me to give Holly a mean phone call.
-It was very, very mean.
-I don't know why I did it.
-That was the last time I spoke to her.
-
-Beryl: How long does this go on?
-Castor: - As long as you want it to.
-I saw a glimpse... It was me and Holly.
-Can I go back to that?
-- Yes! You may.
-I don't even know if I want to wake up...
-If I could just stay there.
-- Well, if you insist, you can stay forever.
-Forever?
-- Forever and ever.
-...That's a long time.
-- It doesn't feel like it.
-I guess... I have to know...
-What is... that monster?
-Is that a memory?
-- The monster? Don't worry about her.
-Her? What do you mean by 'her'?
-- I... I mean...
-Castor, are you hiding something? 
-- Be careful, Beryl, it'll come back.
-Maybe I want it to.
-- You don't, I can assure you.
-...You're probably right.
-- Very good. Let's move on, shall we?
-
-Senior year, I got bored of theatre.
-A lot of my friends started taking art class.
-That's where I met Capricorn.
-I think we dated for maybe six months.
-I liked the attention.
-One day he just stopped texting.
-That's the thing about high school...
-Everyone goes off to college.
-Circumstantial friends stop talking to you.
-I ended up very, very alone.
-I was looking forward to college, though...
-At least, I think I was looking forward.
-I spent a lot of time looking backward.
-
-- So, how do you feel?
-Terrible.
-- You looked pretty happy around Corners.
-- With the ice cream? Dutch chocolate?
-I was.
-- Is that where you'd like to stay?
-You keep saying 'stay'.
-I thought your job was to wake me up.
-- Only if you want to be awoken.
-...Something isn't adding up here.
-Who... are you? Really.
-- I'm Castor, I'm-
-Quit lying to me.
-- I'm not lying to you.
-
-MONSTER, who is actually MEMORY:
-I have always been you, Beryl.
-My twin, Nostalgia, he is so jealous.
-He will lie as much as it takes.
-And as if 2018 were even his to give.
-That happy thought, that distraction...
-It's why you got in that car wreck.
-It's why you're in a coma.
-He wants to eat your soul.
-Beryl... you've done bad things.
-But this experience could be a gift.
-All the little mistakes that led to now...
-The compromises... they're off to the side.
-You only remember the true Beryl, deep down.
-Don't fight for 2018.
-Fight for what made 2018 good.
 
 Choices:
 > No. I want to stay forever.
