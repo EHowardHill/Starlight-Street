@@ -44,10 +44,17 @@
 #include "bn_sprite_items_grass.h"
 #include "bn_sprite_items_spr_text.h"
 #include "bn_sprite_items_sign.h"
+#include "bn_sprite_items_spr_conbini.h"
+#include "bn_sprite_items_gas_station.h"
 #include "bn_regular_bg_items_starsbackground.h"
 #include "bn_regular_bg_items_bg_berylsroom.h"
 #include "bn_regular_bg_items_bg_grass.h"
+#include "bn_regular_bg_items_bg_conbini.h"
 #include "bn_regular_bg_items_thx.h"
+
+#include "bn_regular_bg_items_c0101.h"
+#include "bn_regular_bg_items_c0102.h"
+#include "bn_regular_bg_items_c0103.h"
 
 using namespace bn;
 using namespace core;
@@ -252,6 +259,10 @@ public:
 
         case MUSIC_STOP:
             music::stop();
+            break;
+
+        case SFX_SEBENEREBEN:
+            sound_items::sebenereben.play();
             break;
 
         case CASTOR_APPEAR:
@@ -720,6 +731,7 @@ void play_room(int current_room_int)
     bool is_playing = true;
     while (is_playing)
     {
+
         for (int t = 0; t < virtual_sprites.size(); t++)
         {
             virtual_sprites.at(t).update();
@@ -763,12 +775,11 @@ void play_room(int current_room_int)
                 }
                 else
                 {
-                    auto c_offset = b.x() - b.cam.x();
-                    b.set_x(500);
-                    b.cam.set_x(500 - c_offset);
+                    b.set_x(b.x() + 1001);
+                    b.cam.set_x(b.cam.x() + 1001);
                 }
             }
-            else if (b.x().integer() > 500)
+            else if (b.x().integer() >= 501)
             {
                 if (b.is_scared)
                 {
@@ -776,9 +787,8 @@ void play_room(int current_room_int)
                 }
                 else
                 {
-                    auto c_offset = b.x() - b.cam.x();
-                    b.set_x(-500);
-                    b.cam.set_x(-500 - c_offset);
+                    b.set_x(b.x() - 1001);
+                    b.cam.set_x(b.cam.x() - 1001);
                 }
             }
         }
@@ -906,6 +916,24 @@ void play_room(int current_room_int)
 
             break;
         }
+        case ROOM_CONBINI:
+        {
+            if (spent_dialogue.size() == 9 && b.x() < 50 && b.x() > -240 && !globals->opt_te.has_value())
+            {
+                b.is_scared = true;
+                sound_items::door.play();
+                music::stop();
+                spent_dialogue.push_back(-1);
+
+                Rake rr = {b.cam, 300};
+                r = rr;
+            }
+
+            if (b.is_scared && b.x() < -750)
+            {
+                is_playing = false;
+            }
+        }
         default:
         {
             break;
@@ -988,6 +1016,35 @@ void cutscene(int scene)
         }
         break;
     }
+    case C_S1:
+    {
+        sound_items::cutscene01.play();
+        auto bg = c0101.create_bg(0, 0);
+        while (ticker < 2200)
+        {
+            if ((ticker % 8) < 4)
+            {
+                bg.set_x(0);
+            }
+            else
+            {
+                bg.set_x(-240);
+            }
+
+            if (ticker == 850) {
+                bg = c0102.create_bg(0, 0);
+            }
+
+            if (ticker == 1750) {
+                bg = c0103.create_bg(0, 0);
+            }
+
+            BN_LOG(ticker);
+            ticker++;
+            update();
+        }
+        break;
+    }
     default:
     {
         break;
@@ -1000,13 +1057,16 @@ int main()
     init();
     globals = new global_data();
 
-    cutscene(C_2018);
-    play_room(ROOM_BEDROOM);
-    cutscene(C_GASP);
-    cutscene(C_STARS);
-    play_room(ROOM_GRASS);
-    cutscene(C_STARS);
-    cutscene(C_THX);
+    // cutscene(C_2018);
+    // play_room(ROOM_BEDROOM);
+    // cutscene(C_GASP);
+    // cutscene(C_STARS);
+    // play_room(ROOM_GRASS);
+    // cutscene(C_STARS);
+    // cutscene(C_THX);
+
+    cutscene(C_S1);
+    play_room(ROOM_CONBINI);
 
     // Stuck end
     while (true)

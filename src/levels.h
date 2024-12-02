@@ -23,6 +23,7 @@ enum Rooms
 {
     ROOM_BEDROOM,
     ROOM_GRASS,
+    ROOM_CONBINI,
     COUNT_ROOMS
 };
 
@@ -38,7 +39,15 @@ enum Conversations
     C_BED_COUCH,
     C_BED_DOOR,
     C_INITGRASS1,
-    C_ENDOFDEMO
+    C_ENDOFDEMO,
+    C_INITCONBINI,
+    C_CON_COUNTER,
+    C_CON_SODA,
+    C_CON_CREAM,
+    C_CON_CASTOR,
+    C_CON_CAR,
+    C_CON_DING,
+    COUNT_CONVERSATIONS
 };
 
 // Define the actionable items as a constexpr array
@@ -61,6 +70,17 @@ constexpr ActionableItem room_items[COUNT_ROOMS][64] = {
     {
         {1, C_INITGRASS1, true},
         {900, C_ENDOFDEMO, false}
+    },
+
+    // Conbini
+    {
+        {-240, C_INITCONBINI, true},
+        {-298, C_CON_COUNTER, false},
+        {9, C_CON_SODA, false},
+        {230, C_CON_CREAM, false},
+        {345, C_CON_CASTOR, false},
+        {-495, C_CON_CAR, false},
+        {-415, C_CON_DING, false}
     }
     
 };
@@ -78,9 +98,11 @@ constexpr Room room_map(int room_no)
     switch (room_no)
     {
     case ROOM_BEDROOM:
-        return make_room(bn::regular_bg_items::bg_berylsroom, room_items[ROOM_BEDROOM], -240, true, false);
+        return make_room(bn::regular_bg_items::bg_berylsroom, room_items[ROOM_BEDROOM], -240, true, true);
     case ROOM_GRASS:
         return make_room(bn::regular_bg_items::bg_grass, room_items[ROOM_GRASS], 0, false, true);
+    case ROOM_CONBINI:
+        return make_room(bn::regular_bg_items::bg_conbini, room_items[ROOM_CONBINI], -240, true, true);
     default:
         return make_room(bn::regular_bg_items::bg_berylsroom, empty_items, 0, false, false);
     }
@@ -91,5 +113,10 @@ enum CUTSCENES
     C_2018,
     C_GASP,
     C_STARS,
-    C_THX
+    C_THX,
+    C_S1
 };
+
+// 850
+// 1400
+// 2100
