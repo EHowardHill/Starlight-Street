@@ -51,6 +51,7 @@
 #include "bn_regular_bg_items_bg_berylsroom.h"
 #include "bn_regular_bg_items_bg_grass.h"
 #include "bn_regular_bg_items_bg_conbini.h"
+#include "bn_regular_bg_items_bg_theatre.h"
 #include "bn_regular_bg_items_thx.h"
 
 #include "bn_regular_bg_items_c0101.h"
@@ -1098,7 +1099,7 @@ int main()
     // cutscene(C_THX);
 
     // cutscene(C_S1);
-    play_room(ROOM_CONBINI);
+    play_room(ROOM_THEATRE);
 
     // Stuck end
     while (true)

@@ -1,2 +1,2 @@
 bn_hw_core.o: \
- /mnt/c/users/ethan/OneDrive/Documents/GitHub/Starlight-Street/butano/hw/src/bn_hw_core.s
+ /mnt/c/users/ethan/documents/github/Starlight-Street/butano/hw/src/bn_hw_core.s
