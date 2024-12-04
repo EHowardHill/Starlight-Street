@@ -240,12 +240,10 @@ const DialogueLine gamelines[64][64] = {
      {SAY, 0, CH_BERYL, EMO_NORMAL, "And that's enough."},
      {EXIT}},
 
-    // Numbering doesn't count
-
     {{CASTOR_APPEAR, 0, CH_BERYL, EMO_SURPRISED, "?"},
      {SAY, 0, CH_CASTOR, EMO_SURPRISED, "Hello, Beryl.. Are you alright?"},
      {SAY, 0, CH_BERYL, EMO_NORMAL, "Yeah.. How long is this supposed to last?"},
-     {SAY, 0, CH_BERYL, EMO_NORMAL, "As long as you want it to."},
+     {SAY, 0, CH_CASTOR, EMO_NORMAL, "As long as you want it to."},
      {SAY, 0, CH_BERYL, EMO_CONFUSED, "I don't like these memories..."},
      {SAY, 0, CH_BERYL, EMO_CONFUSED, "How hard would it be to just.. y'know.."},
      {SAY, 0, CH_BERYL, EMO_SAD, "Go back to Corner's and stay there."},
@@ -269,6 +267,8 @@ const DialogueLine gamelines[64][64] = {
      {SAY, 0, CH_BERYL, EMO_SAD, "I don't know anything anymore."},
      {SAY, 0, CH_CASTOR, EMO_SAD, "Let's move on, shall we?"},
      {EXIT}},
+
+     // un-numbered
 
     {{SAY, 0, CH_BERYL, LAY_STILL, "It's coming back to me..."},
      {SAY, 0, CH_BERYL, LAY_STILL, "I got bored of theatre my senior year."},

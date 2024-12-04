@@ -109,11 +109,12 @@ main.o: /mnt/c/users/ethan/documents/github/Starlight-Street/src/main.cpp \
  /mnt/c/users/ethan/documents/github/Starlight-Street/build/bn_sprite_items_rake01.h \
  /mnt/c/users/ethan/documents/github/Starlight-Street/build/bn_sprite_items_star.h \
  /mnt/c/users/ethan/documents/github/Starlight-Street/build/bn_sprite_items_grass.h \
- /mnt/c/users/ethan/documents/github/Starlight-Street/build/bn_sprite_items_spr_text.h \
  /mnt/c/users/ethan/documents/github/Starlight-Street/build/bn_sprite_items_sign.h \
- /mnt/c/users/ethan/documents/github/Starlight-Street/build/bn_sprite_items_spr_conbini.h \
  /mnt/c/users/ethan/documents/github/Starlight-Street/build/bn_sprite_items_gas_station.h \
  /mnt/c/users/ethan/documents/github/Starlight-Street/build/bn_sprite_items_answers.h \
+ /mnt/c/users/ethan/documents/github/Starlight-Street/build/bn_sprite_items_spr_text.h \
+ /mnt/c/users/ethan/documents/github/Starlight-Street/build/bn_sprite_items_spr_conbini.h \
+ /mnt/c/users/ethan/documents/github/Starlight-Street/build/bn_sprite_items_spr_chair.h \
  /mnt/c/users/ethan/documents/github/Starlight-Street/build/bn_regular_bg_items_starsbackground.h \
  /mnt/c/users/ethan/documents/github/Starlight-Street/butano/include/bn_regular_bg_item.h \
  /mnt/c/users/ethan/documents/github/Starlight-Street/butano/include/bn_bg_palette_item.h \
@@ -124,6 +125,7 @@ main.o: /mnt/c/users/ethan/documents/github/Starlight-Street/src/main.cpp \
  /mnt/c/users/ethan/documents/github/Starlight-Street/build/bn_regular_bg_items_bg_grass.h \
  /mnt/c/users/ethan/documents/github/Starlight-Street/build/bn_regular_bg_items_bg_conbini.h \
  /mnt/c/users/ethan/documents/github/Starlight-Street/build/bn_regular_bg_items_bg_theatre.h \
+ /mnt/c/users/ethan/documents/github/Starlight-Street/build/bn_regular_bg_items_bg_class.h \
  /mnt/c/users/ethan/documents/github/Starlight-Street/build/bn_regular_bg_items_thx.h \
  /mnt/c/users/ethan/documents/github/Starlight-Street/build/bn_regular_bg_items_c0101.h \
  /mnt/c/users/ethan/documents/github/Starlight-Street/build/bn_regular_bg_items_c0102.h \
@@ -241,11 +243,12 @@ main.o: /mnt/c/users/ethan/documents/github/Starlight-Street/src/main.cpp \
 /mnt/c/users/ethan/documents/github/Starlight-Street/build/bn_sprite_items_rake01.h:
 /mnt/c/users/ethan/documents/github/Starlight-Street/build/bn_sprite_items_star.h:
 /mnt/c/users/ethan/documents/github/Starlight-Street/build/bn_sprite_items_grass.h:
-/mnt/c/users/ethan/documents/github/Starlight-Street/build/bn_sprite_items_spr_text.h:
 /mnt/c/users/ethan/documents/github/Starlight-Street/build/bn_sprite_items_sign.h:
-/mnt/c/users/ethan/documents/github/Starlight-Street/build/bn_sprite_items_spr_conbini.h:
 /mnt/c/users/ethan/documents/github/Starlight-Street/build/bn_sprite_items_gas_station.h:
 /mnt/c/users/ethan/documents/github/Starlight-Street/build/bn_sprite_items_answers.h:
+/mnt/c/users/ethan/documents/github/Starlight-Street/build/bn_sprite_items_spr_text.h:
+/mnt/c/users/ethan/documents/github/Starlight-Street/build/bn_sprite_items_spr_conbini.h:
+/mnt/c/users/ethan/documents/github/Starlight-Street/build/bn_sprite_items_spr_chair.h:
 /mnt/c/users/ethan/documents/github/Starlight-Street/build/bn_regular_bg_items_starsbackground.h:
 /mnt/c/users/ethan/documents/github/Starlight-Street/butano/include/bn_regular_bg_item.h:
 /mnt/c/users/ethan/documents/github/Starlight-Street/butano/include/bn_bg_palette_item.h:
@@ -256,6 +259,7 @@ main.o: /mnt/c/users/ethan/documents/github/Starlight-Street/src/main.cpp \
 /mnt/c/users/ethan/documents/github/Starlight-Street/build/bn_regular_bg_items_bg_grass.h:
 /mnt/c/users/ethan/documents/github/Starlight-Street/build/bn_regular_bg_items_bg_conbini.h:
 /mnt/c/users/ethan/documents/github/Starlight-Street/build/bn_regular_bg_items_bg_theatre.h:
+/mnt/c/users/ethan/documents/github/Starlight-Street/build/bn_regular_bg_items_bg_class.h:
 /mnt/c/users/ethan/documents/github/Starlight-Street/build/bn_regular_bg_items_thx.h:
 /mnt/c/users/ethan/documents/github/Starlight-Street/build/bn_regular_bg_items_c0101.h:
 /mnt/c/users/ethan/documents/github/Starlight-Street/build/bn_regular_bg_items_c0102.h:

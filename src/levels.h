@@ -25,6 +25,7 @@ enum Rooms
     ROOM_GRASS,
     ROOM_CONBINI,
     ROOM_THEATRE,
+    ROOM_CLASS,
     COUNT_ROOMS
 };
 
@@ -48,6 +49,7 @@ enum Conversations
     C_CON_CASTOR,
     C_CON_CAR,
     C_CON_DING,
+    C_INITTHEATRE,
     COUNT_CONVERSATIONS
 };
 
@@ -82,6 +84,11 @@ constexpr ActionableItem room_items[COUNT_ROOMS][64] = {
         {-415, C_CON_DING, false}},
 
     // Theatre
+        {
+            {115, C_INITTHEATRE, true},
+        },
+
+    // Class
         {}
 
 };
@@ -106,6 +113,8 @@ constexpr Room room_map(int room_no)
         return make_room(bn::regular_bg_items::bg_conbini, room_items[room_no], -240, true, true);
     case ROOM_THEATRE:
         return make_room(bn::regular_bg_items::bg_theatre, room_items[room_no], 115, true, true);
+    case ROOM_CLASS:
+        return make_room(bn::regular_bg_items::bg_class, room_items[room_no], -240, true, true);
     default:
         return make_room(bn::regular_bg_items::bg_berylsroom, empty_items, 0, false, false);
     }

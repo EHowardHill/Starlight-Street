@@ -42,16 +42,20 @@
 #include "bn_sprite_items_rake01.h"
 #include "bn_sprite_items_star.h"
 #include "bn_sprite_items_grass.h"
-#include "bn_sprite_items_spr_text.h"
 #include "bn_sprite_items_sign.h"
-#include "bn_sprite_items_spr_conbini.h"
 #include "bn_sprite_items_gas_station.h"
 #include "bn_sprite_items_answers.h"
+
+#include "bn_sprite_items_spr_text.h"
+#include "bn_sprite_items_spr_conbini.h"
+#include "bn_sprite_items_spr_chair.h"
+
 #include "bn_regular_bg_items_starsbackground.h"
 #include "bn_regular_bg_items_bg_berylsroom.h"
 #include "bn_regular_bg_items_bg_grass.h"
 #include "bn_regular_bg_items_bg_conbini.h"
 #include "bn_regular_bg_items_bg_theatre.h"
+#include "bn_regular_bg_items_bg_class.h"
 #include "bn_regular_bg_items_thx.h"
 
 #include "bn_regular_bg_items_c0101.h"
@@ -1099,7 +1103,7 @@ int main()
     // cutscene(C_THX);
 
     // cutscene(C_S1);
-    play_room(ROOM_THEATRE);
+    play_room(ROOM_CLASS);
 
     // Stuck end
     while (true)
