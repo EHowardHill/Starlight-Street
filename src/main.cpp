@@ -751,6 +751,19 @@ void play_room(int current_room_int)
         virtual_sprites.push_back(shelf10);
         break;
     }
+
+    case ROOM_GRASS2:
+    {
+        Grass gg = {&b.cam};
+        g = gg;
+
+        VirtualSprite sign01 = {&sign, &b.cam, 256, 0, 0};
+        VirtualSprite sign02 = {&sign, &b.cam, 256, 32, 1};
+
+        virtual_sprites.push_back(sign01);
+        virtual_sprites.push_back(sign02);
+        break;
+    }
     default:
     {
         break;
@@ -969,6 +982,11 @@ void play_room(int current_room_int)
                 is_playing = false;
             }
         }
+
+        case ROOM_GRASS:
+        {
+            break;
+        }
         default:
         {
             break;
@@ -1103,7 +1121,7 @@ int main()
     // cutscene(C_THX);
 
     // cutscene(C_S1);
-    play_room(ROOM_CLASS);
+    play_room(ROOM_THEATRE);
 
     // Stuck end
     while (true)

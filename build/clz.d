@@ -1,2 +1,2 @@
 clz.o: \
- /mnt/c/users/ethan/documents/github/Starlight-Street/butano/hw/3rd_party/gba-modern/src/clz.s
+ /mnt/c/users/ethan/OneDrive/Documents/GitHub/Starlight-Street/butano/hw/3rd_party/gba-modern/src/clz.s
