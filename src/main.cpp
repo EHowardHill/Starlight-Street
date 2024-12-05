@@ -44,7 +44,6 @@
 #include "bn_sprite_items_grass.h"
 #include "bn_sprite_items_sign.h"
 #include "bn_sprite_items_gas_station.h"
-#include "bn_sprite_items_answers.h"
 #include "bn_sprite_items_chair.h"
 
 #include "bn_sprite_items_spr_text.h"

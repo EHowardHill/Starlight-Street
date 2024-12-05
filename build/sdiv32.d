@@ -1,2 +1,2 @@
 sdiv32.o: \
- /mnt/c/users/ethan/documents/github/Starlight-Street/butano/hw/3rd_party/gba-modern/src/sdiv32.s
+ /mnt/c/Users/Ethan/OneDrive/Documents/GitHub/Starlight-Street/butano/hw/3rd_party/gba-modern/src/sdiv32.s
