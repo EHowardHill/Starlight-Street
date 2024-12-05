@@ -45,6 +45,7 @@
 #include "bn_sprite_items_sign.h"
 #include "bn_sprite_items_gas_station.h"
 #include "bn_sprite_items_answers.h"
+#include "bn_sprite_items_chair.h"
 
 #include "bn_sprite_items_spr_text.h"
 #include "bn_sprite_items_spr_conbini.h"
@@ -61,6 +62,15 @@
 #include "bn_regular_bg_items_c0101.h"
 #include "bn_regular_bg_items_c0102.h"
 #include "bn_regular_bg_items_c0103.h"
+#include "bn_regular_bg_items_c0201.h"
+#include "bn_regular_bg_items_c0202.h"
+#include "bn_regular_bg_items_c0203.h"
+
+#include "bn_regular_bg_items_bg_scary.h"
+#include "bn_regular_bg_items_bg_question.h"
+
+#include "bn_regular_bg_items_bg_mirror.h"
+#include "bn_regular_bg_items_bg_mirror2.h"
 
 using namespace bn;
 using namespace core;
@@ -138,11 +148,13 @@ public:
     sprite_ptr spr = castor.create_sprite(0, -150);
     int ideal_y;
     int ticker;
+    int speed = 2;
+    int range = 12;
 
     void update()
     {
         ticker++;
-        spr.set_y(lerp(spr.y().integer(), ideal_y + (int)(degrees_sin((ticker * 2) % 360) * 12), 0.2));
+        spr.set_y(lerp(spr.y().integer(), ideal_y + (int)(degrees_sin((ticker * speed) % 360) * range), 0.2));
     }
 };
 
@@ -252,6 +264,17 @@ public:
         a_button.set_scale(new_scale, new_scale);
         dl = &gamelines[conversation][current_line];
 
+        if (dl->ch_id == CH_CASTOR && is_talking)
+        {
+            castor.speed = 12;
+            castor.range = 6;
+        }
+        else
+        {
+            castor.speed = 2;
+            castor.range = 12;
+        }
+
         switch (dl->action)
         {
         case EXIT:
@@ -261,6 +284,10 @@ public:
 
         case PLAY_WELCOME:
             music_items::welcome.play();
+            break;
+
+        case PLAY_LOFI:
+            // music_items::lofi.play();
             break;
 
         case MUSIC_STOP:
@@ -653,22 +680,27 @@ public:
             auto corrected_x = blades.at(t).x() - local_camera->x(); // Use -> for pointer
             if (corrected_x < -200)
             {
-                blades.at(t).set_x(local_camera->x() + 200 + globals->rnd.get_int(150));
+                // blades.at(t).set_x(local_camera->x() + 200 + globals->rnd.get_int(150));
             }
             else if (corrected_x > 200)
             {
-                blades.at(t).set_x(local_camera->x() - 200 - globals->rnd.get_int(150));
+                // blades.at(t).set_x(local_camera->x() - 200 - globals->rnd.get_int(150));
             }
         }
         ticker++;
     }
 };
 
-void play_room(int current_room_int)
+void play_room(int current_room_int, int spent_dialogue_size = 0)
 {
     vector<regular_bg_ptr, 3> bgs;
     vector<int, 64> spent_dialogue;
     vector<VirtualSprite, 64> virtual_sprites;
+
+    while (spent_dialogue.size() <= spent_dialogue_size)
+    {
+        spent_dialogue.push_back(-1);
+    }
 
     Room current_room = room_map(current_room_int);
 
@@ -751,12 +783,40 @@ void play_room(int current_room_int)
         virtual_sprites.push_back(shelf10);
         break;
     }
+    case ROOM_THEATRE:
+    {
+        VirtualSprite c01 = {&chair, &b.cam, -364, 24, 0};
+        VirtualSprite c02 = {&chair, &b.cam, -364 + (72 * 1), 24, 0};
+        VirtualSprite c03 = {&chair, &b.cam, -364 + (72 * 2), 24, 0};
+        VirtualSprite c04 = {&chair, &b.cam, -364 + (72 * 3), 24, 0};
+        VirtualSprite c05 = {&chair, &b.cam, -364 + (72 * 4), 24, 0};
 
+        virtual_sprites.push_back(c01);
+        virtual_sprites.push_back(c02);
+        virtual_sprites.push_back(c03);
+        virtual_sprites.push_back(c04);
+        virtual_sprites.push_back(c05);
+        break;
+    }
+    case ROOM_CLASS:
+    {
+        VirtualSprite c01 = {&spr_chair, &b.cam, -364, 32, 0};
+        VirtualSprite c02 = {&spr_chair, &b.cam, -364 + (64 * 1), 32, 1};
+        VirtualSprite c03 = {&spr_chair, &b.cam, -364 + (100 * 3) + (64 * 2), 32, 0};
+        VirtualSprite c04 = {&spr_chair, &b.cam, -364 + (100 * 3) + (64 * 3), 32, 1};
+        VirtualSprite c05 = {&spr_chair, &b.cam, -364 + (100 * 4) + (64 * 4), 32, 0};
+        VirtualSprite c06 = {&spr_chair, &b.cam, -364 + (100 * 4) + (64 * 5), 32, 1};
+
+        virtual_sprites.push_back(c01);
+        virtual_sprites.push_back(c02);
+        virtual_sprites.push_back(c03);
+        virtual_sprites.push_back(c04);
+        virtual_sprites.push_back(c05);
+        virtual_sprites.push_back(c06);
+        break;
+    }
     case ROOM_GRASS2:
     {
-        Grass gg = {&b.cam};
-        g = gg;
-
         VirtualSprite sign01 = {&sign, &b.cam, 256, 0, 0};
         VirtualSprite sign02 = {&sign, &b.cam, 256, 32, 1};
 
@@ -817,11 +877,7 @@ void play_room(int current_room_int)
         {
             if (b.x().integer() < -500)
             {
-                if (b.is_scared)
-                {
-                    bgs.clear();
-                }
-                else
+                if (!b.is_scared)
                 {
                     b.set_x(b.x() + 1001);
                     b.cam.set_x(b.cam.x() + 1001);
@@ -829,11 +885,7 @@ void play_room(int current_room_int)
             }
             else if (b.x().integer() >= 501)
             {
-                if (b.is_scared)
-                {
-                    bgs.clear();
-                }
-                else
+                if (!b.is_scared)
                 {
                     b.set_x(b.x() - 1001);
                     b.cam.set_x(b.cam.x() - 1001);
@@ -880,7 +932,7 @@ void play_room(int current_room_int)
                             t = spent_dialogue.size();
                     }
 
-                    if (close(b.x().integer(), current_room.items[i].x, 5) && !globals->opt_te.has_value() && !(exists && current_room.items[i].automatic))
+                    if (close(b.x().integer(), current_room.items[i].x, 8) && !globals->opt_te.has_value() && !(exists && current_room.items[i].automatic))
                     {
                         show_bubble = true;
 
@@ -917,6 +969,8 @@ void play_room(int current_room_int)
         {
             BN_LOG("X: ", b.x());
             BN_LOG("CAMX: ", b.cam.x());
+            BN_LOG("Size: ", spent_dialogue.size());
+            BN_LOG("---");
         }
 
         // Room-specific actions
@@ -924,12 +978,11 @@ void play_room(int current_room_int)
         {
         case ROOM_BEDROOM:
         {
-            if (spent_dialogue.size() == 9 && b.x() < 50 && b.x() > -240 && !globals->opt_te.has_value())
+            if (!b.is_scared && (spent_dialogue.size() == C_INITGRASS1) && b.x() < 50 && b.x() > -240 && !globals->opt_te.has_value())
             {
                 b.is_scared = true;
                 sound_items::door.play();
                 music::stop();
-                spent_dialogue.push_back(-1);
 
                 Rake rr = {b.cam, 300};
                 r = rr;
@@ -966,12 +1019,11 @@ void play_room(int current_room_int)
         }
         case ROOM_CONBINI:
         {
-            if (spent_dialogue.size() == 9 && b.x() < 50 && b.x() > -240 && !globals->opt_te.has_value())
+            if (!b.is_scared && (spent_dialogue.size() == C_INITTHEATRE) && b.x() < 50 && b.x() > -240 && !globals->opt_te.has_value())
             {
                 b.is_scared = true;
                 sound_items::door.play();
                 music::stop();
-                spent_dialogue.push_back(-1);
 
                 Rake rr = {b.cam, 300};
                 r = rr;
@@ -981,11 +1033,64 @@ void play_room(int current_room_int)
             {
                 is_playing = false;
             }
+
+            break;
         }
 
-        case ROOM_GRASS:
+        case ROOM_THEATRE:
         {
+            if (!b.is_scared && (spent_dialogue.size() == C_INITCLASS) && b.x() < 50 && b.x() > -240 && !globals->opt_te.has_value())
+            {
+                b.is_scared = true;
+                sound_items::door.play();
+                music::stop();
+
+                Rake rr = {b.cam, 300};
+                r = rr;
+            }
+
+            if (b.is_scared && b.x() < -750)
+            {
+                is_playing = false;
+            }
             break;
+        }
+
+        case ROOM_CLASS:
+        {
+            if (!b.is_scared && (spent_dialogue.size() == C_INITGRASS2) && (b.x() < 50) && (b.x() > -240) && !globals->opt_te.has_value())
+            {
+                b.is_scared = true;
+                sound_items::door.play();
+                music::stop();
+
+                Rake rr = {b.cam, 300};
+                r = rr;
+            }
+
+            if (b.is_scared && b.x() < -750)
+            {
+                is_playing = false;
+            }
+            break;
+        }
+
+        case ROOM_GRASS2:
+        {
+            if (!b.is_scared && b.x() > 375 && !globals->opt_te.has_value())
+            {
+                b.is_scared = true;
+                sound_items::door.play();
+                music::stop();
+
+                Rake rr = {b.cam, 475};
+                r = rr;
+            }
+
+            if (b.is_scared && b.x() < 0)
+            {
+                is_playing = false;
+            }
         }
         default:
         {
@@ -1003,7 +1108,7 @@ void play_room(int current_room_int)
     }
 }
 
-void cutscene(int scene)
+int cutscene(int scene)
 {
     int ticker = 0;
     switch (scene)
@@ -1100,11 +1205,188 @@ void cutscene(int scene)
         }
         break;
     }
+    case C_S2:
+    {
+        sound_items::cutscene02.play();
+        auto bg = c0201.create_bg(0, 0);
+        while (ticker < 2200)
+        {
+            if ((ticker % 8) < 4)
+            {
+                bg.set_x(0);
+            }
+            else
+            {
+                bg.set_x(-240);
+            }
+
+            if (ticker == 850)
+            {
+                bg = c0202.create_bg(0, 0);
+            }
+
+            if (ticker == 1750)
+            {
+                bg = c0203.create_bg(0, 0);
+            }
+
+            BN_LOG(ticker);
+            ticker++;
+            update();
+        }
+        break;
+    }
+    case EXTRO:
+    {
+        auto bg = bg_mirror2.create_bg(0, 0);
+        bg.set_blending_enabled(true);
+        blending::set_transparency_alpha(0);
+
+        sound_items::flowershop.play();
+
+        TextElement te;
+        te.setup(-108, -60, 0);
+        te.conversation = C_CONFRONTATION + 1;
+        globals->opt_te = te;
+
+        bool is_talking = true;
+        while (is_talking)
+        {
+            if (ticker > 100 && ticker < 250)
+            {
+                if (blending::transparency_alpha() + 0.01 < 1)
+                {
+                    blending::set_transparency_alpha(blending::transparency_alpha() + 0.01);
+                }
+            }
+            else if (ticker > 300 && ticker < 450)
+            {
+                if (blending::transparency_alpha() - 0.01 > 0)
+                {
+                    blending::set_transparency_alpha(blending::transparency_alpha() - 0.01);
+                }
+            }
+            else if (ticker == 450)
+            {
+                bg = bg_mirror.create_bg(0, 0);
+                bg.set_blending_enabled(true);
+            }
+            else if (ticker > 500)
+            {
+                if (blending::transparency_alpha() + 0.01 < 1)
+                {
+                    blending::set_transparency_alpha(blending::transparency_alpha() + 0.01);
+                }
+            }
+
+            if (ticker < 450)
+            {
+                if ((ticker % 8) < 4)
+                {
+                    bg.set_x(0);
+                }
+                else
+                {
+                    bg.set_x(-240);
+                }
+            }
+            else
+            {
+                if ((ticker % 8) < 4)
+                {
+                    bg.set_x(64);
+                }
+                else
+                {
+                    bg.set_x(-240 + 64);
+                }
+            }
+
+            if (globals->opt_te.has_value())
+            {
+                globals->opt_te.value().update();
+
+                if (!globals->opt_te.value().active)
+                {
+                    globals->opt_te.reset();
+                    is_talking = false;
+                }
+            }
+
+            BN_LOG(ticker);
+            ticker++;
+            update();
+        }
+        break;
+    }
+    case CHOOSE:
+    {
+
+        auto bg = bg_question.create_bg(0, 0);
+        bg.set_blending_enabled(true);
+        blending::set_transparency_alpha(0);
+
+        while (true)
+        {
+            if (blending::transparency_alpha() + 0.01 < 1)
+            {
+                blending::set_transparency_alpha(blending::transparency_alpha() + 0.01);
+            }
+
+            if (a_pressed())
+            {
+                return 1;
+            }
+
+            if (b_pressed())
+            {
+                return 2;
+            }
+
+            update();
+        }
+
+        break;
+    }
+    case DEAD:
+    {
+        auto bg = bg_scary.create_bg(0, 0);
+        bg.set_visible(false);
+        sound_items::flatline.play();
+
+        while (ticker < 1200)
+        {
+            if (ticker == 1000)
+            {
+                bg.set_visible(true);
+            }
+
+            BN_LOG(ticker);
+            ticker++;
+            update();
+        }
+        break;
+    }
+    case LIVE:
+    {
+        sound_items::cutscene03.play();
+
+        while (ticker < 800)
+        {
+
+            BN_LOG(ticker);
+            ticker++;
+            update();
+        }
+        break;
+    }
     default:
     {
         break;
     }
     }
+
+    return 0;
 }
 
 int main()
@@ -1112,16 +1394,78 @@ int main()
     init();
     globals = new global_data();
 
-    // cutscene(C_2018);
-    // play_room(ROOM_BEDROOM);
-    // cutscene(C_GASP);
-    // cutscene(C_STARS);
-    // play_room(ROOM_GRASS);
-    // cutscene(C_STARS);
-    // cutscene(C_THX);
+    cutscene(C_2018);
+    update();
 
-    // cutscene(C_S1);
-    play_room(ROOM_THEATRE);
+    play_room(ROOM_BEDROOM);
+    update();
+
+    cutscene(C_GASP);
+    update();
+
+    cutscene(C_STARS);
+    update();
+
+    play_room(ROOM_GRASS);
+    update();
+
+    cutscene(C_STARS);
+    update();
+
+    play_room(ROOM_CONBINI, C_ENDOFDEMO);
+    update();
+
+    cutscene(C_GASP);
+    update();
+
+    cutscene(C_S1);
+    update();
+
+    cutscene(C_STARS);
+    update();
+
+    play_room(ROOM_THEATRE, C_CON_DING);
+    update();
+
+    cutscene(C_GASP);
+    update();
+
+    cutscene(C_S2);
+    update();
+
+    cutscene(C_STARS);
+    update();
+
+    play_room(ROOM_CLASS, C_TH_GREEN);
+    update();
+
+    cutscene(C_GASP);
+    update();
+
+    cutscene(C_STARS);
+    update();
+
+    play_room(ROOM_GRASS2);
+    update();
+
+    cutscene(C_GASP);
+    update();
+
+    cutscene(EXTRO);
+    update();
+
+    int ending = cutscene(CHOOSE);
+
+    if (ending == 1)
+    {
+        cutscene(DEAD);
+    }
+    else
+    {
+        cutscene(LIVE);
+    }
+
+    cutscene(C_THX);
 
     // Stuck end
     while (true)

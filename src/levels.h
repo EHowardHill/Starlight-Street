@@ -46,7 +46,6 @@ enum Conversations
     C_INITCONBINI,
     C_CON_COUNTER,
     C_CON_SODA,
-    C_CON_CREAM,
     C_CON_CASTOR,
     C_CON_CAR,
     C_CON_DING,
@@ -91,8 +90,7 @@ constexpr ActionableItem room_items[COUNT_ROOMS][64] = {
         {-240, C_INITCONBINI, true},
         {-298, C_CON_COUNTER, false},
         {9, C_CON_SODA, false},
-        {230, C_CON_CREAM, false},
-        {345, C_CON_CASTOR, false},
+        {472, C_CON_CASTOR, false},
         {-495, C_CON_CAR, false},
         {-415, C_CON_DING, false}},
 
@@ -109,7 +107,13 @@ constexpr ActionableItem room_items[COUNT_ROOMS][64] = {
         {1, C_CL_CLOCK, false},
         {-175, C_CL_CANVAS, false},
         {233, C_CL_WINDOW, false},
-        {-500, C_CL_DARK, false}}
+        {-500, C_CL_DARK, false}},
+
+    // Grass2
+    {
+        {146, C_INITGRASS2, true},
+        {350, C_CONFRONTATION, true}
+    }
 
 };
 
@@ -148,7 +152,12 @@ enum CUTSCENES
     C_GASP,
     C_STARS,
     C_THX,
-    C_S1
+    C_S1,
+    C_S2,
+    EXTRO,
+    CHOOSE,
+    DEAD,
+    LIVE
 };
 
 // 850
